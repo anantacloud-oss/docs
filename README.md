@@ -40,7 +40,7 @@ Test on your Local in your browser to see your documentation site running.
 
 ## **Project Structure**
 
-## 📂 my-documentsite/
+ 📂 my-documentsite/
    ├── 📂 docs/                      # Markdown documentation files
    ├── 📂 developer-docs/            # Markdown documentation files
    ├── 📂 src/                       # Custom React components & assets
