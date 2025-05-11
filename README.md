@@ -21,13 +21,13 @@ Follow these steps to create and start your documentation site:
 
 ### **1. Create a new Docusaurus site**
 
-npx create-docusaurus@latest my-doc-site classic
+npx create-docusaurus@latest my-documentsite classic
 
-This will generate a new Docusaurus project in a folder named `my-doc-site`.
+This will generate a new Docusaurus project in a folder named `my-documentsite`.
 
 ### **2. Navigate into the project directory**
 
-cd my-doc-site
+cd my-documentsite
 
 
 ### **3. Start the development server**
@@ -40,16 +40,16 @@ Test on your Local in your browser to see your documentation site running.
 
 ## **Project Structure**
 
-📂 my-documentsite/
- ├── 📂 docs/                      # Markdown documentation files
- ├── 📂 developer-docs/            # Markdown documentation files
- ├── 📂 src/                       # Custom React components & assets
- ├── 📂 static/                    # Static files (e.g., images, logos)
- ├── 📄 docusaurus.config.js       # Docusaurus configuration file
- ├── 📄 package.json               # Project dependencies
- ├── 📄 sidebars.js                # Sidebar navigation settings
- ├── 📄 sidebarsDeveloper.js       # Sidebar navigation settings 
- └── 📄 README.md                  # Project instructions
+## 📂 my-documentsite/
+   ├── 📂 docs/                      # Markdown documentation files
+   ├── 📂 developer-docs/            # Markdown documentation files
+   ├── 📂 src/                       # Custom React components & assets
+   ├── 📂 static/                    # Static files (e.g., images, logos)
+   ├── 📄 docusaurus.config.js       # Docusaurus configuration file
+   ├── 📄 package.json               # Project dependencies
+   ├── 📄 sidebars.js                # Sidebar navigation settings
+   ├── 📄 sidebarsDeveloper.js       # Sidebar navigation settings 
+   └── 📄 README.md                  # Project instructions
 
 
 
