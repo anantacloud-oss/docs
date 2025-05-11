@@ -7,73 +7,67 @@ This README provides step-by-step instructions to set up a Docusaurus documentat
 Before you begin, make sure you have **Node.js** and **npm** installed on your system.
 
 ### **Check Node.js and npm versions**
-```sh
+
 node -v  # Check Node.js version
 npm -v   # Check npm version
-```
+
 
 If Node.js and npm are not installed, download and install them from [Node.js official website](https://nodejs.org/).
 
----
 
 ## **Creating a Docusaurus Project**
 
 Follow these steps to create and start your documentation site:
 
 ### **1. Create a new Docusaurus site**
-```sh
+
 npx create-docusaurus@latest my-doc-site classic
-```
+
 This will generate a new Docusaurus project in a folder named `my-doc-site`.
 
 ### **2. Navigate into the project directory**
-```sh
+
 cd my-doc-site
-```
+
 
 ### **3. Start the development server**
-```sh
-npm run start
-```
-Once the server starts, open **http://localhost:3000/** in your browser to see your documentation site running.
 
----
+npm run start
+
+Test on your Local in your browser to see your documentation site running.
+
+
 
 ## **Project Structure**
 
-```
-📂 my-doc-site/
- ├── 📂 docs/               # Markdown documentation files
- ├── 📂 blog/               # Blog posts (optional)
- ├── 📂 src/                # Custom React components & assets
- ├── 📂 static/             # Static files (e.g., images, logos)
- ├── 📄 docusaurus.config.js # Docusaurus configuration file
- ├── 📄 package.json        # Project dependencies
- ├── 📄 sidebars.js         # Sidebar navigation settings
- └── 📄 README.md           # Project instructions
-```
+📂 my-documentsite/
+ ├── 📂 docs/                      # Markdown documentation files
+ ├── 📂 developer-docs/            # Markdown documentation files
+ ├── 📂 src/                       # Custom React components & assets
+ ├── 📂 static/                    # Static files (e.g., images, logos)
+ ├── 📄 docusaurus.config.js       # Docusaurus configuration file
+ ├── 📄 package.json               # Project dependencies
+ ├── 📄 sidebars.js                # Sidebar navigation settings
+ ├── 📄 sidebarsDeveloper.js       # Sidebar navigation settings 
+ └── 📄 README.md                  # Project instructions
 
----
 
-## **Available Scripts**
 
 ### **Run the development server**
-```sh
+
 npm run start
-```
+
 
 ### **Build the site for production**
-```sh
+
 npm run build
-```
+
 This will generate static HTML files in the `build/` directory.
 
 ### **Serve the production build locally**
-```sh
-npm run serve
-```
 
----
+npm run serve
+
 
 ## **Customization**
 
