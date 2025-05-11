@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Docusaurus Documentation Site
 
 This README provides step-by-step instructions to set up a Docusaurus documentation site from scratch.
@@ -94,4 +95,6 @@ npm run serve
 ---
 
 Now you're ready to build and customize your Docusaurus documentation site! 🚀
+=======
+>>>>>>> 67b3e01ccf0e8aa6e479b8adc051f251b3bbfc45
 
