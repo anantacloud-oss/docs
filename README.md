@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Docusaurus Documentation Site
 
 This README provides step-by-step instructions to set up a Docusaurus documentation site from scratch.
@@ -82,7 +81,7 @@ npm run serve
 - Customize the styles in `src/css/custom.css`.
 - Add documentation files in the `docs/` directory.
 
----
+
 
 ## **Contributing**
 
@@ -92,9 +91,7 @@ npm run serve
 4. Push to your Branch (`git push origin branch-name`)
 5. Open a Pull Request
 
----
+
 
 Now you're ready to build and customize your Docusaurus documentation site! 🚀
-=======
->>>>>>> 67b3e01ccf0e8aa6e479b8adc051f251b3bbfc45
 
