@@ -8,9 +8,10 @@ Before you begin, make sure you have **Node.js** and **npm** installed on your s
 
 ### **Check Node.js and npm versions**
 
+```
 node -v  # Check Node.js version
 npm -v   # Check npm version
-
+```
 
 If Node.js and npm are not installed, download and install them from [Node.js official website](https://nodejs.org/).
 
@@ -21,24 +22,31 @@ Follow these steps to create and start your documentation site:
 
 ### **1. Create a new Docusaurus site**
 
+```
 npx create-docusaurus@latest my-documentsite classic
+```
 
 This will generate a new Docusaurus project in a folder named `my-documentsite`.
 
 ### **2. Navigate into the project directory**
 
+```
 cd my-documentsite
+```
 
 
 ### **3. Start the development server**
 
+```
 npm run start
+```
 
 Test on your Local in your browser to see your documentation site running.
 
 
-```
 ## **Project Structure**
+
+```
 
  📂 my-documentsite/
    ├── 📂 docs/                      # Markdown documentation files
@@ -51,23 +59,29 @@ Test on your Local in your browser to see your documentation site running.
    ├── 📄 sidebarsDeveloper.js       # Sidebar navigation settings 
    └── 📄 README.md                  # Project instructions
 
-
+```
 
 ### **Run the development server**
 
+```
 npm run start
+```
 
 
 ### **Build the site for production**
 
+```
 npm run build
+```
 
 This will generate static HTML files in the `build/` directory.
 
+
 ### **Serve the production build locally**
 
+```
 npm run serve
-
+```
 
 ## **Customization**
 
