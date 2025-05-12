@@ -23,6 +23,8 @@
 }
 
 
+
+
 .cardTitle {
    margin: 0.5rem 0;
    font-size: 1.25rem;
@@ -39,7 +41,6 @@
 
 .cardText {
   font-size: 1rem;
-  color: black;
   text-align: center;
   overflow: hidden;
   display: -webkit-box;
@@ -47,12 +48,6 @@
   -webkit-box-orient: vertical;
   min-height: 6.5em; 
 }
-
-
-.card {
-  cursor: pointer;
-}
-
 
 
 
@@ -114,6 +109,55 @@
   font-size: 0.9rem;
   color: #999;
 }
+
+
+
+
+
+
+
+
+/* 🌑 Dark theme overrides */
+html[data-theme='dark'] .heroCustom {
+  background-color: #1e1e1e; /* Dark background */
+  color: white;
+}
+
+html[data-theme='dark'] .subtitle {
+  color: #cccccc;
+}
+
+html[data-theme='dark'] .footer {
+  background-color: #000c1a; /* Even darker blue shade */
+  color: #f1f1f1;
+}
+
+html[data-theme='dark'] .footerColumn h4 {
+  color: #ffffff;
+}
+
+html[data-theme='dark'] .footerColumn p,
+html[data-theme='dark'] .footerColumn li {
+  color: #aaaaaa;
+}
+
+html[data-theme='dark'] .footerLinks li a {
+  color: #aaaaaa;
+}
+
+html[data-theme='dark'] .footerLinks li a:hover {
+  color: #ffffff;
+}
+
+html[data-theme='dark'] .footerBottom {
+  color: #777;
+  border-top: 1px solid #444;
+}
+
+
+
+
+
 
 
 

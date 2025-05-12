@@ -86,13 +86,14 @@ prism: {
   darkTheme: prismThemes.dracula,
 },
 
-headTags: [
-  {
-    tagName: 'link',
-    rel: 'stylesheet',
-    href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css',
+
+colorMode: {
+    defaultMode: 'light',
+    disableSwitch: false,
+    respectPrefersColorScheme: true,
   },
-],
+
+
 }),
 };
 

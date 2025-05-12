@@ -6,7 +6,7 @@ sidebar_label: Infrastructure Live
 
 # Recommended Folder Structure – Infrastructure Live
 
-A common question from customers is how to structure their Terragrunt code effectively. This document outlines Gruntwork's recommended approach to organizing infrastructure code for better **comprehension**, **scalability**, and **development efficiency**.
+A common question from customers is how to structure their Terragrunt code effectively. This document outlines Ananta Cloud's recommended approach to organizing infrastructure code for better **comprehension**, **scalability**, and **development efficiency**.
 
 ## 📦 Separating Modules from Live Infrastructure
 
