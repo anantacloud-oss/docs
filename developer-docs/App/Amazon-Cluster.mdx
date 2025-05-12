@@ -1,0 +1,155 @@
+---
+id: Amazon-Cluster
+title: Amazon ECS Cluster
+sidebar_label: Amazon ECS Cluster
+---
+
+
+
+## Amazon ECS Cluster
+
+
+import React, { useState } from 'react';
+
+export default function ECSCluster() {
+  const [showModal, setShowModal] = useState(false);
+
+  return (
+    <>
+      <button onClick={() => setShowModal(true)}    
+         style={{
+                       backgroundColor: '#0033A0',
+                       color: '#fff',
+                       padding: '12px 24px',
+                       border: 'none',
+                       borderRadius: '8px',
+                       cursor: 'pointer',
+                       fontSize: '20px',
+                       lineHeight: '1.2'
+                    }}>View Source</button>
+
+      {showModal && (
+        <div style={{
+          position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
+          backgroundColor: 'rgba(0,0,0,0.5)', display: 'flex',
+          justifyContent: 'center', alignItems: 'center', zIndex: 1000
+        }}>
+          <div style={{
+            backgroundColor: '#fff', padding: '2rem',
+            borderRadius: '8px', maxWidth: '500px'
+          }}>
+            <h3>For Subscribers Only</h3>
+            <p>This link leads to the private <code>terraform-aws-service-catalog</code> repository visible only to subscribers; everyone else will               see a 404.</p>
+            <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'flex-end', gap: '1rem' }}>
+                  <button onClick={() => setShowModal(false)} 
+                       style={{
+                                     backgroundColor: '#0033A0',
+                                     color: '#fff',
+                                     padding: '10px 20px',
+                                     border: 'none',
+                                     borderRadius: '8px',
+                                     cursor: 'pointer',
+                                     fontSize: '16px',
+                                     lineHeight: '1.2'
+                                  }}>Cancel</button>
+                  <a href="https://github.com/anantacloud/action-linting" target="_blank" rel="noopener noreferrer">
+                 <button
+                        style={{
+                                     backgroundColor: '#0033A0',
+                                     color: '#fff',
+                                     padding: '10px 20px',
+                                     border: 'none',
+                                     borderRadius: '8px',
+                                     cursor: 'pointer',
+                                     fontSize: '16px',
+                                     lineHeight: '1.2'
+                                  }}>Continue to GitHub</button>
+                 </a>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <h2>Amazon ECS Cluster</h2>
+
+      <hr />
+
+      <h3>Overview</h3>
+      <p>This service contains Terraform code to deploy a production-grade ECS cluster on AWS using Elastic Container Service (ECS).</p>
+      <p>This service launches an ECS cluster on top of an Auto Scaling Group that you manage. If you wish to launch an ECS cluster on top of        Fargate that is completely managed by AWS, refer to the <code>ecs-fargate-cluster</code> module. Refer to the section <strong>EC2 vs        Fargate Launch Types</strong> for more information on the differences between the two flavors.</p>
+
+      <h4>ECS architecture</h4>
+      <em>ECS architecture</em>
+
+      <hr />
+
+      <h3>Features</h3>
+      <p>This Terraform Module launches an EC2 Container Service Cluster that you can use to run Docker containers. The cluster consists of a configurable number of instances in an Auto Scaling Group (ASG). Each instance:</p>
+
+      <ul>
+        <li>Runs the ECS Container Agent so it can communicate with the ECS scheduler.</li>
+        <li>Authenticates with a Docker repo so it can download private images (using KMS encrypted details).</li>
+        <li>Runs the CloudWatch Logs Agent to send logs in syslog to CloudWatch.</li>
+        <li>Emits custom metrics (memory, disk, etc.) via the <code>cloudwatch-agent</code>.</li>
+        <li>Uses the <code>syslog</code> module for log rotation and disk usage protection.</li>
+        <li>Uses <code>ssh-grunt</code> for IAM-based SSH access to ECS nodes.</li>
+        <li>Uses <code>auto-update</code> module for security updates.</li>
+      </ul>
+
+      <hr />
+
+      <h3>Learn</h3>
+      <div className="alert alert--info">
+        <strong>Note:</strong> This repo is a part of the Ananta Cloud <strong>Service Catalog</strong>, a collection of reusable, battle-tested, production-ready infrastructure code.  
+        If you’ve never used the Service Catalog before, read <strong>How to use the Ananta Cloud Service Catalog!</strong>
+      </div>
+
+      <p>This is implemented using Terraform modules from the <code>terraform-aws-ecs</code> repo.  
+      If you are a subscriber and don’t have access, email <a href="mailto:support@anantacloud.io">support@anantacloud.io</a>.</p>
+
+      <hr />
+
+      <h3>Core Concepts</h3>
+      <p>To understand what ECS is and the different cluster types, refer to the documentation in the <code>terraform-aws-ecs</code> repo.</p>
+
+      <p>To use ECS:</p>
+      <ul>
+        <li>Deploy EC2 Instances into a <strong>cluster</strong>.</li>
+        <li>ECS scheduler runs Docker containers across instances.</li>
+        <li>Each instance must have ECS Agent installed.</li>
+      </ul>
+
+      <p>Also refer to:</p>
+      <ul>
+        <li><code>ecs-cluster</code> docs for running Docker containers, IAM, security groups, etc.</li>
+        <li><code>cloudwatch-agent</code> docs for logs and metrics.</li>
+      </ul>
+
+      <hr />
+
+      <h3>Repo Organization</h3>
+      <ul>
+        <li><strong>modules</strong>: main implementation code (submodules).</li>
+        <li><strong>examples</strong>: working usage examples.</li>
+        <li><strong>test</strong>: automated tests for modules and examples.</li>
+      </ul>
+
+      <hr />
+
+      <h3>Deploy</h3>
+
+      <h4>🚀 Non-production deployment (learning/testing)</h4>
+      <p>Refer to:</p>
+      <ul>
+        <li><code>examples/for-learning-and-testing</code>: optimized for experimenting and learning.</li>
+      </ul>
+
+      <h4>🏢 Production deployment</h4>
+      <p>Refer to:</p>
+      <ul>
+        <li><code>examples/for-production</code>: sample production-ready deployments based on Ananta Cloud Reference Architecture.</li>
+      </ul>
+    </>
+  );
+}
+

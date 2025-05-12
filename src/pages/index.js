@@ -37,7 +37,7 @@ export default function Home() {
           </div>
 
           <div className="col col--4">
-            <Link to="/developer-docs/Library/AnantaCloud-Library"  className="card shadow--md padding--lg" style={{ textDecoration: 'none',                   color: 'inherit' }}>
+            <Link to="/developer-docs/findingmodule"  className="card shadow--md padding--lg" style={{ textDecoration: 'none', color: 'inherit' }}>
               <FaBook className={styles.cardIcon} />
               <h3 className={styles.cardTitle}>Explore the Ananta Cloud Library</h3>
               <p className={styles.cardText}>

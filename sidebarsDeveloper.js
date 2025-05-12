@@ -14,16 +14,36 @@ const sidebars = {
       label: 'Introduction',
       id: 'introduction',
     },
+
+
+
     {
-      type: 'category',
-      label: 'Ananta Cloud Library',
-      items: [
-                    'Library/AnantaCloud-Library', 
-                    'Library/Servicecatalog' ,
-                 ],
+      type: 'html',
+      value: '<strong>Ananta Cloud Library</strong>',
+      defaultStyle: true,
+    },
+    {
+      type: 'doc',
+      label: 'Find a Module',
+      id: 'findingmodule',
     },
 
-         
+    {
+      type: 'category',
+      label: 'Service Catalog',
+      items: [
+         {
+            type: 'category',
+            label: 'App Orchestration',
+            items: [
+                          'App/Amazon-Cluster',
+                       ],
+         },
+      ],
+   },
+
+
+            
   ],
 };
 
