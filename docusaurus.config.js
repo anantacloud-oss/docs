@@ -7,13 +7,13 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
 title: 'Ananta Cloud Docs',
-favicon: 'img/favicon.ico',
+
 
 url: 'https://your-docusaurus-site.example.com',
 baseUrl: '/',
 
 organizationName: 'anantacloud', // Replace with your GitHub org/user
-projectName: 'docs', // Replace with your repo name
+projectName: 'Documentation Site', // Replace with your repo name
 
 onBrokenLinks: 'throw',
 onBrokenMarkdownLinks: 'warn',
@@ -36,15 +36,11 @@ sidebarPath: require.resolve('./sidebars.js'),
 editUrl:
 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
 },
-blog: {
-showReadingTime: true,
-feedOptions: {
-type: ['rss', 'atom'],
-xslt: true,
-},
+
 editUrl:
 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
 },
+
 theme: {
 customCss: require.resolve('./src/css/custom.css'),
 },
