@@ -32,8 +32,6 @@ const config = {
           path: 'docs',
           routeBasePath: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -50,8 +48,6 @@ const config = {
         path: 'developer-docs',
         routeBasePath: 'developer-docs',
         sidebarPath: require.resolve('./sidebarsDeveloper.js'),
-        editUrl:
-          'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
       },
     ],
   ],
@@ -62,7 +58,7 @@ const config = {
       navbar: {
         logo: {
           alt: 'Ananta Cloud Logo',
-          src: 'https://static.wixstatic.com/media/acdaa6_a907d2fb0e354e8fac207526c8e7609f~mv2.png/v1/crop/x_34,y_61,w_434,h_343/fill/w_98,h_76,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo2.png',
+          src:  'https://static.wixstatic.com/media/acdaa6_a907d2fb0e354e8fac207526c8e7609f~mv2.png/v1/crop/x_34,y_61,w_434,h_343/fill/w_98,h_76,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo2.png',
         },
         items: [
           { to: '/docs/devops-foundations', label: 'Docs', position: 'left' },

@@ -47,7 +47,8 @@
 
 
 
-/* 🌑 Dark theme overrides for navbar */
+/* Dark theme */
+
 html[data-theme='dark'] .navbar {
   background-color: #1a1a1a; /* Dark background */
 }
@@ -70,30 +71,6 @@ html[data-theme='dark'] .navbar__search {
 /* Dark mode 'Sign In' button */
 html[data-theme='dark'] .navbar__item--right {
   color: white;
-}
-
-
-
-
-
-
-.card{
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-     border: 2px solid black;
-}
-
-
-.card:hover {
-    transform: scale(1.05); /* Card thoda bada ho jayega */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thoda shadow aayega */
-}
-
-
-html[data-theme='dark'] .card {
-  background-color: #000c1a !important;
-  color: white;
-  border: 1px solid white !important;
 }
 
 

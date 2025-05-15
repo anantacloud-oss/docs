@@ -13,46 +13,49 @@
 }
 
 
-
-
-.cardIcon {
-    font-size: 3rem;
-    color: #007acc;
-    margin-left: 9rem;
-    margin-bottom: 0.5rem
+.card {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%; /* make cards equal height */
+  transition: transform 0.2s ease;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.cardIcon {
+  font-size: 48px;
+  color: #0078d7; 
+  margin-bottom: 16px;
+}
 
 
 
 .cardTitle {
-   margin: 0.5rem 0;
-   font-size: 1.25rem;
-   font-weight: bold;
-   text-align: center;
-   overflow: hidden;
-   display: -webkit-box;
-   -webkit-line-clamp: 2;
-   -webkit-box-orient: vertical;
-   min-height: 2.5em; 
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 1.25rem;
+  min-height: 2.5em; 
+  text-align: center;
 }
-
 
 
 .cardText {
+  color: #111;
   font-size: 1rem;
-  text-align: center;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
+  line-height: 1.5;
   min-height: 6.5em; 
+  text-align: center;
 }
-
-
-
-
-
 
 
 .footer {
@@ -61,6 +64,7 @@
   padding: 3rem 0 2rem;
 }
 
+
 .footerContent {
   display: flex;
   justify-content: space-between;
@@ -68,16 +72,19 @@
   gap: 2rem;
 }
 
+
 .footerColumn {
   flex: 1;
   min-width: 220px;
 }
+
 
 .footerColumn h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
   color: #ffffff;
 }
+
 
 .footerColumn p,
 .footerColumn li {
@@ -86,20 +93,24 @@
   margin-bottom: 0.5rem;
 }
 
+
 .footerLinks {
   list-style: none;
   padding: 0;
 }
+
 
 .footerLinks li a {
   text-decoration: none;
   color: #cccccc;
 }
 
+
 .footerLinks li a:hover {
   color: #ffffff;
   text-decoration: underline;
 }
+
 
 .footerBottom {
   text-align: center;
@@ -114,45 +125,65 @@
 
 
 
+/* Dark theme */
 
 
-
-/* 🌑 Dark theme overrides */
 html[data-theme='dark'] .heroCustom {
   background-color: #1e1e1e; /* Dark background */
   color: white;
 }
 
+
 html[data-theme='dark'] .subtitle {
   color: #cccccc;
 }
+
+
+html[data-theme='dark'] .card {
+  background-color: #000c1a !important;
+  border: 1px solid white !important;
+}
+
+
+html[data-theme='dark'] .cardTitle,
+html[data-theme='dark'] .cardText {
+  color: white !important;
+}
+
 
 html[data-theme='dark'] .footer {
   background-color: #000c1a; /* Even darker blue shade */
   color: #f1f1f1;
 }
 
+
 html[data-theme='dark'] .footerColumn h4 {
   color: #ffffff;
 }
+
 
 html[data-theme='dark'] .footerColumn p,
 html[data-theme='dark'] .footerColumn li {
   color: #aaaaaa;
 }
 
+
 html[data-theme='dark'] .footerLinks li a {
   color: #aaaaaa;
 }
+
 
 html[data-theme='dark'] .footerLinks li a:hover {
   color: #ffffff;
 }
 
+
 html[data-theme='dark'] .footerBottom {
   color: #777;
   border-top: 1px solid #444;
 }
+
+
 
 
 
