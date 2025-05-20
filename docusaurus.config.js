@@ -8,7 +8,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'Ananta Cloud Docs',
 
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://reimagined-adventure-lrry9rm.pages.github.io',
   baseUrl: '/',
 
   organizationName: 'anantacloud', // Replace with your GitHub org/user
