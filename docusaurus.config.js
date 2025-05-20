@@ -9,11 +9,11 @@ const config = {
   title: 'Ananta Cloud Docs',
   tagline: "Learn to manage and deploy your full infrastructure with infrastructure as code.",
   url: 'https://reimagined-adventure-lrry9rm.pages.github.io',
-  baseUrl: '/docs/',
+  baseUrl: '/',
 
   organizationName: 'anantacloud', // Replace with your GitHub org/user
   projectName: 'docs', // Replace with your repo name
-
+  trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -82,4 +82,3 @@ const config = {
 };
 
 export default config;
-
