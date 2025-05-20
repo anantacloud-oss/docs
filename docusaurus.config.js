@@ -7,7 +7,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Ananta Cloud Docs',
-
+  tagline: "Learn to manage and deploy your full infrastructure with infrastructure as code.",
   url: 'https://reimagined-adventure-lrry9rm.pages.github.io',
   baseUrl: '/',
 
