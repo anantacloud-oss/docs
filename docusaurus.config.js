@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/',
 
   organizationName: 'anantacloud', // Replace with your GitHub org/user
-  projectName: 'Documentation Site', // Replace with your repo name
+  projectName: 'docs', // Replace with your repo name
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
