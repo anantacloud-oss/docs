@@ -47,7 +47,7 @@ return (
           </p>
         </Link>
       </div>
-
+    </div>
   </main>
 
   <header className={styles.heroCustom}>
