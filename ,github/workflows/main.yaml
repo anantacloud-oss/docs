@@ -1,0 +1,13 @@
+name: Terraform Modules Workflow
+on:
+  push:
+    branches:
+      - github-pages
+jobs:
+  github-pages:
+    name: github pages
+    uses: anantacloud/workflows/.github/workflows/github-pages-deployment.yaml@main
+    with:
+      runner_label: "cloud-runner"
+      code_dir: "examples/${{ inputs.source_type }}"
+    secrets: inherit
