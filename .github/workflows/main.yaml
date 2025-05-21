@@ -1,8 +1,8 @@
-name: Terraform Modules Workflow
+name: github pages deployment
 on:
   push:
     branches:
-      - github-pages
+      - gh-pages
 jobs:
   github-pages:
     name: github pages
