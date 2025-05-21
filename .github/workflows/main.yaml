@@ -3,6 +3,12 @@ on:
   push:
     branches:
       - gh-pages
+
+permissions:
+  id-token: write
+  pages: write
+  contents: read 
+  
 jobs:
   github-pages:
     name: github pages
