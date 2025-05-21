@@ -9,5 +9,5 @@ jobs:
     uses: anantacloud/workflows/.github/workflows/github-pages-deployment.yaml@main
     with:
       runner_label: "cloud-runner"
-      code_dir: "examples/${{ inputs.source_type }}"
+      checkout_dir: "/apps/anantacloud/runner/${{ github.repository }}"
     secrets: inherit
