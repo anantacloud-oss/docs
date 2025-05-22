@@ -7,7 +7,8 @@ import Link from '@docusaurus/Link';
 
 export default function Home() {
 return (
-<Layout description="Ananta Cloud equips you with a comprehensive arsenal of pre-built modules, tools, and frameworks for faster, smarter deployment.">
+<Layout description="Ananta Cloud equips you with a comprehensive arsenal of pre-built modules, tools, and frameworks for faster, smarter deployment."
+>
 
   <header className={styles.heroCustom}>
     <div className="container">
@@ -18,7 +19,7 @@ return (
     </div>
   </header>
 
-  <main className="container margin-vert--lg">
+ <main className={"container margin-vert--lg"}>
     <div className="row">
       <div className="col col--4">
         <Link

@@ -129,7 +129,7 @@
 
 
 html[data-theme='dark'] .heroCustom {
-  background-color: #1e1e1e; /* Dark background */
+  background-color: #1e1e1e; /* Even darker blue shade  */
   color: white;
 }
 
@@ -152,7 +152,7 @@ html[data-theme='dark'] .cardText {
 
 
 html[data-theme='dark'] .footer {
-  background-color: #000c1a; /* Even darker blue shade */
+  background-color: #000c1a; 
   color: #f1f1f1;
 }
 
@@ -182,6 +182,9 @@ html[data-theme='dark'] .footerBottom {
   color: #777;
   border-top: 1px solid #444;
 }
+
+
+
 
 
 
