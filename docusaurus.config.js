@@ -63,7 +63,6 @@ const config = {
         items: [
           { to: '/docs/devops-foundations', label: 'Docs', position: 'left' },
           { to: '/developer-docs/introduction', label: 'Reference', position: 'left' },
-          { to: '/signin', label: 'Sign In', position: 'right' },
           { type: 'search', position: 'right' },
         ],
       },

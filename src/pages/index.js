@@ -21,7 +21,7 @@ return (
 
  <main className={"container margin-vert--lg"}>
     <div className="row">
-      <div className="col col--4">
+      <div className="col col--4   col--offset-2">
         <Link
           to="/docs/devops-foundations"
           className={styles.card}

@@ -27,15 +27,12 @@
   margin-top: -18px;     /* Move logo upward */
 }
 
-/* Adjust search bar and sign-in button */
+
 .navbar__search {
   color: black; /* Search bar icon color */
 }
 
-/* Custom styling for the sign-in button */
-.navbar__item--right {
-  color: black; /* Black color for the 'Sign In' button */
-}
+
 
 /* Make the logo responsive (adjust size on smaller screens) */
 @media (max-width: 768px) {
