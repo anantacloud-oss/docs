@@ -1,6 +1,6 @@
 .navbar {
   background-color: white;
-  height: 110px; /* Set desired navbar height */
+  height: 75px; /* Set desired navbar height */
   display: flex;
   align-items: center; /* Vertically center contents */
   padding: 0 5rem; /* Horizontal padding */
@@ -21,7 +21,7 @@
 
 /* Custom styling for the navbar logo */
 .navbar__logo img {
-  height: 85px; /* Set a fixed height for the logo */
+  height: 60px; /* Set a fixed height for the logo */
   width: auto;  /* Maintain aspect ratio */
   margin-right: 1rem; /* Add some space to the right of the logo */
   margin-top: -18px;     /* Move logo upward */
