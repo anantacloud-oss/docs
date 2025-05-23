@@ -21,7 +21,7 @@
 
 /* Custom styling for the navbar logo */
 .navbar__logo img {
-  height: 60px; /* Set a fixed height for the logo */
+  height: 65px; /* Set a fixed height for the logo */
   width: auto;  /* Maintain aspect ratio */
   margin-right: 1rem; /* Add some space to the right of the logo */
   margin-top: -18px;     /* Move logo upward */
@@ -47,7 +47,7 @@
 /* Dark theme */
 
 html[data-theme='dark'] .navbar {
-  background-color: #1a1a1a; /* Dark background */
+  background-color: #1b1b1d; /* Dark background */
 }
 
 /* Dark mode navbar items text color */
@@ -72,6 +72,24 @@ html[data-theme='dark'] .navbar__item--right {
 
 
 
+.pagination-nav__link
+ {
+    border: 3px solid black; 
+    border-radius: var(--ifm-pagination-nav-border-radius);
+    display: block;
+    height: 100%;
+    line-height: var(--ifm-heading-line-height);
+    padding: var(--ifm-global-spacing);
+    transition: border-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+
+}  
+
+
+
+/* Dark theme override */
+[data-theme='dark'] .pagination-nav__link {
+    border: 3px solid white;
+}
 
 
 

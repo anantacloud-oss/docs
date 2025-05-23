@@ -132,19 +132,26 @@
 
 
 html[data-theme='dark'] .heroCustom {
-  background-color: #1e1e1e; 
+  background-color: #1b1b1d; 
   color: white;
 }
 
 
 html[data-theme='dark'] .subtitle {
   color: #cccccc;
+  background-color: #1b1b1d; 
 }
 
 
 html[data-theme='dark'] .card {
-  background-color: #000c1a !important;
+  background-color: #001c2e !important;
   border: 1px solid white !important;
+  transition: box-shadow 0.3s ease;
+}
+
+
+html[data-theme='dark'] .card:hover {
+  box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.4);
 }
 
 
@@ -155,7 +162,7 @@ html[data-theme='dark'] .cardText {
 
 
 html[data-theme='dark'] .footer {
-  background-color: #000c1a; 
+  background-color: #001c2e; 
   color: #f1f1f1;
 }
 
