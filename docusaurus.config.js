@@ -55,10 +55,13 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+
+     favicon: 'img/favicon.ico',     
+
       navbar: {
         logo: {
           alt: 'Ananta Cloud Logo',
-          src:  'https://static.wixstatic.com/media/acdaa6_a907d2fb0e354e8fac207526c8e7609f~mv2.png/v1/crop/x_34,y_61,w_434,h_343/fill/w_98,h_76,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo2.png',
+          src:  'img/logo.png',
         },
         items: [
           { to: '/docs/devops-foundations', label: 'Docs', position: 'left' },
