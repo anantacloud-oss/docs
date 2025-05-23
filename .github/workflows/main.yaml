@@ -8,7 +8,7 @@ permissions:
   
 jobs:
   github-pages:
-    name: github pages
+    name: pages
     uses: anantacloud/workflows/.github/workflows/github-pages-deployment.yaml@main
     with:
       runner_label: "cloud-runner"
