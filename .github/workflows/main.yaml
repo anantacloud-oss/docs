@@ -1,9 +1,6 @@
 name: github pages deployment
-on:
-  push:
-    branches:
-      - gh-pages
-
+on: workflow_dispatch
+  
 permissions:
   id-token: write
   pages: write
@@ -11,7 +8,7 @@ permissions:
   
 jobs:
   github-pages:
-    name: github pages
+    name: pages
     uses: anantacloud/workflows/.github/workflows/github-pages-deployment.yaml@main
     with:
       runner_label: "cloud-runner"

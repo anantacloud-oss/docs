@@ -1,3 +1,5 @@
+![Maintainer](https://img.shields.io/badge/Maintained%20By-Ananta%20Cloud-red) [![github pages deployment](https://github.com/anantacloud/docs/actions/workflows/main.yaml/badge.svg)](https://github.com/anantacloud/docs/actions/workflows/main.yaml)
+
 # Docusaurus Documentation Site
 
 This README provides step-by-step instructions to set up a Docusaurus documentation site from scratch.
