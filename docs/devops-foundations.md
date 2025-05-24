@@ -24,28 +24,29 @@ In addition, Ananta Cloud customers benefit from expert guidance to ensure corre
 
 ## Available Components
 
-Ananta Cloud currently provides several core components under DevOps Foundations:
+Ananta Cloud’s **DevOps Foundations** delivers a powerful set of tools designed to streamline and scale cloud infrastructure management:
 
-- **Infrastructure-Live**: A best-practice directory structure for IaC repos that follows DRY principles using OpenTofu.
-- **Pipelines**: End-to-end CI/CD pipelines for infrastructure code, including structure guidelines and operational scripts.
-- **Account Factory**: Automates AWS account provisioning with built-in compliance and governance controls.
-- **Patcher**: Detects outdated modules, creates pull requests with version updates, and auto-refactors breaking changes.
-- **Library**: A rich repository of 300,000+ lines of reusable OpenTofu/Terraform code for provisioning VPCs, ECS clusters, S3 buckets, and more.
+- **IaC Project Framework:** A modular, DRY-compliant folder structure for infrastructure code, leveraging OpenTofu to enforce best practices.
+- **Automated Deployment Workflows:** Predefined pipelines that automate the entire infrastructure lifecycle—from code validation to deployment—along with templates and utility scripts.
+- **Scalable AWS Account Provisioning:** A turnkey solution for provisioning AWS accounts at scale, complete with built-in controls for governance and compliance.
+- **Scalable GCP Landing Zone Provisioning:** Automated setup and configuration of GCP environments using best practices for security, networking, and resource management, enabling rapid and consistent project onboarding.
+- **Module Version Management Tool:** Keeps your infrastructure code up-to-date by scanning for outdated modules, generating upgrade pull requests, and auto-fixing breaking changes.
+- **Reusable Infrastructure Codebase:** Access a curated collection of over 300,000 lines of proven OpenTofu/Terraform code to rapidly deploy services like networking, compute, and storage.
 
-These components are optimized for use with **Terragrunt**, **OpenTofu/Terraform**, **GitHub**, and **AWS**. Support for additional platforms may be added over time.
+Built to integrate seamlessly with **OpenTofu/Terraform**, GitHub, and AWS, with future extensibility planned for additional ecosystems.
 
 ---
 
 ## Extending and Customizing
 
-While Ananta Cloud's components provide a robust starting point, they are intentionally designed to be **extensible**. Users are encouraged to:
+Ananta Cloud provides a flexible platform that empowers users to:
 
-- Build upon existing modules
-- Integrate their own tools and practices
-- Contribute feedback or improvements
+- Tailor existing modules to fit specific requirements
+- Seamlessly integrate preferred tools and workflows
+- Actively contribute ideas and improvements to the platform
 
-Ananta Cloud recognizes that infrastructure needs vary widely and supports a collaborative, developer-first approach to extending functionality and shaping future improvements.
+This collaborative model ensures the platform evolves in step with user needs and industry innovation.
 
 ---
 
-With DevOps Foundations, teams can accelerate cloud adoption, reduce operational overhead, and enforce proven infrastructure standards at scale.
+DevOps Foundations enables teams to speed up their cloud journey, streamline operations, and consistently apply best-practice infrastructure standards across their environments.
