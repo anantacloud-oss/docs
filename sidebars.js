@@ -14,6 +14,14 @@ const sidebars = {
       label: 'DevOps Foundations',
       id: 'devops-foundations',
     },
+
+     {
+      type: 'doc',
+      label: 'Need Help!',
+      id: 'Need-Help',
+    },
+
+
     {
       type: 'category',
       label: 'IaC Best Practices',

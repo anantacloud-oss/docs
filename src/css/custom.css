@@ -4,6 +4,7 @@
   display: flex;
   align-items: center; /* Vertically center contents */
   padding: 0 5rem; /* Horizontal padding */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); 
 }
 
 
@@ -19,6 +20,7 @@
   color: blue; /* Blue color when hovering over navbar items */
 }
 
+
 /* Custom styling for the navbar logo */
 .navbar__logo img {
   height: 65px; /* Set a fixed height for the logo */
@@ -30,6 +32,49 @@
 
 .navbar__search {
   color: black; /* Search bar icon color */
+}
+
+
+.pagination-nav__link
+ {
+    border: 3px solid black; 
+    border-radius: var(--ifm-pagination-nav-border-radius);
+    display: block;
+    height: 100%;
+    line-height: var(--ifm-heading-line-height);
+    padding: var(--ifm-global-spacing);
+    transition: border-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+}  
+
+
+.menu_SIkG {
+    padding: 0.5rem 0.5rem 0.5rem 0.75rem; /* Top, Right, Bottom, Left */
+    scrollbar-gutter: stable;
+    width: 270px;
+    overflow-y: auto; /* enables vertical scrolling when needed */
+}
+
+
+:root {
+    --doc-sidebar-width: 275px !important;
+}
+
+
+.toggleButton_gllP {
+    -webkit-tap-highlight-color: transparent;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: background var(--ifm-transition-fast);
+    margin-left: 10px; /* Add left gap (adjust as needed) */
+}
+
+
+.toggleButton_gllP:hover {
+    color: blue; /* Change background to blue on hover */
 }
 
 
@@ -47,7 +92,8 @@
 /* Dark theme */
 
 html[data-theme='dark'] .navbar {
-  background-color: #1b1b1d; /* Dark background */
+  background-color: #001c2e; /* Dark background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Bottom shadow */
 }
 
 /* Dark mode navbar items text color */
@@ -57,7 +103,7 @@ html[data-theme='dark'] .navbar__item {
 
 /* Dark mode hover effect for navbar links */
 html[data-theme='dark'] .navbar__item:hover {
-  color: #3399ff; /* Blue on hover (same as icon color) */
+  color: #3399ff; /* Blue on hover */
 }
 
 /* Dark mode search icon color */
@@ -65,30 +111,20 @@ html[data-theme='dark'] .navbar__search {
   color: white;
 }
 
-/* Dark mode 'Sign In' button */
-html[data-theme='dark'] .navbar__item--right {
-  color: white;
-}
-
-
-
-.pagination-nav__link
- {
-    border: 3px solid black; 
-    border-radius: var(--ifm-pagination-nav-border-radius);
-    display: block;
-    height: 100%;
-    line-height: var(--ifm-heading-line-height);
-    padding: var(--ifm-global-spacing);
-    transition: border-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
-
-}  
-
-
-
 /* Dark theme override */
 [data-theme='dark'] .pagination-nav__link {
     border: 3px solid white;
+}
+
+html[data-theme='dark'] .sidebar_njMd {
+  background-color: #001c2e;
+}
+
+
+/* Dark mode hover effect for toggle button */
+html[data-theme='dark'] .toggleButton_gllP:hover {
+  color: #3399ff; /* Optional: text color change */
+  background-color: #001c2e;
 }
 
 

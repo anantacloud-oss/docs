@@ -66,6 +66,8 @@ const config = {
         items: [
           { to: '/docs/devops-foundations', label: 'Docs', position: 'left' },
           { to: '/developer-docs/introduction', label: 'Reference', position: 'left' },
+          { to: 'https://github.com/orgs/anantacloud/discussions', label: 'Knowledge Hub', position: 'right' },
+          { to: '/docs/Need-Help', label: 'Need Help!', position: 'right' },
           { type: 'search', position: 'right' },
         ],
       },
