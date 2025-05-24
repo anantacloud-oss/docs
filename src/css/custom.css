@@ -78,6 +78,51 @@
 }
 
 
+.support-card {
+  flex: 1 1 200px;
+  color: inherit;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+  transition: transform 0.2s ease;
+  display: block;
+  text-align: center; /* Center all inner content */
+}
+
+
+.support-card:hover {
+  cursor: pointer;
+  text-decoration: none !important;
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 2px 2px #001f3f;
+}
+
+
+.support-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+
+.support-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  color: #333;
+}
+
+
+.support-icon {
+  font-size: 35px;
+  color: #007bff;
+  margin: 0 auto 10px auto;
+  display: block;
+}
+
+    
+
 
 /* Make the logo responsive (adjust size on smaller screens) */
 @media (max-width: 768px) {
@@ -127,6 +172,23 @@ html[data-theme='dark'] .toggleButton_gllP:hover {
   background-color: #001c2e;
 }
 
+
+html[data-theme='dark'] .support-card {
+  background-color: #001c2e !important;
+  border: 1px solid white !important;
+  transition: box-shadow 0.3s ease;
+}
+
+
+html[data-theme='dark'] .support-card:hover {
+  box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.4);
+}
+
+
+html[data-theme='dark'] .support-card h3,
+html[data-theme='dark'] .support-card p {
+  color: white !important;
+}
 
 
 

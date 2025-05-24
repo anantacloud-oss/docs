@@ -4,6 +4,7 @@ title: Need-Help
 sidebar_label: Need Help
 ---
 
+import { MdLightbulb, MdPeople, MdEmail } from 'react-icons/md';
 
 # Need Help?
 
@@ -11,16 +12,17 @@ We’re here to assist when you get stuck. Every Ananta Cloud subscription inclu
 
 Need more help? Explore our [paid support plans](#) or connect with our Pro Serve team for personalized services.
 
-
 ## Get Support
 
 <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', marginTop: '20px' }}>
 
-
-  <a href="https://github.com/orgs/gruntwork-io/discussions" target="_blank" rel="noopener noreferrer" style={{ flex: '1 1 200px', textDecoration:    'none', color: 'inherit' }}>
-    <div style={{ border: '1px solid #ddd', padding: '20px', borderRadius: '8px', boxShadow: '0 2px 5px rgba(0,0,0,0.1)', transition: '0.2s ease',            cursor: 'pointer' }}>
+  <a
+    href="https://github.com/orgs/gruntwork-io/discussions"
+    className="support-card"
+    >
+    <div>
       <div style={{ marginBottom: '10px' }}>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="#5a5a5a"><path d="M13 3a5 5 0 0 1 5 5c0 1.4-.6 2.6-1.5 3.5-.4.4         -.5.9-.5 1.4V14h-6v-1.1c0-.5-.2-1-.5-1.4C6.6 10.6 6 9.4 6 8a5 5 0 0 1 5-5h2zm-1 14c-.6 0-1 .4-1 1s.4 1 1 1v2h2v-2c.6 0 1-.4 1-1s-.4-1-1         -1h-2z"/></svg>
+        <MdLightbulb className="support-icon" />
       </div>
       <h3>Our Knowledge Hub</h3>
       <p>Access our Knowledge Hub community for quick help</p>
@@ -28,12 +30,13 @@ Need more help? Explore our [paid support plans](#) or connect with our Pro Serv
   </a>
 
 
-
-
-  <a href="https://anantacloud-community.slack.com/" target="_blank" rel="noopener noreferrer" style={{ flex: '1 1 200px', textDecoration: 'none',    color: 'inherit' }}>
-    <div style={{ border: '1px solid #ddd', padding: '20px', borderRadius: '8px', boxShadow: '0 2px 5px rgba(0,0,0,0.1)', transition: '0.2s ease',           cursor: 'pointer' }}>
+  <a
+    href="https://anantacloud-community.slack.com/"
+    className="support-card"
+    >
+    <div>
       <div style={{ marginBottom: '10px' }}>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="#5a5a5a"><path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8               5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        <MdPeople className="support-icon" />
       </div>
       <h3>Community Support</h3>
       <p>Connect with peers and engineers to solve challenges together</p>
@@ -41,29 +44,20 @@ Need more help? Explore our [paid support plans](#) or connect with our Pro Serv
   </a>
 
 
-
-  <a href="mailto:support@anantacloud.io" style={{ flex: '1 1 200px', textDecoration: 'none', color: 'inherit' }}>
-    <div style={{ border: '1px solid #ddd', padding: '20px', borderRadius: '8px', boxShadow: '0 2px 5px rgba(0,0,0,0.1)', transition: '0.2s ease',           cursor: 'pointer' }}>
+  <a
+    href="mailto:support@anantacloud.io"
+    className="support-card"
+    >
+    <div>
       <div style={{ marginBottom: '10px' }}>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="#5a5a5a"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2                 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <MdEmail className="support-icon" />
       </div>
       <h3>Email Us</h3>
-      <p>Email us at support@anantacloud.io for direct assistance</p>
+      <p>Email us at hello@anantacloud.com for direct assistance</p>
     </div>
   </a>
 
 </div>
-
-
-
-## Chat with Ananta Cloud
-
-You can converse with our engineers in a **private Slack channel** with SLA-based response times.
-
-
-
-## Share Feedback
-
 
 
 
@@ -84,4 +78,3 @@ To access your billing portal:
 3. Click the link sent to your inbox (expires in 5 mins)
 
 For help: `support@anantacloud.io`
-
