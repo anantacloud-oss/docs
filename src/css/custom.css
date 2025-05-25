@@ -121,9 +121,25 @@
   display: block;
 }
 
+
+.custom-schedule-button {
+  background-color: #0070f3;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+
+.custom-schedule-button:hover {
+  background-color: #005bb5;
+  color: #fff;
+}
+
+
     
-
-
 /* Make the logo responsive (adjust size on smaller screens) */
 @media (max-width: 768px) {
   .navbar__logo img {
@@ -188,6 +204,18 @@ html[data-theme='dark'] .support-card:hover {
 html[data-theme='dark'] .support-card h3,
 html[data-theme='dark'] .support-card p {
   color: white !important;
+}
+
+
+html[data-theme='dark'] .custom-schedule-button {
+  background-color: #3291ff;
+  color: #000;
+}
+
+
+html[data-theme='dark'] .custom-schedule-button:hover {
+  background-color: #0070f3;
+  color: #fff;
 }
 
 

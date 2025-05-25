@@ -68,7 +68,11 @@ const config = {
           { to: '/developer-docs/introduction', label: 'Reference', position: 'left' },
           { to: 'https://github.com/orgs/anantacloud/discussions', label: 'Knowledge Hub', position: 'right' },
           { to: '/docs/Need-Help', label: 'Support', position: 'right' },
-          { to: 'https://calendly.com/anantacloud/30min', button: 'Schedule Meeting', position: 'right' },
+          {
+             type: 'html',
+             position: 'right',
+             value: '<a class="navbar__link custom-schedule-button" href="https://calendly.com/anantacloud/30min" target="_blank">Schedule              Meeting</a>',
+          },
           { type: 'search', position: 'right' },
         ],
       },
