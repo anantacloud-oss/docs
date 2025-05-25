@@ -127,7 +127,6 @@
 
 
 
-
 /* Dark theme */
 
 
@@ -194,6 +193,59 @@ html[data-theme='dark'] .footerBottom {
 }
 
 
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+  .heroCustom {
+    font-size: 2rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .card {
+    padding: 16px;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .cardTitle {
+    font-size: 1.1rem;
+  }
+
+  .cardText {
+    font-size: 0.95rem;
+  }
+
+  .footerContent {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footerColumn {
+    min-width: unset;
+  }
+
+  .footerColumn h4 {
+    font-size: 1rem;
+  }
+
+  .footerColumn p,
+  .footerColumn li {
+    font-size: 0.9rem;
+  }
+
+  .footerBottom {
+    font-size: 0.85rem;
+  }
+}
 
 
 

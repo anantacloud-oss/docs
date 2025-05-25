@@ -137,15 +137,6 @@
   color: #fff;
 }
 
-    
-/* Make the logo responsive (adjust size on smaller screens) */
-@media (max-width: 768px) {
-  .navbar__logo img {
-    height: 50px; /* Reduce logo size on smaller screens */
-  }
-}
-
-
 
 
 /* Dark theme */
@@ -155,25 +146,30 @@ html[data-theme='dark'] .navbar {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Bottom shadow */
 }
 
+
 /* Dark mode navbar items text color */
 html[data-theme='dark'] .navbar__item {
   color: white;
 }
+
 
 /* Dark mode hover effect for navbar links */
 html[data-theme='dark'] .navbar__item:hover {
   color: #3399ff; /* Blue on hover */
 }
 
+
 /* Dark mode search icon color */
 html[data-theme='dark'] .navbar__search {
   color: white;
 }
 
+
 /* Dark theme override */
 [data-theme='dark'] .pagination-nav__link {
     border: 3px solid white;
 }
+
 
 html[data-theme='dark'] .sidebar_njMd {
   background-color: #001c2e;
@@ -207,8 +203,40 @@ html[data-theme='dark'] .support-card p {
 
 
 
+/* Responsive styles for mobile screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+  }
 
+  .navbar__logo img {
+    height: 50px;
+    margin: 0 auto 10px auto;
+  }
 
+  .navbar__item {
+    display: block;
+    margin: 0.5rem 0;
+  }
 
+  .menu_SIkG {
+    width: 100%;
+  }
 
+  .support-card {
+    margin-bottom: 1rem;
+  }
 
+  .pagination-nav__link {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .custom-schedule-button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

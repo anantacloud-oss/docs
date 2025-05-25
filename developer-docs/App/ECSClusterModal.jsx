@@ -1,7 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function ECSClusterModal() {
   const [showModal, setShowModal] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth <= 768);
+    }
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <>
@@ -16,6 +26,8 @@ export default function ECSClusterModal() {
           cursor: 'pointer',
           fontSize: '20px',
           lineHeight: '1.2',
+          width: isMobile ? '100%' : 'auto',  // Full width button on mobile
+          boxSizing: 'border-box',
         }}
       >
         View Source
@@ -34,6 +46,7 @@ export default function ECSClusterModal() {
             justifyContent: 'center',
             alignItems: 'center',
             zIndex: 1000,
+            padding: isMobile ? '1rem' : '0',  // Padding for mobile to prevent edges cutoff
           }}
         >
           <div
@@ -41,8 +54,12 @@ export default function ECSClusterModal() {
               backgroundColor: '#fff',
               padding: '2rem',
               borderRadius: '8px',
-              maxWidth: '500px',
+              maxWidth: isMobile ? '100%' : '500px',
+              width: isMobile ? '100%' : 'auto',
               color: '#000',
+              boxSizing: 'border-box',
+              maxHeight: '90vh',
+              overflowY: 'auto',  // Scroll inside modal if content is tall
             }}
           >
             <h3>For Subscribers Only</h3>
@@ -56,6 +73,7 @@ export default function ECSClusterModal() {
                 display: 'flex',
                 justifyContent: 'flex-end',
                 gap: '1rem',
+                flexDirection: isMobile ? 'column' : 'row', // Stack buttons vertically on mobile
               }}
             >
               <button
@@ -69,6 +87,8 @@ export default function ECSClusterModal() {
                   cursor: 'pointer',
                   fontSize: '16px',
                   lineHeight: '1.2',
+                  width: isMobile ? '100%' : 'auto', // Full width on mobile
+                  boxSizing: 'border-box',
                 }}
               >
                 Cancel
@@ -77,6 +97,7 @@ export default function ECSClusterModal() {
                 href="https://github.com/anantacloud/github-actions"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{ width: isMobile ? '100%' : 'auto' }}
               >
                 <button
                   style={{
@@ -88,6 +109,8 @@ export default function ECSClusterModal() {
                     cursor: 'pointer',
                     fontSize: '16px',
                     lineHeight: '1.2',
+                    width: '100%',
+                    boxSizing: 'border-box',
                   }}
                 >
                   Continue to GitHub
@@ -100,4 +123,3 @@ export default function ECSClusterModal() {
     </>
   );
 }
-
