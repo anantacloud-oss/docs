@@ -9,7 +9,7 @@ sidebar_label: Find a Module
 
 ## OpenTofu Compatibility
 
-The Ananta Cloud Infrastructure as Code (IaC) Library is fully compatible with **OpenTofu**. If you encounter any issues while using the Library with OpenTofu, feel free to contact our team at  [support@anantacloud.io](mailto:support@anantacloud.io).
+The Ananta Cloud Infrastructure as Code (IaC) Library is fully compatible with **OpenTofu**. If you encounter any issues while using the Library with OpenTofu, feel free to contact our team at  [support@anantacloud.com](mailto:support@anantacloud.com).
 
 ## Overview
 
