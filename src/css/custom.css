@@ -123,7 +123,7 @@
 
 
 .custom-schedule-button {
-  background-color: #0070f3;
+  background-color: #005bb5;
   color: white;
   padding: 8px 16px;
   border-radius: 6px;
@@ -134,10 +134,8 @@
 
 
 .custom-schedule-button:hover {
-  background-color: #005bb5;
   color: #fff;
 }
-
 
     
 /* Make the logo responsive (adjust size on smaller screens) */
@@ -207,16 +205,9 @@ html[data-theme='dark'] .support-card p {
 }
 
 
-html[data-theme='dark'] .custom-schedule-button {
-  background-color: #3291ff;
-  color: #000;
-}
 
 
-html[data-theme='dark'] .custom-schedule-button:hover {
-  background-color: #0070f3;
-  color: #fff;
-}
+
 
 
 
