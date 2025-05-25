@@ -30,7 +30,7 @@ export default function ECSClusterModal() {
           boxSizing: 'border-box',
         }}
       >
-        View Source
+        View Source Code
       </button>
 
       {showModal && (
@@ -46,7 +46,7 @@ export default function ECSClusterModal() {
             justifyContent: 'center',
             alignItems: 'center',
             zIndex: 1000,
-            padding: isMobile ? '1rem' : '0',  // Padding for mobile to prevent edges cutoff
+            padding: isMobile ? '1rem' : '0', 
           }}
         >
           <div
@@ -64,8 +64,7 @@ export default function ECSClusterModal() {
           >
             <h3>For Subscribers Only</h3>
             <p>
-              This link leads to the private <code>terraform-aws-service-catalog</code> repository visible only to
-              subscribers; everyone else will see a 404.
+              This link points to the private <code>terraform-aws-ecs-service-catalog</code> repository, which is accessible only to subscribers. Non-subscribers will receive a 404 error.
             </p>
             <div
               style={{
@@ -73,7 +72,7 @@ export default function ECSClusterModal() {
                 display: 'flex',
                 justifyContent: 'flex-end',
                 gap: '1rem',
-                flexDirection: isMobile ? 'column' : 'row', // Stack buttons vertically on mobile
+                flexDirection: isMobile ? 'column' : 'row',
               }}
             >
               <button
