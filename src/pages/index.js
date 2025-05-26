@@ -12,9 +12,9 @@ return (
 
   <header className={styles.heroCustom}>
     <div className="container">
-      <h1>Getting Started</h1>
+      <h2>Getting Started</h2>
       <p className={styles.subtitle}>
-        Accelerate the delivery of scalable, resilient infrastructure with Ananta Cloud’s extensive library of ready-to-use modules, tools, and frameworks.
+        Accelerate the delivery of scalable, resilient infrastructure with Ananta Cloud’s extensive library of ready-to-use modules, tools, and frameworks.  Ananta Cloud equips you with everything you need to move faster and more securely.
       </p>
     </div>
   </header>
@@ -53,7 +53,7 @@ return (
 
   <header className={styles.heroCustom}>
     <div className="container">
-      <h1>Built on Trusted Open Source Tools</h1>
+      <h2>Built on Trusted Open Source Tools</h2>
       <p className={styles.subtitle}>
         Ananta Cloud's products are powered by a reliable foundation of open source tools that we actively develop and maintain, ensuring                transparency, stability, and community-driven innovation.
       </p>

@@ -1,3 +1,4 @@
+
 .navbar {
   background-color: white;
   height: 75px; /* Set desired navbar height */
@@ -11,7 +12,7 @@
 /* Custom styling for the navbar links */
 .navbar__item {
   color: black; /* Black color for navbar links */
-  font-size: 1.2rem; /* Set font size for navbar items */
+  font-size: 1rem; /* Set font size for navbar items */
 }
 
 
@@ -34,12 +35,18 @@
   color: black; /* Search bar icon color */
 }
 
+.pagination-nav{
+   display: flex;
+    justify-content: space-between;
+    
+}
 
 .pagination-nav__link
  {
-    border: 3px solid black; 
+    border: 1px solid black; 
     border-radius: var(--ifm-pagination-nav-border-radius);
     display: block;
+   width: 250px;
     height: 100%;
     line-height: var(--ifm-heading-line-height);
     padding: var(--ifm-global-spacing);
@@ -135,6 +142,7 @@
 
 .custom-schedule-button:hover {
   color: #fff;
+   background-color: #094785;
 }
 
 
@@ -167,12 +175,17 @@ html[data-theme='dark'] .navbar__search {
 
 /* Dark theme override */
 [data-theme='dark'] .pagination-nav__link {
-    border: 3px solid white;
+    border: 1px solid white;
+}
+[data-theme='dark'] .pagination-nav__link:hover {
+  
+    box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.4);
 }
 
 
 html[data-theme='dark'] .sidebar_njMd {
   background-color: #001c2e;
+ 
 }
 
 
