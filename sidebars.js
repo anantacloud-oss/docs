@@ -34,7 +34,6 @@ const sidebars = {
       type: 'category',
       label: 'Getting Started',
       items: ['getting-started/setup-checklist'],
-      items: ['getting-started/Createaccount'],
     },
 
          
