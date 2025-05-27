@@ -1,4 +1,6 @@
-
+article h1 {
+  font-size: 2.30em;
+}
 .navbar {
   background-color: white;
   height: 75px; /* Set desired navbar height */

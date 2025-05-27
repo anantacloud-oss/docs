@@ -9,12 +9,11 @@ const sidebars = {
       value: '<strong>Welcome to Ananta Cloud</strong>',
       defaultStyle: true,
     },
-    {
-      type: 'category',
-      label: 'Getting Started',
-      items: ['getting-started/setup-checklist'],
-      
-    },
+  {
+  type: 'category',
+  label: 'Getting Started',
+  items: ['getting-started'],
+},
     {
       type: 'doc',
       label: 'DevOps Foundations',
