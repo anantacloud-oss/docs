@@ -10,31 +10,61 @@ const sidebars = {
       defaultStyle: true,
     },
     {
+      type: 'category',
+      label: 'Getting Started',
+      items: ['getting-started/setup-checklist'],
+      
+    },
+    {
       type: 'doc',
       label: 'DevOps Foundations',
       id: 'devops-foundations',
     },
 
+   
+
+
+    {
+      type: 'category',
+      label: 'Infrastructure As Code (IAC)',
+      items: [
+                    'iac/IaC-Overview', 
+                    'iac/Module-Catalog',
+                    'iac/Service-Catalog',
+
+                 ],
+    },
      {
+      type: 'category',
+      label: 'Cloud Providers',
+      items: [
+                    'cloud-providers/AWS', 
+                    'cloud-providers/Azure',
+                    'cloud-providers/DigitalOcean',
+                    'cloud-providers/GCP',
+                    'cloud-providers/OCI',
+
+                 ],
+    },
+     {
+      type: 'doc',
+      label: 'Security',
+      id: 'Security',
+    },
+     {
+      type: 'doc',
+      label: 'Support',
+      id: 'Support',
+    },
+     {
+      type: 'doc',
+      label: 'Appendices',
+      id: 'Appendices',
+    },
+      {
       type: 'doc',
       label: 'Need Help!',
       id: 'Need-Help',
-    },
-
-
-    {
-      type: 'category',
-      label: 'IaC Best Practices',
-      items: [
-                    'iac/infrastructure-live', 
-                    'iac/iac-platform' ,
-                 ],
-    },
-    {
-      type: 'category',
-      label: 'Getting Started',
-      items: ['getting-started/setup-checklist'],
-      
     },
 
          
