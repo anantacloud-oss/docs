@@ -26,7 +26,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: auto; /* make cards equal height */
+  height: 170px; 
   transition: transform 0.2s ease;
 }
 
@@ -56,7 +56,7 @@
 
 .cardText {
   color: #111;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   line-height: 1.4;
   min-height: auto; 
   text-align: center;
@@ -223,6 +223,10 @@ html[data-theme='dark'] .footerBottom {
 
   .cardText {
     font-size: 0.95rem;
+  }
+  
+  .cardIcon {
+    font-size: 32px;
   }
 
   .footerContent {

@@ -45,8 +45,8 @@
     border: 1px solid black; 
     border-radius: var(--ifm-pagination-nav-border-radius);
     display: block;
-   width: 250px;
-    height: 100%;
+    width: 250px;
+    height: 70px;
     line-height: var(--ifm-heading-line-height);
     padding: var(--ifm-global-spacing);
     transition: border-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
@@ -238,5 +238,35 @@ html[data-theme='dark'] .support-card p {
   .navbar-sidebar__brand img {
     display: none !important;
   }
+
+  .card_M5pr {
+    padding: 0.5rem !important;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .navbar-sidebar__brand{
+    padding: 0 !important;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .toggleButton_gllP{
+    margin-left: 1px;
+  }
+
+  .clean-btn{
+    margin-right: 30px;
+   }
+
+  .navbar-sidebar {
+     width: 290px; 
+   }
+
+  .pagination-nav__link {
+     height: 80px;
+     width: 200px;
+     padding: 10px; 
+  } 
+
 }
 

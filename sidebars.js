@@ -59,14 +59,7 @@ const sidebars = {
       label: 'Appendices',
       id: 'Appendices',
     },
-      
-    {
-      type: 'doc',
-      label: 'Need Help!',
-      id: 'Need-Help',
-    },
-
-         
+               
   ],
 };
 
