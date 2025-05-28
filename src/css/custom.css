@@ -45,8 +45,7 @@
     border: 1px solid black; 
     border-radius: var(--ifm-pagination-nav-border-radius);
     display: block;
-    width: 250px;
-    height: 70px;
+    width: 280px;
     line-height: var(--ifm-heading-line-height);
     padding: var(--ifm-global-spacing);
     transition: border-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
