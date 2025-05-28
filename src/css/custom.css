@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-article h1 {
-  font-size: 2.30em;
-}
->>>>>>> 2e580385336c8261645634900d90f0238b521875
 .navbar {
   background-color: white;
   height: 75px; /* Set desired navbar height */
@@ -239,6 +233,10 @@ html[data-theme='dark'] .support-card p {
 
   .navbar__item {
     margin-bottom: 10px;
+  }
+
+  .navbar-sidebar__brand img {
+    display: none !important;
   }
 }
 

@@ -1,7 +1,3 @@
-/**
- * Sidebar configuration for Gruntwork-style Docs.
- * @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
- */
 const sidebars = {
   tutorialSidebar: [
     {
@@ -9,19 +5,18 @@ const sidebars = {
       value: '<strong>Welcome to Ananta Cloud</strong>',
       defaultStyle: true,
     },
-  {
-  type: 'category',
-  label: 'Getting Started',
-  items: ['getting-started'],
-},
+   
+    {
+     type: 'doc',
+     label: 'Getting Started',
+     id: 'getting-started',
+    },
+
     {
       type: 'doc',
       label: 'DevOps Foundations',
       id: 'devops-foundations',
     },
-
-   
-
 
     {
       type: 'category',
@@ -33,7 +28,8 @@ const sidebars = {
 
                  ],
     },
-     {
+     
+    {
       type: 'category',
       label: 'Cloud Providers',
       items: [
@@ -45,22 +41,26 @@ const sidebars = {
 
                  ],
     },
-     {
+ 
+    {
       type: 'doc',
       label: 'Security',
       id: 'Security',
     },
-     {
+
+    {
       type: 'doc',
       label: 'Support',
       id: 'Support',
     },
-     {
+
+    {
       type: 'doc',
       label: 'Appendices',
       id: 'Appendices',
     },
-      {
+      
+    {
       type: 'doc',
       label: 'Need Help!',
       id: 'Need-Help',
