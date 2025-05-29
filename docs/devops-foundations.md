@@ -4,8 +4,6 @@ title: DevOps Foundations
 sidebar_label: DevOps Foundations
 ---
 
-## Overview of DevOps Foundations
-
 Ananta Cloud's **DevOps Foundations** offers a curated set of foundational components to help organizations build, operate, and manage modern cloud infrastructure using best practices.
 
 Cloud infrastructure today encompasses a wide array of elements—ranging from CI/CD pipelines and secrets management to FinOps and application deployment. Addressing each of these areas independently requires deep technical knowledge, custom tooling, and continuous maintenance.
