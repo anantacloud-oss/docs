@@ -4,7 +4,7 @@ title: DevOps Foundations
 sidebar_label: DevOps Foundations
 ---
 
-# Overview of DevOps Foundations
+## Overview of DevOps Foundations
 
 Ananta Cloud's **DevOps Foundations** offers a curated set of foundational components to help organizations build, operate, and manage modern cloud infrastructure using best practices.
 
@@ -22,7 +22,7 @@ In addition, Ananta Cloud customers benefit from expert guidance to ensure corre
 
 ---
 
-## Available Components
+### Available Components
 
 Ananta Cloud’s **DevOps Foundations** delivers a powerful set of tools designed to streamline and scale cloud infrastructure management:
 
@@ -37,7 +37,7 @@ Built to integrate seamlessly with **OpenTofu/Terraform**, GitHub, and AWS, with
 
 ---
 
-## Extending and Customizing
+### Extending and Customizing
 
 Ananta Cloud provides a flexible platform that empowers users to:
 
