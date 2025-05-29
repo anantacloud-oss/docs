@@ -1,12 +1,12 @@
 ---
-id: introduction
-title: Introduction
-sidebar_label: Introduction
+id: references
+title: References
+sidebar_label: References
 ---
 
 
 
-# Developer Reference
+## Developer Reference
 
 Welcome to the **Reference** section of Ananta Cloud’s documentation site! This section is your comprehensive resource for in-depth information on configuring Ananta Cloud products. 
 
