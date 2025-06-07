@@ -35,7 +35,7 @@ return (
         </Link>
       </div>
 
-      <div className="col col--4 col--offset-2">
+      <div className="col col--4">
         <Link
           to="/developer-docs/find-modules"
           className={styles.card}
@@ -49,7 +49,7 @@ return (
         </Link>
       </div>
 
-      <div className="col col--4 col--offset-2">
+      <div className="col col--6 col--offset-2">
         <Link
           to="/docs/security/overview"
           className={styles.card}
