@@ -12,7 +12,7 @@ const sidebars = {
     },
     {
        type: 'category',
-       label: 'DevOps Foundations',
+       label: 'DevOps',
        items: [
          'devops/overview',
          'devops/cicd'
@@ -44,6 +44,7 @@ const sidebars = {
        type: 'category',
        label: 'Security',
        items: [
+         'security/overview'
          'security/cis-benchmark',
          'security/security-left',
          'security/iam'
