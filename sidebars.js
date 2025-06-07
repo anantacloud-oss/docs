@@ -19,30 +19,30 @@ const sidebars = {
        type: 'category',
        label: 'IaC Best Practices',
        items: [
-         'iac/IaC-Overview', 
-         'iac/Recommended Folder Structure',
-         'iac/Tagging Naming Convention',
-         'iac/Supported IaC Platforms',
-         'iac/Prebuilt IaC Modules'
+         'iac/overview', 
+         'iac/folder-structure',
+         'iac/tagging',
+         'iac/iac-platforms',
+         'iac/prebuilt-iac-modules'
        ],
     },
     {
        type: 'category',
-       label: 'Cloud Providers',
+       label: 'Supported Clouds',
        items: [
-         'cloud-providers/AWS', 
-         'cloud-providers/Azure',
-         'cloud-providers/DigitalOcean',
-         'cloud-providers/GCP',
-         'cloud-providers/OCI',
+         'cloud-providers/aws', 
+         'cloud-providers/azure',
+         'cloud-providers/digital-ocean',
+         'cloud-providers/ocp',
+         'cloud-providers/oci',
        ],
     },
     {
        type: 'category',
        label: 'Security',
        items: [
-         'security/CIS Benchmarking',
-         'security/Shift Security Left'
+         'security/cis-benchmark',
+         'security/security-left'
        ],
     },
     {
