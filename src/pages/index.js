@@ -12,7 +12,7 @@ return (
 
   <header className={styles.heroCustom}>
     <div className="container">
-      <h2>Getting Started</h2>
+      <h3>Getting Started</h3>
       <p className={styles.subtitle}>
         Accelerate the delivery of scalable, resilient infrastructure with Ananta Cloud’s extensive library of ready-to-use modules, tools, and frameworks.  Ananta Cloud equips you with everything you need to move faster and more securely.
       </p>
@@ -23,7 +23,7 @@ return (
     <div className="row">
       <div className="col col--4   col--offset-2">
         <Link
-          to="/docs/devops-foundations"
+          to="/docs/devops"
           className={styles.card}
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
@@ -37,12 +37,12 @@ return (
 
       <div className="col col--4">
         <Link
-          to="/developer-docs/findingmodule"
+          to="/developer-docs/find-modules"
           className={styles.card}
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
           <FaBook className={styles.cardIcon} />
-          <h3 className={styles.cardTitle}>Explore the Ananta Cloud Library</h3>
+          <h3 className={styles.cardTitle}>Explore the Ananta Cloud's IaC Library</h3>
           <p className={styles.cardText}>
             Harness the power of Ananta Cloud’s Library to find exactly the modules you need for building smarter, more efficient infrastructure.
           </p>
@@ -53,10 +53,9 @@ return (
 
   <header className={styles.heroCustom}>
     <div className="container">
-      <h2>Built on Trusted Open Source Tools</h2>
+      <h3>Driven by Open Source Tools Trusted by Experts</h3>
       <p className={styles.subtitle}>
-        Ananta Cloud's products are powered by a reliable foundation of open source tools that we actively develop and maintain, ensuring                transparency, stability, and community-driven innovation.
-      </p>
+        Ananta Cloud leverages a widely recommended suite of open-source tools to build a robust foundation of reusable frameworks. We actively develop and maintain these frameworks to ensure transparency, stability, and community-driven innovation.      </p>
     </div>
   </header>
 
@@ -73,9 +72,9 @@ return (
         <div className={styles.footerColumn}>
           <h4>Quick Links</h4>
           <ul className={styles.footerLinks}>
-            <li><a href="/docs/devops-foundations">Docs</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-            <li><a href="/support">Support</a></li>
+            <li><a href="/docs/devops">Docs</a></li>
+            <li><a href="/docs/contact">Contact Us</a></li>
+            <li><a href="/docs/support">Support</a></li>
           </ul>
         </div>
 
