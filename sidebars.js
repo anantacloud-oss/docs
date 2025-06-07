@@ -11,9 +11,12 @@ const sidebars = {
        id: 'getting-started',
     },
     {
-       type: 'doc',
+       type: 'category',
        label: 'DevOps Foundations',
-       id: 'devops-foundations',
+       items: [
+         'devops/overview',
+         'devops/cicd'
+       ],
     },
     {
        type: 'category',
