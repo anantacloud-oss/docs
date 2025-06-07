@@ -21,7 +21,7 @@ return (
 
  <main className={"container margin-vert--lg"}>
     <div className="row">
-      <div className="col col--4 col--offset-2">
+      <div className="col col--3 col--offset-2">
         <Link
           to="/docs/devops/overview"
           className={styles.card}
@@ -35,7 +35,7 @@ return (
         </Link>
       </div>
 
-      <div className="col col--4">
+      <div className="col col--3">
         <Link
           to="/developer-docs/find-modules"
           className={styles.card}
@@ -49,7 +49,7 @@ return (
         </Link>
       </div>
 
-      <div className="col col--6 col--offset-2">
+      <div className="col col--3 col--offset-2">
         <Link
           to="/docs/security/overview"
           className={styles.card}
