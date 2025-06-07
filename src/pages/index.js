@@ -23,7 +23,7 @@ return (
     <div className="row">
       <div className="col col--4   col--offset-2">
         <Link
-          to="/docs/devops"
+          to="/docs/devops/overview"
           className={styles.card}
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
@@ -72,8 +72,8 @@ return (
         <div className={styles.footerColumn}>
           <h4>Quick Links</h4>
           <ul className={styles.footerLinks}>
-            <li><a href="/docs/devops">Docs</a></li>
-            <li><a href="/docs/contact">Contact Us</a></li>
+            <li><a href="/docs/devops/overview">Documentation</a></li>
+            <li><a href="/docs/contact-us">Contact Us</a></li>
             <li><a href="/docs/support">Support</a></li>
           </ul>
         </div>
