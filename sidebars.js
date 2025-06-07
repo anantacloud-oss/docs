@@ -23,7 +23,7 @@ const sidebars = {
          'iac/folder-structure',
          'iac/tagging',
          'iac/iac-platforms',
-         'iac/prebuilt-iac-modules'
+         'iac/prebuilt-modules'
        ],
     },
     {
