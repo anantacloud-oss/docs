@@ -21,31 +21,45 @@ return (
 
  <main className={"container margin-vert--lg"}>
     <div className="row">
-      <div className="col col--4   col--offset-2">
+      <div className="col col--4 col--offset-2">
         <Link
           to="/docs/devops/overview"
           className={styles.card}
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
-          <MdTravelExplore className={styles.cardIcon} />
-          <h3 className={styles.cardTitle}>Explore DevOps Fundamentals</h3>
+        <MdTravelExplore className={styles.cardIcon} />
+          <h3 className={styles.cardTitle}>DevOps Foundations</h3>
           <p className={styles.cardText}>
             Let Ananta Cloud’s DevOps Foundations be your blueprint for creating and managing top-tier infrastructure.
           </p>
         </Link>
       </div>
 
-      <div className="col col--4">
+      <div className="col col--4 col--offset-2">
         <Link
           to="/developer-docs/find-modules"
           className={styles.card}
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
-          <FaBook className={styles.cardIcon} />
-          <h3 className={styles.cardTitle}>Explore the Ananta Cloud's IaC Library</h3>
-          <p className={styles.cardText}>
-            Harness the power of Ananta Cloud’s Library to find exactly the modules you need for building smarter, more efficient infrastructure.
-          </p>
+        <FaBook className={styles.cardIcon} />
+        <h3 className={styles.cardTitle}>IAC Library</h3>
+        <p className={styles.cardText}>
+           Harness the power of Ananta Cloud’s Library to find exactly the modules you need for building smarter, more efficient infrastructure.
+        </p>
+        </Link>
+      </div>
+
+      <div className="col col--4 col--offset-2">
+        <Link
+          to="/docs/security/overview"
+          className={styles.card}
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+        <FaBook className={styles.cardIcon} />
+        <h3 className={styles.cardTitle}>Security Solutions</h3>
+        <p className={styles.cardText}>
+           Ananta Cloud delivers end-to-end security that fortifies your cloud and DevOps workflows — putting security first, from code to production..
+        </p>
         </Link>
       </div>
     </div>
