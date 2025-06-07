@@ -42,7 +42,8 @@ const sidebars = {
        label: 'Security',
        items: [
          'security/cis-benchmark',
-         'security/security-left'
+         'security/security-left',
+         'security/iam'
        ],
     },
     {
