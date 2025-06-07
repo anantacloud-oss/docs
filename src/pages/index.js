@@ -89,7 +89,7 @@ return (
           <h4>Quick Links</h4>
           <ul className={styles.footerLinks}>
             <li><a href="/docs/devops/overview">Documentation</a></li>
-            <li><a href="/docs/contact-us">Contact Us</a></li>
+            <li><a href="https://www.anantacloud.com/contact-us">Contact Us</a></li>
             <li><a href="/docs/support">Support</a></li>
           </ul>
         </div>
