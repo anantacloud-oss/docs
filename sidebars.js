@@ -44,7 +44,7 @@ const sidebars = {
        type: 'category',
        label: 'Security',
        items: [
-         'security/overview'
+         'security/overview',
          'security/cis-benchmark',
          'security/security-left',
          'security/iam'
