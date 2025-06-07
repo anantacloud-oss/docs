@@ -1,5 +1,5 @@
 ---
-id: iac-platform
+id: iac-platforms
 title: Platform Choice
 sidebar_label: Platform Choice 
 ---
