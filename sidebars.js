@@ -33,7 +33,7 @@ const sidebars = {
          'cloud-providers/aws', 
          'cloud-providers/azure',
          'cloud-providers/digital-ocean',
-         'cloud-providers/ocp',
+         'cloud-providers/gcp',
          'cloud-providers/oci',
        ],
     },
