@@ -7,19 +7,16 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); 
 }
 
-
 /* Custom styling for the navbar links */
 .navbar__item {
   color: black; /* Black color for navbar links */
   font-size: 1rem; /* Set font size for navbar items */
 }
 
-
 /* Change color of navbar links on hover */
 .navbar__item:hover {
   color: blue; /* Blue color when hovering over navbar items */
 }
-
 
 /* Custom styling for the navbar logo */
 .navbar__logo img {
@@ -29,15 +26,13 @@
   margin-top: -18px;     /* Move logo upward */
 }
 
-
 .navbar__search {
   color: black; /* Search bar icon color */
 }
 
 .pagination-nav{
    display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between;   
 }
 
 .pagination-nav__link
@@ -51,7 +46,6 @@
     transition: border-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
 }  
 
-
 .menu_SIkG {
     padding: 0.5rem 0.5rem 0.5rem 0.75rem; /* Top, Right, Bottom, Left */
     scrollbar-gutter: stable;
@@ -59,11 +53,9 @@
     overflow-y: auto; /* enables vertical scrolling when needed */
 }
 
-
 :root {
     --doc-sidebar-width: 275px !important;
 }
-
 
 .toggleButton_gllP {
     -webkit-tap-highlight-color: transparent;
@@ -77,11 +69,9 @@
     margin-left: 10px; /* Add left gap (adjust as needed) */
 }
 
-
 .toggleButton_gllP:hover {
     color: blue; /* Change background to blue on hover */
 }
-
 
 .support-card {
   flex: 1 1 200px;
@@ -95,7 +85,6 @@
   text-align: center; /* Center all inner content */
 }
 
-
 .support-card:hover {
   cursor: pointer;
   text-decoration: none !important;
@@ -103,13 +92,11 @@
   box-shadow: 0px 0px 2px 2px #001f3f;
 }
 
-
 .support-card h3 {
   margin-top: 0;
   margin-bottom: 8px;
   font-weight: 700;
 }
-
 
 .support-card p {
   margin: 0;
@@ -118,14 +105,12 @@
   color: #333;
 }
 
-
 .support-icon {
   font-size: 35px;
   color: #007bff;
   margin: 0 auto 10px auto;
   display: block;
 }
-
 
 .custom-schedule-button {
   background-color: #005bb5;
@@ -137,13 +122,10 @@
   transition: background-color 0.3s ease;
 }
 
-
 .custom-schedule-button:hover {
   color: #fff;
    background-color: #094785;
 }
-
-
 
 /* Dark theme */
 
@@ -152,40 +134,32 @@ html[data-theme='dark'] .navbar {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Bottom shadow */
 }
 
-
 /* Dark mode navbar items text color */
 html[data-theme='dark'] .navbar__item {
   color: white;
 }
-
 
 /* Dark mode hover effect for navbar links */
 html[data-theme='dark'] .navbar__item:hover {
   color: #3399ff; /* Blue on hover */
 }
 
-
 /* Dark mode search icon color */
 html[data-theme='dark'] .navbar__search {
   color: white;
 }
-
 
 /* Dark theme override */
 [data-theme='dark'] .pagination-nav__link {
     border: 1px solid white;
 }
 [data-theme='dark'] .pagination-nav__link:hover {
-  
-    box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.4);
+   box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.4);
 }
-
 
 html[data-theme='dark'] .sidebar_njMd {
   background-color: #001c2e;
- 
 }
-
 
 /* Dark mode hover effect for toggle button */
 html[data-theme='dark'] .toggleButton_gllP:hover {
@@ -193,27 +167,20 @@ html[data-theme='dark'] .toggleButton_gllP:hover {
   background-color: #001c2e;
 }
 
-
 html[data-theme='dark'] .support-card {
   background-color: #001c2e !important;
   border: 1px solid white !important;
   transition: box-shadow 0.3s ease;
 }
 
-
 html[data-theme='dark'] .support-card:hover {
   box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.4);
 }
-
 
 html[data-theme='dark'] .support-card h3,
 html[data-theme='dark'] .support-card p {
   color: white !important;
 }
-
-
-
-
 
 @media (max-width: 768px) {
    .custom-schedule-button {
@@ -266,6 +233,4 @@ html[data-theme='dark'] .support-card p {
      width: 200px;
      padding: 10px; 
   } 
-
 }
-
