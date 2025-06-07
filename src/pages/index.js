@@ -65,7 +65,9 @@ return (
         <div className={styles.footerColumn}>
           <h4>About Ananta Cloud</h4>
           <p>
-            Ananta Cloud simplifies the path to secure, scalable infrastructure using proven IaC tools trusted by the industry.
+            Ananta Cloud simplifies the path to secure, 
+            scalable infrastructure using proven IaC tools 
+            trusted by the industry.
           </p>
         </div>
 
@@ -87,7 +89,7 @@ return (
       </div>
 
       <div className={styles.footerBottom}>
-        <p>© {new Date().getFullYear()} Ananta Cloud. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Ananta Cloud. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
