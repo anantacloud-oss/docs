@@ -19,10 +19,10 @@ const sidebars = {
            type: 'category',
            label: 'CICD',
            items: [
+               'devops/cicd/workflow-hub',
                'devops/cicd/github-actions',
                'devops/cicd/gitlab',
                'devops/cicd/Jenkins',
-               'devops/cicd/intro',
             ],
          },
       ],
