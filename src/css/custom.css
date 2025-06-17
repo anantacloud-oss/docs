@@ -73,6 +73,8 @@
     color: blue; /* Change background to blue on hover */
 }
 
+
+
 .support-card {
   flex: 1 1 200px;
   color: inherit;
@@ -84,6 +86,7 @@
   display: block;
   text-align: center; /* Center all inner content */
 }
+
 
 .support-card:hover {
   cursor: pointer;
@@ -126,6 +129,8 @@
   color: #fff;
    background-color: #094785;
 }
+
+
 
 /* Dark theme */
 

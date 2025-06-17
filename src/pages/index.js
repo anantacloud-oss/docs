@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import styles from './index.module.css';
 import { MdTravelExplore } from 'react-icons/md';
 import { FaBook, FaUserPlus } from 'react-icons/fa';
+import { FaShieldAlt } from 'react-icons/fa'; 
 import Link from '@docusaurus/Link';
 
 export default function Home() {
@@ -21,7 +22,7 @@ return (
 
  <main className={"container margin-vert--lg"}>
     <div className="row">
-      <div className="col col--4 col--offset-2">
+      <div className="col col--4">
         <Link
           to="/docs/devops/overview"
           className={styles.card}
@@ -49,13 +50,14 @@ return (
         </Link>
       </div>
 
-      <div className="col col--4 col--offset-2">
+      <div className="col col--4">
         <Link
           to="/docs/security/overview"
           className={styles.card}
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
-        <FaBook className={styles.cardIcon} />
+       
+        <FaShieldAlt className={styles.cardIcon} />
         <h3 className={styles.cardTitle}>Security Solutions</h3>
         <p className={styles.cardText}>
            Ananta Cloud delivers end-to-end security that fortifies your cloud and DevOps workflows — putting security first, from code to production..
@@ -69,7 +71,7 @@ return (
     <div className="container">
       <h3>Driven by Open Source Tools Trusted by Experts</h3>
       <p className={styles.subtitle}>
-        Ananta Cloud leverages a widely recommended suite of open-source tools to build a robust foundation of reusable frameworks. We actively develop and maintain these frameworks to ensure transparency, stability, and community-driven innovation.      </p>
+        Ananta Cloud leverages a widely recommended suite of open-source tools to build a robust foundation of reusable frameworks. We actively develop and maintain these frameworks to ensure transparency, stability, and community-driven innovation.</p>
     </div>
   </header>
 

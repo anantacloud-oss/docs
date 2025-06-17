@@ -1,0 +1,82 @@
+.workflowHeader {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.workflowHeader h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.workflowHeader p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.skipLink {
+  color: #0b5fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.searchBar {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.suggestionHeading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
+}
+
+.container {
+  padding: 1rem 2rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  padding: 20px;
+  flex: 1 1 calc(33.33% - 24px);
+  max-width: calc(33.33% - 24px);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #0052cc;
+}
+
+.title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  font-size: 0.95rem;
+  color: #555;
+}
+

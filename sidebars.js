@@ -11,13 +11,22 @@ const sidebars = {
        id: 'getting-started',
     },
     {
-       type: 'category',
-       label: 'DevOps',
-       items: [
+      type: 'category',
+      label: 'DevOps',
+      items: [
          'devops/overview',
-         'devops/cicd'
-       ],
-    },
+        {
+           type: 'category',
+           label: 'CICD',
+           items: [
+               'devops/cicd/github-actions',
+               'devops/cicd/gitlab',
+               'devops/cicd/Jenkins',
+               'devops/cicd/intro',
+            ],
+         },
+      ],
+    },  
     {
        type: 'category',
        label: 'IaC Best Practices',
