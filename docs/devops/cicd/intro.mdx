@@ -3,48 +3,153 @@ id: intro
 title: Overview
 sidebar_label: Introduction
 ---
-
-import styles from './Styles.module.css';
-import { FaShieldAlt, FaCogs, FaCloud, FaCodeBranch, FaDatabase, FaDocker, FaLock, FaTools, FaUserShield } from 'react-icons/fa';
-
+ 
+import styles from "./Styles.module.css";
+import {
+  FaShieldAlt,
+  FaCogs,
+  FaCloud,
+  FaCodeBranch,
+  FaDatabase,
+  FaDocker,
+  FaLock,
+  FaTools,
+  FaUserShield,
+} from "react-icons/fa";
+ 
 export const cards = [
-  { title: 'Security', icon: <FaShieldAlt />, text: 'End-to-end security from code to cloud.' },
-  { title: 'CI/CD', icon: <FaCogs />, text: 'Automate build and deploy pipelines.' },
-  { title: 'Cloud Infra', icon: <FaCloud />, text: 'Manage scalable cloud infrastructure.' },
-  { title: 'Source Control', icon: <FaCodeBranch />, text: 'Integrated Git workflows.' },
-  { title: 'Database Ops', icon: <FaDatabase />, text: 'Provision and manage DBs.' },
-  { title: 'Docker Build', icon: <FaDocker />, text: 'Build, tag, and push Docker images.' },
-  { title: 'Secrets Mgmt', icon: <FaLock />, text: 'Handle secrets securely in pipelines.' },
-  { title: 'Tooling', icon: <FaTools />, text: 'Useful developer tools & scripts.' },
-  { title: 'Access Control', icon: <FaUserShield />, text: 'Role-based access & audit logs.' },
+  {
+    title: "Security",
+    subtitle: "By DevSecOps",
+    icon: <FaShieldAlt />,
+    text: "End-to-end security from code to cloud.",
+    buttonText: "Configure",
+    status: "Security",
+    statusColor: "#28a745",
+    isCustom: true,
+  },
+  {
+    title: "CI/CD Pipeline",
+    subtitle: "By GitHub Actions",
+    icon: <FaCogs />,
+    text: "Automate your build and deployment workflows.",
+    buttonText: "Setup",
+    status: "CI/CD",
+    statusColor: "#ff9800",
+    isCustom: true,
+  },
+  {
+    title: "Cloud Infrastructure",
+    subtitle: "By Terraform",
+    icon: <FaCloud />,
+    text: "Provision infrastructure across cloud providers.",
+    buttonText: "Deploy",
+    status: "Infra",
+    statusColor: "#3a86ff",
+    isCustom: true,
+  },
+  {
+    title: "Source Control",
+    subtitle: "By Git Integration",
+    icon: <FaCodeBranch />,
+    text: "Version control with Git-based workflows.",
+    buttonText: "Connect",
+    status: "Git",
+    statusColor: "#8e44ad",
+    isCustom: true,
+  },
+  {
+    title: "Database Ops",
+    subtitle: "By DBaaS",
+    icon: <FaDatabase />,
+    text: "Easily provision and manage your databases.",
+    buttonText: "Launch",
+    status: "Database",
+    statusColor: "#00796b",
+    isCustom: true,
+  },
+  {
+    title: "Docker Build",
+    subtitle: "By Docker Hub",
+    icon: <FaDocker />,
+    text: "Build and push Docker images to registry.",
+    buttonText: "Configure",
+    status: "Docker",
+    statusColor: "#0db7ed",
+    isCustom: true,
+  },
+  {
+    title: "Secrets Mgmt",
+    subtitle: "By Vault",
+    icon: <FaLock />,
+    text: "Securely manage sensitive credentials.",
+    buttonText: "Enable",
+    status: "Secrets",
+    statusColor: "#c0392b",
+    isCustom: true,
+  },
+  {
+    title: "Tooling",
+    subtitle: "By Dev Tools",
+    icon: <FaTools />,
+    text: "Utilize CLI, monitoring, and integrations.",
+    buttonText: "Explore",
+    status: "Tools",
+    statusColor: "#2c3e50",
+    isCustom: true,
+  },
+  {
+    title: "Access Control",
+    subtitle: "By RBAC",
+    icon: <FaUserShield />,
+    text: "Set roles and permissions for your team.",
+    buttonText: "Set Roles",
+    status: "Access",
+    statusColor: "#9c27b0",
+    isCustom: true,
+  },
 ];
-
+ 
 <div className={styles.workflowHeader}>
-  <h1>Choose a workflow</h1>
-  <p>
+<h1>Choose a workflow</h1>
+<p>
     Build, test, and deploy your code. Make code reviews, branch management, and issue triaging work the way you want. Select a workflow to get started.
-  </p>
-  <p>
-    <a href="#" className={styles.skipLink}>Skip this and set up a workflow yourself</a>
-  </p>
-
+</p>
+<p>
+<a href="#" className={styles.skipLink}>Skip this and set up a workflow yourself</a>
+</p>
+ 
   <input
     type="text"
     placeholder="Search workflows"
     className={styles.searchBar}
   />
-
+ 
   <h2 className={styles.suggestionHeading}>Suggested for this repository</h2>
 </div>
-
+ 
 <main className={styles.container}>
-  <div className={styles.grid}>
+<div className={styles.grid}>
     {cards.map((card, idx) => (
-      <div className={styles.card} key={idx}>
-        <div className={styles.icon}>{card.icon}</div>
-        <h3 className={styles.title}>{card.title}</h3>
-        <p className={styles.text}>{card.text}</p>
-      </div>
+<div className={styles.card} key={idx}>
+<div className={styles.icon}>{card.icon}</div>
+<h3 className={styles.title}>{card.title}</h3>
+        {card.subtitle && <p className={styles.subtitle}>{card.subtitle}</p>}
+<p className={styles.text}>{card.text}</p>
+ 
+        {card.isCustom && (
+<div className={styles.cardFooter}>
+<button className={styles.configureButton}>{card.buttonText}</button>
+<span className={styles.status}>
+              {card.status}
+<span
+                className={styles.statusDot}
+                style={{ backgroundColor: card.statusColor }}
+              />
+</span>
+</div>
+        )}
+</div>
     ))}
-  </div>
+</div>
 </main>
