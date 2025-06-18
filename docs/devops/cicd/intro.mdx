@@ -3,8 +3,10 @@ id: workflow-hub
 title: "CICD Workflow Hub"
 sidebar_label: "Overview"
 ---
- 
+
+import React, { useState } from "react";
 import styles from "./Styles.module.css";
+<<<<<<< HEAD
 import { FiSearch } from 'react-icons/fi';
 import {
   FaShieldAlt,
@@ -154,3 +156,36 @@ export const cards = [
     ))}
 </div>
 </main>
+=======
+import WorkflowCards from "./WorkflowCards";
+
+export default function CICDWorkflowHub() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  return (
+    <>
+      <div className={styles.workflowHeader}>
+        <h1>Choose a workflow</h1>
+        <p>
+          Build, test, and deploy your code. Make code reviews, branch management, and issue triaging work the way you want. Select a workflow to get started.
+        </p>
+        <p>
+          <a href="#" className={styles.skipLink}>Skip this and set up a workflow yourself</a>
+        </p>
+
+        <input
+          type="text"
+          placeholder="Search workflows"
+          className={styles.searchBar}
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+
+        <h2 className={styles.suggestionHeading}>Suggested for this repository</h2>
+      </div>
+
+      <WorkflowCards searchTerm={searchTerm} />
+    </>
+  );
+}
+>>>>>>> 59e0631dd6bdb428bfa680d6da1fb3504ba9a31d
