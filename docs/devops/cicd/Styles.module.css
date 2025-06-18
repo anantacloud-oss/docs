@@ -2,23 +2,23 @@
   max-width: 900px;
   margin: auto;
 }
- 
+
 .workflowHeader h1 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
- 
+
 .workflowHeader p {
   font-size: 1rem;
   margin: 0.5rem 0;
 }
- 
+
 .skipLink {
   color: #0b5fff;
   text-decoration: none;
   font-weight: 500;
 }
- 
+
 .searchBar {
   width: 100%;
   max-width: 400px;
@@ -29,43 +29,57 @@
   border-radius: 6px;
   border: 1px solid #ccc;
 }
- 
+
 .suggestionHeading {
   font-size: 1.2rem;
   font-weight: 600;
   margin: 1.5rem 0 1rem;
 }
+.viewAllButton {
+  margin-top: 1rem;
+  background: none;
+  border: none;
+  color: #0b5fff;
+  cursor: pointer;
+  font-weight: 500;
+}
+.notFound {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color:  #0b5fff;
+}
 .container {
   padding: 2rem;
-  max-width: 1800px; /* Adjust based on desired width */
+  max-width: 1800px;
   margin: 0 auto;
 }
- 
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
- 
+
 .card {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 220px;
-  height: 270px; /* ✅ Fixed height */
+  width: 225px;
+  height: 270px;
   transition: transform 0.3s ease;
   text-align: left;
 }
- 
+
 .card:hover {
   transform: translateY(-4px);
 }
- 
+
 .icon {
   font-size: 2rem;
   color: #0052cc;
@@ -74,34 +88,35 @@
   align-items: center;
   margin-bottom: 0.75rem;
 }
+
 .title {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   text-align: center;
 }
- 
+
 .subtitle {
   font-size: 0.85rem;
   color: #555;
   margin-bottom: 0.75rem;
   text-align: center;
 }
- 
+
 .text {
   font-size: 0.95rem;
   color: #888;
   flex-grow: 1;
   text-align: center;
 }
- 
+
 .cardFooter {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 1rem;
 }
- 
+
 .configureButton {
   background-color: #0b5fff;
   color: white;
@@ -113,7 +128,7 @@
   cursor: pointer;
   font-weight: 500;
 }
- 
+
 .status {
   font-size: 0.85rem;
   color: #555;
@@ -121,44 +136,53 @@
   align-items: center;
   gap: 6px;
 }
- 
+
 .statusDot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   display: inline-block;
 }
+
+.categoryHeading {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  color: #1a1a1a;
+}
+
 html[data-theme='dark'] .card {
   background-color: #001c2e !important;
   border: 1px solid #ffffff !important;
   transition: box-shadow 0.3s ease;
 }
- 
+
 html[data-theme='dark'] .card:hover {
   box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.4);
 }
- 
+
 html[data-theme='dark'] .title,
 html[data-theme='dark'] .subtitle,
 html[data-theme='dark'] .text {
   color: #ffffff !important;
 }
- 
+
 html[data-theme='dark'] .subtitle {
   color: #cccccc !important;
- 
 }
- 
+
 html[data-theme='dark'] .status {
   color: #bbbbbb;
 }
- 
+
 html[data-theme='dark'] .configureButton {
   background-color: #024ab6;
   color: white;
 }
- 
+
 html[data-theme='dark'] .statusDot {
   background-color: #ffffff;
 }
- 
+
+html[data-theme='dark'] .categoryHeading {
+  color: white !important;
+}
