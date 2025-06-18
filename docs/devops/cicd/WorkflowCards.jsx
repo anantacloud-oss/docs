@@ -1,174 +1,135 @@
 import React, { useState } from "react";
-import Link from '@docusaurus/Link';
+import Link from "@docusaurus/Link";
 import styles from "./Styles.module.css";
-import {
-  FaShieldAlt,
-  FaCogs,
-  FaCloud,
-  FaCodeBranch,
-  FaDatabase,
-  FaDocker,
-  FaLock,
-  FaUserShield,
-  FaSignature,     
-  FaBug,          
-  FaSearch,
-  FaTools,
-} from "react-icons/fa";
 
 const categorizedCards = [
-   {
-    category: "Deployment",
+  {
+    category: "Infrastructure as a Service",
     items: [
       {
-        title: "Security",
-        subtitle: "By DevSecOps",
-        icon: <FaShieldAlt />,
-        text: "End-to-end security from code to cloud.",
+        title: "Terraform",
+        subtitle: "By HashiCorp",
+        icon: <img src="/img/terraform.svg" />,
+        text: "Provision and manage cloud infrastructure with code",
         buttonText: "Configure",
-        status: "Security",
-        statusColor: "#28a745",
+        status: "IaC",
+        statusColor: "#5c6bc0",
         isCustom: true,
+        link: "/docs/devops/cicd/iac/terraform",
       },
       {
-        title: "Secrets Mgmt",
-        subtitle: "By Vault",
-        icon: <FaLock />,
-        text: "Securely manage sensitive credentials.",
-        buttonText: "Enable",
-        status: "Secrets",
-        statusColor: "#c0392b",
+        title: "Terragrunt",
+        subtitle: "Wrapper for Terraform",
+        icon: <img src="/img/terragrunt.svg" />,
+        text: "Keep your Terraform configurations DRY with Terragrunt",
+        buttonText: "Configure",
+        status: "Terragrunt",
+        statusColor: "#00897b",
         isCustom: true,
+        link: "/docs/devops/cicd/iac/terragrunt",
       },
       {
-        title: "Access Control",
-        subtitle: "By RBAC",
-        icon: <FaUserShield />,
-        text: "Set roles and permissions for your team.",
-        buttonText: "Set Roles",
-        status: "Access",
-        statusColor: "#9c27b0",
+        title: "Pulumi",
+        subtitle: "Modern IaC",
+        icon: <img src="/img/pulumi.svg" />,
+        text: "Use real languages to define and deploy infrastructure",
+        buttonText: "Configure",
+        status: "Pulumi",
+        statusColor: "#ab47bc",
         isCustom: true,
+        link: "/docs/devops/cicd/iac/pulumi",
       },
     ],
   },
   {
-    category: "Security",
+    category: "Top Security Actions",
     items: [
-     {
+      {
         title: "Cosign",
         subtitle: "By Sigstore",
-        icon: <FaSignature />,
+        icon: <img src="/img/cosign.svg" />,
         text: "Sign and verify container images",
-        buttonText: "Verify",
+        buttonText: "Configure",
         status: "Image Signing",
         statusColor: "#007acc",
         isCustom: true,
-     },
-     {
+        link: "/docs/devops/cicd/security/cosign",
+      },
+      {
         title: "Trivy",
         subtitle: "By Aqua Security",
-        icon: <FaBug />,
+        icon: <img src="/img/trivy.svg" />,
         text: "Scan containers, IaC, and source code for vulnerabilities",
-        buttonText: "Scan",
+        buttonText: "Configure",
         status: "Scanner",
         statusColor: "#e67e22",
         isCustom: true,
-     },
-     {
+        link: "/docs/devops/cicd/security/trivy",
+      },
+      {
         title: "Clair",
         subtitle: "By Quay",
-        icon: <FaSearch />,
+        icon: <img src="/img/clair.svg" />,
         text: "Static analysis for vulnerabilities in OCI images",
-        buttonText: "Analyze",
+        buttonText: "Configure",
         status: "Security",
         statusColor: "#8e44ad",
         isCustom: true,
-     },
-
+        link: "/docs/devops/cicd/security/clair",
+      },
     ],
   },
   {
     category: "Continuous Integration",
     items: [
       {
-        title: "CI/CD Pipeline",
-        subtitle: "By GitHub Actions",
-        icon: <FaCogs />,
-        text: "Automate your build and deployment workflows.",
-        buttonText: "Setup",
-        status: "CI/CD",
-        statusColor: "#ff9800",
-        isCustom: true,
-      },
-      {
-        title: "Docker Build",
-        subtitle: "By Docker Hub",
-        icon: <FaDocker />,
-        text: "Build and push Docker images to registry.",
+        title: "Maven Build",
+        subtitle: "By Apache Maven",
+        icon: <img src="/img/maven.svg" />,
+        text: "Manage builds, dependencies, and documentation with Maven.",
         buttonText: "Configure",
-        status: "Docker",
-        statusColor: "#0db7ed",
+        status: "Maven",
+        statusColor: "#1565c0",
         isCustom: true,
+        link: "/docs/devops/cicd/continuous-integration/maven",
       },
       {
-        title: "Source Control",
-        subtitle: "By Git Integration",
-        icon: <FaCodeBranch />,
-        text: "Version control with Git-based workflows.",
-        buttonText: "Connect",
-        status: "Git",
-        statusColor: "#8e44ad",
+        title: "Gradle Build",
+        subtitle: "By Gradle",
+        icon: <img src="/img/gradle.svg" />,
+        text: "Flexible build automation for Java and Android projects.",
+        buttonText: "Configure",
+        status: "Gradle",
+        statusColor: "#388e3c",
         isCustom: true,
+        link: "/docs/devops/cicd/continuous-integration/gradle",
       },
     ],
   },
   {
-    category: "Automation",
+    category: "Version Control",
     items: [
       {
-        title: "Cloud Infrastructure",
-        subtitle: "By Terraform",
-        icon: <FaCloud />,
-        text: "Provision infrastructure across cloud providers.",
-        buttonText: "Deploy",
-        status: "Infra",
-        statusColor: "#3a86ff",
+        title: "Source Control",
+        subtitle: "By Git Integration",
+        icon: <img src="/img/git.svg" />,
+        text: "Version control with Git-based workflows.",
+        buttonText: "Configure",
+        status: "Git",
+        statusColor: "#8e44ad",
         isCustom: true,
-      },
-      {
-        title: "Database Ops",
-        subtitle: "By DBaaS",
-        icon: <FaDatabase />,
-        text: "Easily provision and manage your databases.",
-        buttonText: "Launch",
-        status: "Database",
-        statusColor: "#00796b",
-        isCustom: true,
-      },
-      {
-        title: "Tooling",
-        subtitle: "By Dev Tools",
-        icon: <FaTools />,
-        text: "Utilize CLI, monitoring, and integrations.",
-        buttonText: "Explore",
-        status: "Tools",
-        statusColor: "#2c3e50",
-        isCustom: true,
+        link: "/docs/devops/cicd/version-control/git",
       },
     ],
   },
 ];
 
-
 const categoryToRouteMap = {
-  "Security": "/docs/devops/cicd/security",
-  "Deployment": "/docs/devops/cicd/deployment",
-  "Automation": "/docs/devops/cicd/automation",
+  "Infrastructure as a Service": "/docs/devops/cicd/iac",
+  "Top Security Actions": "/docs/devops/cicd/security",
   "Continuous Integration": "/docs/devops/cicd/continuous-integration",
+  "Version Control": "/docs/devops/cicd/version-control",
 };
-
-
 
 const WorkflowCards = ({ searchTerm = "" }) => {
   const filteredCategories = categorizedCards
@@ -193,10 +154,15 @@ const WorkflowCards = ({ searchTerm = "" }) => {
                 <p className={styles.subtitle}>{card.subtitle}</p>
                 <p className={styles.text}>{card.text}</p>
                 <div className={styles.cardFooter}>
-                  <button className={styles.configureButton}>{card.buttonText}</button>
+                  <Link to={card.link} className={styles.configureButton}>
+                    {card.buttonText}
+                  </Link>
                   <span className={styles.status}>
                     {card.status}
-                    <span className={styles.statusDot} style={{ backgroundColor: card.statusColor }} />
+                    <span
+                      className={styles.statusDot}
+                      style={{ backgroundColor: card.statusColor }}
+                    />
                   </span>
                 </div>
               </div>
