@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from '@docusaurus/Link';
 import styles from "./Styles.module.css";
 import {
   FaShieldAlt,
@@ -8,13 +9,16 @@ import {
   FaDatabase,
   FaDocker,
   FaLock,
-  FaTools,
   FaUserShield,
+  FaSignature,     
+  FaBug,          
+  FaSearch,
+  FaTools,
 } from "react-icons/fa";
 
 const categorizedCards = [
-  {
-    category: "Security",
+   {
+    category: "Deployment",
     items: [
       {
         title: "Security",
@@ -46,6 +50,42 @@ const categorizedCards = [
         statusColor: "#9c27b0",
         isCustom: true,
       },
+    ],
+  },
+  {
+    category: "Security",
+    items: [
+     {
+        title: "Cosign",
+        subtitle: "By Sigstore",
+        icon: <FaSignature />,
+        text: "Sign and verify container images",
+        buttonText: "Verify",
+        status: "Image Signing",
+        statusColor: "#007acc",
+        isCustom: true,
+     },
+     {
+        title: "Trivy",
+        subtitle: "By Aqua Security",
+        icon: <FaBug />,
+        text: "Scan containers, IaC, and source code for vulnerabilities",
+        buttonText: "Scan",
+        status: "Scanner",
+        statusColor: "#e67e22",
+        isCustom: true,
+     },
+     {
+        title: "Clair",
+        subtitle: "By Quay",
+        icon: <FaSearch />,
+        text: "Static analysis for vulnerabilities in OCI images",
+        buttonText: "Analyze",
+        status: "Security",
+        statusColor: "#8e44ad",
+        isCustom: true,
+     },
+
     ],
   },
   {
@@ -84,7 +124,7 @@ const categorizedCards = [
     ],
   },
   {
-    category: "Infrastructure",
+    category: "Automation",
     items: [
       {
         title: "Cloud Infrastructure",
@@ -116,104 +156,57 @@ const categorizedCards = [
         statusColor: "#2c3e50",
         isCustom: true,
       },
-      {
-        title: "Tooling",
-        subtitle: "By Dev Tools",
-        icon: <FaTools />,
-        text: "Utilize CLI, monitoring, and integrations.",
-        buttonText: "Explore",
-        status: "Tools",
-        statusColor: "#2c3e50",
-        isCustom: true,
-      },
-      {
-        title: "Tooling",
-        subtitle: "By Dev rahul",
-        icon: <FaTools />,
-        text: "Utilize CLI, monitoring, and integrations.",
-        buttonText: "Explore",
-        status: "Tools",
-        statusColor: "#2c3e50",
-        isCustom: true,
-      },
     ],
   },
 ];
 
+
+const categoryToRouteMap = {
+  "Security": "/docs/devops/cicd/security",
+  "Deployment": "/docs/devops/cicd/deployment",
+  "Automation": "/docs/devops/cicd/automation",
+  "Continuous Integration": "/docs/devops/cicd/continuous-integration",
+};
+
+
+
 const WorkflowCards = ({ searchTerm = "" }) => {
-  const [expandedCategories, setExpandedCategories] = useState({});
-
-  const toggleCategory = (category) => {
-    setExpandedCategories((prev) => ({
-      ...prev,
-      [category]: !prev[category],
-    }));
-  };
-
   const filteredCategories = categorizedCards
     .map((group) => {
-      const categoryMatch = group.category.toLowerCase().includes(searchTerm.toLowerCase());
-
-      const filteredItems = group.items.filter((card) => {
-        return (
-          card.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          card.subtitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          card.text.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          categoryMatch
-        );
-      });
-
+      const filteredItems = group.items.filter((card) =>
+        card.title.toLowerCase().includes(searchTerm.toLowerCase())
+      );
       return { ...group, items: filteredItems };
     })
     .filter((group) => group.items.length > 0);
 
   return (
     <main className={styles.container}>
-      {filteredCategories.length === 0 ? (
-        <div className={styles.notFound}>Workflow not found.</div>
-      ) : (
-        filteredCategories.map((group, index) => {
-          const isExpanded = expandedCategories[group.category];
-          const itemsToShow = isExpanded ? group.items : group.items.slice(0, 3);
-          const showViewAll = group.items.length > 3;
-
-          return (
-            <div key={index}>
-              <h2 className={styles.categoryHeading}>{group.category}</h2>
-              <div className={styles.grid}>
-                {itemsToShow.map((card, idx) => (
-                  <div className={styles.card} key={idx}>
-                    <div className={styles.icon}>{card.icon}</div>
-                    <h3 className={styles.title}>{card.title}</h3>
-                    {card.subtitle && <p className={styles.subtitle}>{card.subtitle}</p>}
-                    <p className={styles.text}>{card.text}</p>
-                    {card.isCustom && (
-                      <div className={styles.cardFooter}>
-                        <button className={styles.configureButton}>{card.buttonText}</button>
-                        <span className={styles.status}>
-                          {card.status}
-                          <span
-                            className={styles.statusDot}
-                            style={{ backgroundColor: card.statusColor }}
-                          />
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                ))}
+      {filteredCategories.map((group, index) => (
+        <div key={index}>
+          <h2 className={styles.categoryHeading}>{group.category}</h2>
+          <div className={styles.grid}>
+            {group.items.map((card, idx) => (
+              <div className={styles.card} key={idx}>
+                <div className={styles.icon}>{card.icon}</div>
+                <h3 className={styles.title}>{card.title}</h3>
+                <p className={styles.subtitle}>{card.subtitle}</p>
+                <p className={styles.text}>{card.text}</p>
+                <div className={styles.cardFooter}>
+                  <button className={styles.configureButton}>{card.buttonText}</button>
+                  <span className={styles.status}>
+                    {card.status}
+                    <span className={styles.statusDot} style={{ backgroundColor: card.statusColor }} />
+                  </span>
+                </div>
               </div>
-              {showViewAll && (
-                <button
-                  className={styles.viewAllButton}
-                  onClick={() => toggleCategory(group.category)}
-                >
-                  {isExpanded ? "Show Less" : "View All"}
-                </button>
-              )}
-            </div>
-          );
-        })
-      )}
+            ))}
+          </div>
+          <Link className={styles.viewAllButton} to={categoryToRouteMap[group.category]}>
+            View All
+          </Link>
+        </div>
+      ))}
     </main>
   );
 };

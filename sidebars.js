@@ -20,9 +20,10 @@ const sidebars = {
            label: 'CICD',
            items: [
                'devops/cicd/workflow-hub',
-               'devops/cicd/github-actions',
-               'devops/cicd/gitlab',
-               'devops/cicd/Jenkins',
+               'devops/cicd/deployment',
+               'devops/cicd/security',
+               'devops/cicd/continuous-integration',
+               'devops/cicd/automation',
             ],
          },
       ],

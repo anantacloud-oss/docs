@@ -3,15 +3,9 @@
   margin: auto;
 }
 
-.workflowHeader h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
 .workflowHeader p {
   font-size: 1rem;
 }
-
  
 .searchContainer {
   position: relative;
@@ -28,7 +22,6 @@
   top: 8px;
 }
 
-
 .searchBar {
   padding: 6px 10px 6px 34px; 
   width: 360px;             
@@ -38,8 +31,6 @@
   font-size: 1rem;
 }
 
-
-
 .viewAllButton {
   margin-top: 1rem;
   background: none;
@@ -47,6 +38,8 @@
   color: #0b5fff;
   cursor: pointer;
   font-weight: 500;
+  display: block;
+  margin-left: 760px;
 }
 
 .notFound {
@@ -70,7 +63,7 @@
 
 .card {
   background: #fff;
-  border: 1px solid #ddd;
+  border: 2px solid #777777;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   padding: 20px;
@@ -85,6 +78,7 @@
 
 .card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(128, 128, 128, 0.4); 
 }
 
 .icon {
