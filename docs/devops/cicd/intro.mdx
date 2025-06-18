@@ -5,6 +5,7 @@ sidebar_label: "Overview"
 ---
  
 import styles from "./Styles.module.css";
+import { FiSearch } from 'react-icons/fi';
 import {
   FaShieldAlt,
   FaCogs,
@@ -115,17 +116,17 @@ export const cards = [
 <p>
     Build, test, and deploy your code. Make code reviews, branch management, and issue triaging work the way you want. Select a workflow to get started.
 </p>
-<p>
-<a href="#" className={styles.skipLink}>Skip this and set up a workflow yourself</a>
-</p>
+
  
+<div className={styles.searchContainer}>
+  <FiSearch className={styles.searchIcon} />
   <input
     type="text"
     placeholder="Search workflows"
     className={styles.searchBar}
   />
- 
-  <h2 className={styles.suggestionHeading}>Suggested for this repository</h2>
+</div>
+
 </div>
  
 <main className={styles.container}>
