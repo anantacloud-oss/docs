@@ -82,13 +82,21 @@
 }
 
 .icon {
-  font-size: 2rem;
-  color: #0052cc;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 60px; /* ensure container has some height */
   margin-bottom: 0.75rem;
 }
+
+
+.icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
+
 
 .title {
   font-size: 1.1rem;

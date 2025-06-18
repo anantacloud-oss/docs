@@ -4,7 +4,7 @@ import styles from "./Styles.module.css";
 
 const categorizedCards = [
   {
-    category: "Infrastructure as a Service",
+    category: "Infrastructure as a Code",
     items: [
       {
         title: "Terraform",
