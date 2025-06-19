@@ -39,7 +39,6 @@
   cursor: pointer;
   font-weight: 500;
   display: block;
-  margin-left: 760px;
 }
 
 .notFound {
@@ -70,8 +69,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 250px;
-  height: 270px;
+  width: 295px;
+  height: 275px;
   transition: transform 0.3s ease;
   text-align: left;
 }
@@ -117,6 +116,10 @@
   color: #888;
   flex-grow: 1;
   text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;  
+  -webkit-box-orient: vertical;
+  height: 3.6em;
 }
 
 .cardFooter {
@@ -157,6 +160,13 @@
   font-size: 1.5rem;
   margin: 1rem 0 1rem;
   color: #1a1a1a;
+}
+
+.configureButton:hover {
+  background-color: #094bcc;
+  transform: translateY(-2px); 
+  color: white;
+  text-decoration: none;
 }
 
 html[data-theme='dark'] .card {

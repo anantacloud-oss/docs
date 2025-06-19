@@ -20,7 +20,7 @@ const categorizedCards = [
       {
         title: "Terragrunt",
         subtitle: "Wrapper for Terraform",
-        icon: <img src="/img/terragrunt.svg" />,
+        icon: <img src="/img/terragrunt.png" />,
         text: "Keep your Terraform configurations DRY with Terragrunt",
         buttonText: "Configure",
         status: "Terragrunt",
@@ -47,8 +47,8 @@ const categorizedCards = [
       {
         title: "Cosign",
         subtitle: "By Sigstore",
-        icon: <img src="/img/cosign.svg" />,
-        text: "Sign and verify container images",
+        icon: <img src="/img/cosign.png" />,
+        text: "Sign and verify container images to ensure trusted supply chains",
         buttonText: "Configure",
         status: "Image Signing",
         statusColor: "#007acc",
@@ -59,9 +59,9 @@ const categorizedCards = [
         title: "Trivy",
         subtitle: "By Aqua Security",
         icon: <img src="/img/trivy.svg" />,
-        text: "Scan containers, IaC, and source code for vulnerabilities",
+        text: "Comprehensive scanner for containers, IaC, and source code vulnerabilities",
         buttonText: "Configure",
-        status: "Scanner",
+        status: "Vulnerability Scanner",
         statusColor: "#e67e22",
         isCustom: true,
         link: "/docs/devops/cicd/security/trivy",
@@ -69,10 +69,10 @@ const categorizedCards = [
       {
         title: "Clair",
         subtitle: "By Quay",
-        icon: <img src="/img/clair.svg" />,
-        text: "Static analysis for vulnerabilities in OCI images",
+        icon: <img src="/img/clair.png" />,
+        text: "Performs static vulnerability analysis on container images",
         buttonText: "Configure",
-        status: "Security",
+        status: "Security Analysis",
         statusColor: "#8e44ad",
         isCustom: true,
         link: "/docs/devops/cicd/security/clair",
@@ -85,7 +85,7 @@ const categorizedCards = [
       {
         title: "Maven Build",
         subtitle: "By Apache Maven",
-        icon: <img src="/img/maven.svg" />,
+        icon: <img src="/img/maven.png" />,
         text: "Manage builds, dependencies, and documentation with Maven.",
         buttonText: "Configure",
         status: "Maven",
@@ -125,7 +125,7 @@ const categorizedCards = [
 ];
 
 const categoryToRouteMap = {
-  "Infrastructure as a Service": "/docs/devops/cicd/iac",
+  "Infrastructure as a Code": "/docs/devops/cicd/iac",
   "Top Security Actions": "/docs/devops/cicd/security",
   "Continuous Integration": "/docs/devops/cicd/continuous-integration",
   "Version Control": "/docs/devops/cicd/version-control",
