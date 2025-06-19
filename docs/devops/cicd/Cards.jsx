@@ -5,44 +5,6 @@ import styles from "./Styles.module.css";
 
 const categorizedCards = [
   {
-    category: "Infrastructure as a Code",
-    items: [
-      {
-        title: "Terraform",
-        subtitle: "By HashiCorp",
-        icon: <img src="/img/terraform.svg" />,
-        text: "Provision and manage cloud infrastructure with code",
-        buttonText: "Configure",
-        status: "IaC",
-        statusColor: "#5c6bc0",
-        isCustom: true,
-        link: "/docs/devops/cicd/iac/terraform",
-      },
-      {
-        title: "Terragrunt",
-        subtitle: "Wrapper for Terraform",
-        icon: <img src="/img/terragrunt.png" />,
-        text: "Keep your Terraform configurations DRY with Terragrunt",
-        buttonText: "Configure",
-        status: "Terragrunt",
-        statusColor: "#00897b",
-        isCustom: true,
-        link: "/docs/devops/cicd/iac/terragrunt",
-      },
-      {
-        title: "Pulumi",
-        subtitle: "Modern IaC",
-        icon: <img src="/img/pulumi.svg" />,
-        text: "Use real languages to define and deploy infrastructure",
-        buttonText: "Configure",
-        status: "Pulumi",
-        statusColor: "#ab47bc",
-        isCustom: true,
-        link: "/docs/devops/cicd/iac/pulumi",
-      },
-    ],
-  },
-  {
     category: "Top Security Actions",
     items: [
       {
@@ -78,61 +40,78 @@ const categorizedCards = [
         isCustom: true,
         link: "/docs/devops/cicd/security/clair",
       },
-    ],
-  },
-  {
-    category: "Continuous Integration",
-    items: [
       {
-        title: "Maven Build",
-        subtitle: "By Apache Maven",
-        icon: <img src="/img/maven.png" />,
-        text: "Manage builds, dependencies, and documentation with Maven.",
+        title: "Grype",
+        subtitle: "By Anchore",
+        icon: <img src="/img/grype.png" />,
+        text: "Vulnerability scanner for container images and filesystems, compatible with Syft.",
         buttonText: "Configure",
-        status: "Maven",
-        statusColor: "#1565c0",
+        status: "Vulnerability Scanner",
+        statusColor: "#d35400",
         isCustom: true,
-        link: "/docs/devops/cicd/continuous-integration/maven",
+        link: "/docs/devops/cicd/security/grype",
       },
       {
-        title: "Gradle Build",
-        subtitle: "By Gradle",
-        icon: <img src="/img/gradle.svg" />,
-        text: "Flexible build automation for Java and Android projects.",
+        title: "Syft",
+        subtitle: "By Anchore",
+        icon: <img src="/img/syft.png" />,
+        text: "Generates Software Bill of Materials (SBOM) for container images and code projects.",
         buttonText: "Configure",
-        status: "Gradle",
-        statusColor: "#388e3c",
+        status: "SBOM Generator",
+        statusColor: "#16a085",
         isCustom: true,
-        link: "/docs/devops/cicd/continuous-integration/gradle",
+        link: "/docs/devops/cicd/security/syft",
       },
-    ],
-  },
-  {
-    category: "Version Control",
-    items: [
       {
-        title: "Source Control",
-        subtitle: "By Git Integration",
-        icon: <img src="/img/git.svg" />,
-        text: "Version control with Git-based workflows.",
-        buttonText: "Configure",
-        status: "Git",
-        statusColor: "#8e44ad",
-        isCustom: true,
-        link: "/docs/devops/cicd/version-control/git",
+       title: "Kube-bench",
+       subtitle: "By Aqua Security",
+       icon: <img src="/img/kube-bench.png" />,
+       text: "Checks Kubernetes clusters against CIS security benchmarks for best practices.",
+       buttonText: "Configure",
+       status: "Kubernetes Security",
+       statusColor: "#9b59b6",
+       isCustom: true,
+       link: "/docs/devops/cicd/security/kube-bench",
+     },
+     {
+       title: "Kube-hunter",
+       subtitle: "By Aqua Security",
+       icon: <img src="/img/kube-hunter.png" />,
+       text: "Kubernetes penetration testing tool that identifies security risks in clusters.",
+       buttonText: "Configure",
+       status: "Kubernetes PenTest",
+       statusColor: "#2980b9",
+       isCustom: true,
+       link: "/docs/devops/cicd/security/kube-hunter",
+     },
+     {
+       title: "Checkov",
+       subtitle: "By Bridgecrew",
+       icon: <img src="/img/checkov.png" />,
+       text: "Static code analysis tool for securing infrastructure as code (Terraform, CloudFormation).",
+       buttonText: "Configure",
+       status: "IaC Security",
+       statusColor: "#e74c3c",
+       isCustom: true,
+       link: "/docs/devops/cicd/security/checkov",
+     },
+     {
+       title: "Falco",
+       subtitle: "By Sysdig",
+       icon: <img src="/img/falco.jpg" />,
+       text: "Cloud-native runtime security tool for detecting unexpected application behavior.",
+       buttonText: "Configure",
+       status: "Runtime Security",
+       statusColor: "#34495e",
+       isCustom: true,
+       link: "/docs/devops/cicd/security/falco",
       },
     ],
   },
-];
+]; 
 
-const categoryToRouteMap = {
-  "Infrastructure as a Code": "/docs/devops/cicd/iac",
-  "Top Security Actions": "/docs/devops/cicd/security",
-  "Continuous Integration": "/docs/devops/cicd/continuous-integration",
-  "Version Control": "/docs/devops/cicd/version-control",
-};
 
-const WorkflowCards = ({ searchTerm = "" }) => {
+const Cards = ({ searchTerm = "" }) => {
   const filteredCategories = categorizedCards
     .map((group) => {
       const filteredItems = group.items.filter((card) =>
@@ -169,13 +148,10 @@ const WorkflowCards = ({ searchTerm = "" }) => {
               </div>
             ))}
           </div>
-          <Link className={styles.viewAllButton} to={categoryToRouteMap[group.category]}>
-            View All
-          </Link>
         </div>
       ))}
     </main>
   );
 };
 
-export default WorkflowCards;
+export default Cards;
