@@ -10,7 +10,7 @@ const categorizedCards = [
       {
         title: "Terraform",
         subtitle: "By HashiCorp",
-        icon: <img src="/img/terraform.svg" style={{ filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)" }}/>,
+        icon: <img src="/img/terraform.svg" style={{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)" }}/>,
         text: "Provision and manage cloud infrastructure with code",
         buttonText: "Configure",
         status: "IaC",
@@ -21,7 +21,7 @@ const categorizedCards = [
       {
         title: "Terragrunt",
         subtitle: "Wrapper for Terraform",
-        icon: <img src="/img/terragrunt.png" style={{ filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)" }}/>,
+        icon: <img src="/img/terragrunt.png" style={{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)" }}/>,
         text: "Keep your Terraform configurations DRY with Terragrunt",
         buttonText: "Configure",
         status: "Terragrunt",
@@ -32,7 +32,7 @@ const categorizedCards = [
       {
         title: "Pulumi",
         subtitle: "Modern IaC",
-        icon: <img src="/img/pulumi.svg" style={{ filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)" }} />,
+        icon: <img src="/img/pulumi.svg" style={{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)" }} />,
         text: "Use real languages to define and deploy infrastructure",
         buttonText: "Configure",
         status: "Pulumi",
@@ -48,7 +48,7 @@ const categorizedCards = [
       {
         title: "Cosign",
         subtitle: "By Sigstore",
-        icon: <img src="/img/cosign.png"  style={{ filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)" }} />,
+        icon: <img src="/img/cosign.png"  style={{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)" }} />,
         text: "Sign and verify container images to ensure trusted supply chains",
         buttonText: "Configure",
         status: "Image Signing",
@@ -59,7 +59,7 @@ const categorizedCards = [
       {
         title: "Trivy",
         subtitle: "By Aqua Security",
-        icon: <img src="/img/trivy.svg"  style={{ filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)" }} />,
+        icon: <img src="/img/trivy.png"  style={{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)" }} />,
         text: "Comprehensive scanner for containers, IaC, and source code vulnerabilities",
         buttonText: "Configure",
         status: "Vulnerability Scanner",
@@ -70,7 +70,7 @@ const categorizedCards = [
       {
         title: "Clair",
         subtitle: "By Quay",
-        icon: <img src="/img/clair.png" style={{ filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)" }} />,
+        icon: <img src="/img/clair.png" style={{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)" }} />,
         text: "Performs static vulnerability analysis on container images",
         buttonText: "Configure",
         status: "Security Analysis",
@@ -86,7 +86,7 @@ const categorizedCards = [
       {
         title: "Maven Build",
         subtitle: "By Apache Maven",
-        icon: <img src="/img/maven.png"  style={{ width: "135px" , height: "30px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)"}}/>,
+        icon: <img src="/img/maven.png"  style={{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)"}}/>,
         text: "Manage builds, dependencies, and documentation with Maven.",
         buttonText: "Configure",
         status: "Maven",
@@ -97,7 +97,7 @@ const categorizedCards = [
       {
         title: "Gradle Build",
         subtitle: "By Gradle",
-        icon: <img src="/img/gradle.svg" style={{ filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)" }} />,
+        icon: <img src="/img/gradle.svg" style={{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)" }} />,
         text: "Flexible build automation for Java and Android projects.",
         buttonText: "Configure",
         status: "Gradle",
@@ -113,7 +113,7 @@ const categorizedCards = [
       {
         title: "Source Control",
         subtitle: "By Git Integration",
-        icon: <img src="/img/git.svg" style={{ filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)" }} />,
+        icon: <img src="/img/git.svg" style={{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(600%)" }} />,
         text: "Version control with Git-based workflows.",
         buttonText: "Configure",
         status: "Git",
