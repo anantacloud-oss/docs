@@ -70,7 +70,7 @@ const sidebars = {
 
  {
       type: 'category',
-      label: 'Infrastructure as Code',
+      label: 'IAC',
       items: [
         {
           type: 'doc',
