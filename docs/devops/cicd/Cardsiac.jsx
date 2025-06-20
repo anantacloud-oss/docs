@@ -38,7 +38,7 @@ const categorizedCards = [
         status: "Security Analysis",
         statusColor: "#8e44ad",
         isCustom: true,
-        link: "/developer-docs/security/pulumi",
+        link: "/developer-docs/iac/pulumi",
       },
       
     ],
