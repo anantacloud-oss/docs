@@ -65,7 +65,61 @@ const sidebars = {
        label: 'Checkov',
       },
   ],
-}
+},
+
+
+ {
+      type: 'category',
+      label: 'Infrastructure as Code',
+      items: [
+        {
+          type: 'doc',
+          id: 'iac/terraform',
+          label: 'Terraform',
+        },
+        {
+          type: 'doc',
+          id: 'iac/terragrunt',
+          label: 'Terragrunt',
+        },
+        {
+          type: 'doc',
+          id: 'iac/pulumi',
+          label: 'Pulumi',
+        },
+      ],
+    },
+
+    // NEW: Continuous Integration
+    {
+      type: 'category',
+      label: 'Continuous Integration',
+      items: [
+        {
+          type: 'doc',
+          id: 'continuous-integration/maven',
+          label: 'Maven',
+        },
+        {
+          type: 'doc',
+          id: 'continuous-integration/gradle',
+          label: 'Gradle',
+        },
+      ],
+    },
+
+    // NEW: Version Control
+    {
+      type: 'category',
+      label: 'Version Control',
+      items: [
+        {
+          type: 'doc',
+          id: 'version-control/git',
+          label: 'Git',
+        },
+      ],
+    },
     
   ],
 };

@@ -3,3 +3,41 @@ id: iac
 title: iac
 sidebar_label: IAC
 ---
+
+
+import React, { useState } from "react";
+import styles from "./Styles.module.css";
+import { FiSearch } from 'react-icons/fi';
+
+import Cardsiac from "./Cardsiac";
+
+export default function CICDWorkflowHub() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  return (
+    <>
+      <div className={styles.workflowHeader}>
+        <p>
+          Explore essential tools to secure your CI/CD pipelines, container images, Kubernetes clusters, and infrastructure as code. Enhance your DevSecOps workflow with scanning,           monitoring, and runtime protection capabilities.
+        </p>
+
+        <div className={styles.searchContainer}>
+             <FiSearch className={styles.searchIcon} />
+                <input
+                     type="text"
+                     placeholder="Search workflows"
+                     className={styles.searchBar}
+                     value={searchTerm}
+                     onChange={(e) => setSearchTerm(e.target.value)}
+                 />
+        </div>
+
+
+      </div>
+
+      <Cards searchTerm={searchTerm} />
+    </>
+  );
+}
+
+
