@@ -19,7 +19,7 @@ const sidebars = {
            type: 'category',
            label: 'CICD',
            items: [
-               'devops/cicd/intro',
+               'devops/cicd/github-actions',
                'devops/cicd/iac',
                'devops/cicd/security',
                'devops/cicd/continuous-integration',
