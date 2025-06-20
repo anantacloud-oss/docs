@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function ECSClusterModal() {
+export default function Modalbutton() {
   const [showModal, setShowModal] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -30,7 +30,7 @@ export default function ECSClusterModal() {
           boxSizing: 'border-box',
         }}
       >
-        View Source Code
+        Subscription
       </button>
 
       {showModal && (
@@ -120,5 +120,6 @@ export default function ECSClusterModal() {
         </div>
       )}
     </>
+
   );
 }

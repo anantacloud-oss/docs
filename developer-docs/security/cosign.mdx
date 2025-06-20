@@ -1,0 +1,114 @@
+---
+id: cosign
+title: Cosign Github Action
+sidebar_label: Cosign
+---
+
+
+import Modalbutton from './Modalbutton';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Cosign GitHub Action
+
+
+This documentation outlines the usage of GitHub Actions for signing and verifying container images 
+
+
+<Modalbutton />
+
+---
+
+## 🔐 Sign Container Images
+
+### Inputs
+
+| Name            | Description                                                           | Required |
+|-----------------|-----------------------------------------------------------------------|----------|
+| `containers`    | Comma-separated list of container image names (without registry)      | ✅ Yes   |
+| `registry`      | Container registry base (e.g., `ghcr.io/owner`)                       | ✅ Yes   |
+| `registry-token`| Token used to authenticate with the registry (usually `${{ secrets.GITHUB_TOKEN }}`) | ✅ Yes |
+| `signing-secret`| Base64-encoded private key for signing (e.g., `${{ secrets.SIGNING_SECRET }}`) | ✅ Yes |
+| `tags`          | Tags to apply when signing (e.g., `latest`, `v1.0.0`)                 | ✅ Yes   |
+
+### Example
+
+```yaml
+jobs:
+  sign-images:
+    runs-on: ubuntu-latest
+    name: Sign container images with Cosign
+    steps:
+      - name: Sign containers
+        uses: EyeCantCU/cosign-action/sign@v0.1.2
+        with:
+          containers: silverblue-main, kinoite-main
+          registry: ghcr.io/ublue-os
+          registry-token: ${{ secrets.GITHUB_TOKEN }}
+          signing-secret: ${{ secrets.SIGNING_SECRET }}
+          tags: latest
+
+```
+
+✅ Verify Container Signatures
+
+
+| Name            | Description                                                       | Required |
+| --------------- | ----------------------------------------------------------------- | -------- |
+| `containers`    | Comma-separated list of full image references (e.g., `image:tag`) | ✅ Yes    |
+| `registry`      | Container registry base (e.g., `ghcr.io/org`)                     | ✅ Yes    |
+| `pubkey`        | Public key URL or value used to verify the signature              | ✅ Yes\*  |
+| `cert-identity` | Identity to verify from certificate (alternative to pubkey)       | ✅ Yes\*  |
+| `oidc-issuer`   | OIDC issuer for identity-based verification                       | ✅ Yes\*  |
+| `fail-silently` | If set to `'true'`, workflow won't fail on verification error     | ❌ No     |
+
+
+🔹 Use either pubkey OR the combination of cert-identity and oidc-issuer
+
+
+
+## Examples
+
+### Example 1
+
+
+```yaml
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    name: Verify container with Cosign
+    steps:
+      - name: Verify container
+        uses: EyeCantCU/cosign-action/verify@v0.1.2
+        with:
+          containers: silverblue-main:latest, kinoite-main:latest
+          registry: ghcr.io/ublue-os
+          pubkey: https://raw.githubusercontent.com/ublue-os/main/main/cosign.pub
+```
+
+
+### Example 2
+
+
+```yaml
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    name: Verify container with Cosign using OIDC
+    steps:
+      - name: Verify container
+        uses: EyeCantCU/cosign-action/verify@v0.1.2
+        with:
+          containers: bash, busybox, caddy
+          registry: cgr.dev/chainguard
+          cert-identity: https://github.com/chainguard-images/images/.github/workflows/release.yaml@refs/heads/main
+          oidc-issuer: https://token.actions.githubusercontent.com
+
+```
+
+
+
+
+
+

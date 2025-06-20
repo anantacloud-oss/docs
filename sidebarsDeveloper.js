@@ -1,7 +1,3 @@
-/**
- * Sidebar configuration for Gruntwork-style Docs.
- * @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
- */
 const sidebars = {
   tutorialSidebar: [
       {
@@ -20,23 +16,57 @@ const sidebars = {
       defaultStyle: true,
     },
     {
-      type: 'doc',
-      label: 'Find a Module',
-      id: 'find-modules',
-    },
-    {
       type: 'category',
-      label: 'Service Catalog',
+      label: 'Security Tools',
       items: [
-        {
-           type: 'category',
-           label: 'Services Orchestration',
-           items: [
-             'App/ecs-cluster',
-           ],
-         },
-      ],
-   },       
+     {
+       type: 'doc',
+       id: 'security/cosign',
+       label: 'Cosign',
+      },
+      {
+      type: 'doc',
+      id: 'security/trivy',
+      label: 'Trivy',
+      },
+     {
+      type: 'doc',
+      id: 'security/clair',
+      label: 'Clair',
+     },
+     {
+      type: 'doc',
+      id: 'security/syft',
+      label: 'Syft',
+     },
+     {
+      type: 'doc',
+      id: 'security/grype',
+      label: 'Grype',
+     },
+     {
+      type: 'doc',
+      id: 'security/falco',
+      label: 'Falco',
+      },
+     {
+      type: 'doc',
+      id: 'security/kube-bench',
+      label: 'Kube-bench',
+      },
+      {
+       type: 'doc',
+       id: 'security/kube-hunter',
+       label: 'Kube-hunter',
+      },
+      {
+       type: 'doc',
+       id: 'security/Checkov',
+       label: 'Checkov',
+      },
+  ],
+}
+    
   ],
 };
 
