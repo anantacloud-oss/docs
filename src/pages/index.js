@@ -38,7 +38,7 @@ return (
 
       <div className="col col--4">
         <Link
-          to="/developer-docs/find-modules"
+          to="/developer-docs/introduction"
           className={styles.card}
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
