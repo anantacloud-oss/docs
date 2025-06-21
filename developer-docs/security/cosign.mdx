@@ -10,10 +10,10 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-## Cosign GitHub Action
+## 🔹Cosign GitHub Action
 Cosign is an open-source tool developed by the Sigstore project that enables secure signing, verification, and storage of container images and other artifacts. It supports keyless signing using OIDC identities, traditional key-based signing, and integrates seamlessly with CI/CD pipelines. Cosign helps ensure the integrity and provenance of software artifacts, making it a critical component for securing supply chains in modern DevOps workflows.
 
-### Key Features of Cosign
+### 🔹Key Features of Cosign
 - **Keyless Signing:** Sign artifacts using OIDC identities (e.g., GitHub Actions, Google, Microsoft), eliminating the need to manage long-lived keys.
 
 - **Traditional Key Support:** Supports signing and verification with private/public key pairs and KMS-backed keys (AWS KMS, GCP KMS, Azure Key Vault, etc.).
@@ -32,20 +32,29 @@ As part of **Ananta Cloud’s** DevSecOps capabilities, we've implemented a stan
 
 This integration ensures artifact integrity, supports keyless signing with OIDC, and enforces security best practices across all environments — with minimal setup.
 
-### ✅ What It Does?
+### 🔹 What It Does?
 - Automates Cosign signing and verification in your GitHub workflows.
 - Supports both keyless (OIDC-based) and key-based signing.
 - Publishes signed container images with attached metadata (e.g., SBOMs, attestations).
 - Verifies image signatures before deployment.
 - Integrates seamlessly with Ananta Cloud’s broader security and compliance framework.
 
+### 🔹 Benefits of Using Ananta Cloud’s Cosign Action
+- **Security by Default:** Enforces signature verification as part of your build and release pipelines.
+
+- **Simplified Key Management:** Use OIDC for keyless signing—no long-lived credentials required.
+
+- **Auditability:** All signed artifacts are traceable and verifiable using transparency logs.
+
+- **Out-of-the-Box Integration:** Easily adoptable across multiple projects with consistent standards.
+
+- **Enhanced Supply Chain Security:** Supports in-toto attestations, SBOM generation, and Rekor transparency log publishing.
+
 <Modalbutton />
 
 ---
 
-## 🔐 Sign Container Images
-
-### Inputs
+### 🔹Supported Inputs
 
 | Name            | Description                                                           | Required |
 |-----------------|-----------------------------------------------------------------------|----------|
