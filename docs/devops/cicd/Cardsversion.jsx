@@ -8,17 +8,10 @@ const categorizedCards = [
     category: "Version Control",
     items: [
       {
-<<<<<<< HEAD
         title: "Git",
         subtitle: "By Linus Torvalds",
         icon: <img src="/img/cosign.webp" style= {{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"}} />,
         text: "Version control with Git-based workflows",
-=======
-        title: "Cosign",
-        subtitle: "Owner: Ananta Cloud",
-        icon: <img src="/img/cosign.webp" style= {{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"}} />,
-        text: "Build trust into your supply chain with cryptographic signatures.",
->>>>>>> 8ad5ca7a1da60f48d81d20ff1d9bf2589937696c
         buttonText: "Configure",
         status: "Version Control",
         statusColor: "#007acc",
