@@ -8,7 +8,7 @@ export default function Modalbutton() {
     function handleResize() {
       setIsMobile(window.innerWidth <= 768);
     }
-    handleResize(); // Initial check
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -26,7 +26,7 @@ export default function Modalbutton() {
           cursor: 'pointer',
           fontSize: '20px',
           lineHeight: '1.2',
-          width: isMobile ? '100%' : 'auto',  // Full width button on mobile
+          width: isMobile ? '100%' : 'auto', 
           boxSizing: 'border-box',
         }}
       >
@@ -59,7 +59,7 @@ export default function Modalbutton() {
               color: '#000',
               boxSizing: 'border-box',
               maxHeight: '90vh',
-              overflowY: 'auto',  // Scroll inside modal if content is tall
+              overflowY: 'auto',
             }}
           >
             <h3>For Subscribers Only</h3>
@@ -84,9 +84,9 @@ export default function Modalbutton() {
                   border: 'none',
                   borderRadius: '8px',
                   cursor: 'pointer',
-                  fontSize: '16px',
+                  fontSize: '12px',
                   lineHeight: '1.2',
-                  width: isMobile ? '100%' : 'auto', // Full width on mobile
+                  width: isMobile ? '100%' : 'auto',
                   boxSizing: 'border-box',
                 }}
               >
@@ -106,7 +106,7 @@ export default function Modalbutton() {
                     border: 'none',
                     borderRadius: '8px',
                     cursor: 'pointer',
-                    fontSize: '16px',
+                    fontSize: '12px',
                     lineHeight: '1.2',
                     width: '100%',
                     boxSizing: 'border-box',
@@ -120,6 +120,5 @@ export default function Modalbutton() {
         </div>
       )}
     </>
-
   );
 }
