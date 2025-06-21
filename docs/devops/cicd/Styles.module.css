@@ -84,7 +84,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px; /* ensure container has some height */
+  height: 60px; 
   margin-bottom: 0.75rem;
 }
 
@@ -203,3 +203,73 @@ html[data-theme='dark'] .statusDot {
 html[data-theme='dark'] .categoryHeading {
   color: white !important;
 }
+
+
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .searchBar {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .workflowHeader,
+  .searchBar {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .searchContainer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .searchIcon {
+    left: 10px;
+    top: 10px;
+  }
+
+  .searchBar {
+    padding-left: 34px;
+    height: 36px;
+  }
+
+  .card {
+    height: auto;
+    padding: 16px;
+  }
+
+  .icon {
+    height: 50px;
+  }
+
+  .categoryHeading {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .viewAllButton {
+    text-align: center;
+    width: 100%;
+  }
+}
+

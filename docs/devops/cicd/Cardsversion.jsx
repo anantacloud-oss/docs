@@ -8,12 +8,12 @@ const categorizedCards = [
     category: "Version Control",
     items: [
       {
-        title: "Cosign",
-        subtitle: "By Sigstore",
+        title: "Git",
+        subtitle: "By Linus Torvalds",
         icon: <img src="/img/cosign.webp" style= {{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"}} />,
-        text: "Sign and verify container images to ensure trusted supply chains",
+        text: "Version control with Git-based workflows",
         buttonText: "Configure",
-        status: "Image Signing",
+        status: "Version Control",
         statusColor: "#007acc",
         isCustom: true,
         link: "/developer-docs/version-control/git",    
