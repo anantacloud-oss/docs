@@ -10,10 +10,25 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-# Cosign GitHub Action
+## Cosign GitHub Action
 
 
-This documentation outlines the usage of GitHub Actions for signing and verifying container images 
+Cosign is an open-source tool developed by the Sigstore project that enables secure signing, verification, and storage of container images and other artifacts. It supports keyless signing using OIDC identities, traditional key-based signing, and integrates seamlessly with CI/CD pipelines. Cosign helps ensure the integrity and provenance of software artifacts, making it a critical component for securing supply chains in modern DevOps workflows.
+
+### Key Features
+- **Keyless Signing:** Sign artifacts using OIDC identities (e.g., GitHub Actions, Google, Microsoft), eliminating the need to manage long-lived keys.
+
+- **Traditional Key Support:** Supports signing and verification with private/public key pairs and KMS-backed keys (AWS KMS, GCP KMS, Azure Key Vault, etc.).
+
+- **Container Image Signing:** Attach signatures, SBOMs, and attestations directly to container images without modifying the image itself.
+
+- **Verification:** Easily verify signatures and provenance metadata with public transparency logs (e.g., Rekor).
+
+- **Integration Friendly:** Designed for seamless integration with CI/CD pipelines and tools like Kubernetes, Tekton, and GitHub Actions.
+
+- **Artifact Support:** Beyond containers, Cosign can sign and verify other artifact types like files and blobs.
+
+Cosign is part of a growing ecosystem focused on improving supply chain security and is widely used in production environments.
 
 
 <Modalbutton />
