@@ -8,17 +8,10 @@ const categorizedCards = [
     category: "Continuous Integration",
     items: [
       {
-<<<<<<< HEAD
         title: "Maven",
         subtitle: "By Apache",
         icon: <img src="/img/maven.png" style= {{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"}} />,
         text: "Manage builds, dependencies, and documentation with Maven",
-=======
-        title: "Cosign",
-        subtitle: "Owner: Ananta Cloud",
-        icon: <img src="/img/cosign.webp" style= {{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"}} />,
-        text: "Build trust into your supply chain with cryptographic signatures.",
->>>>>>> 8ad5ca7a1da60f48d81d20ff1d9bf2589937696c
         buttonText: "Configure",
         status: "Build Automation",
         statusColor: "#007acc",
@@ -26,17 +19,10 @@ const categorizedCards = [
         link: "/developer-docs/continuous-integration/maven",    
       },
       {
-<<<<<<< HEAD
         title: "Gradle",
         subtitle: "By Gradle Inc.",
         icon: <img src="/img/gradle.png"  style= {{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"}} />,
         text: "Flexible build automation for Java and Android projects",
-=======
-        title: "Trivy",
-        subtitle: "By Aqua Security",
-        icon: <img src="/img/trivy.png"  style= {{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"}} />,
-        text: "Comprehensive scanner for containers, IaC, and source code vulnerabilities",
->>>>>>> 8ad5ca7a1da60f48d81d20ff1d9bf2589937696c
         buttonText: "Configure",
         status: "Build Automation",
         statusColor: "#e67e22",
