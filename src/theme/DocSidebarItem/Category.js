@@ -2,12 +2,9 @@ import React from 'react';
 import OriginalCategory from '@theme-original/DocSidebarItem/Category';
 import { FaBook, FaCloud, FaShieldAlt, FaToolbox } from 'react-icons/fa';
 
-// Map category labels to icons
-const iconMap = {
- 
+const iconMap = { 
   'Infrastructure As Code (IAC)': <FaToolbox style={{ marginRight: '0.5rem' }} />,
   'Cloud Providers': <FaCloud style={{ marginRight: '0.5rem' }} />,
-  
 };
 
 export default function CategoryWithIcons(props) {
