@@ -9,9 +9,9 @@ const categorizedCards = [
     items: [
       {
         title: "Cosign",
-        subtitle: "By Sigstore",
-        icon: <img src="/img/cosign.webp" style= {{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"}} />,
-        text: "Sign and verify container images to ensure trusted supply chains",
+        subtitle: "Owner: Ananta Cloud",
+        icon: <img src="/img/cosign.webp" style= {{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"}} />,
+        text: "Build trust into your supply chain with cryptographic signatures.",
         buttonText: "Configure",
         status: "Image Signing",
         statusColor: "#007acc",
@@ -21,7 +21,7 @@ const categorizedCards = [
       {
         title: "Trivy",
         subtitle: "By Aqua Security",
-        icon: <img src="/img/trivy.png"  style= {{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"}} />,
+        icon: <img src="/img/trivy.png"  style= {{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"}} />,
         text: "Comprehensive scanner for containers, IaC, and source code vulnerabilities",
         buttonText: "Configure",
         status: "Vulnerability Scanner",
@@ -32,7 +32,7 @@ const categorizedCards = [
       {
         title: "Clair",
         subtitle: "By Quay",
-        icon: <img src="/img/clair.png"  style={{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"}} />,
+        icon: <img src="/img/clair.png"  style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"}} />,
         text: "Performs static vulnerability analysis on container images",
         buttonText: "Configure",
         status: "Security Analysis",
