@@ -1,5 +1,30 @@
 ---
 id: tagging
-title: Tagging Naming Conventions
+title: Labeling & Tagging
 sidebar_label: Tagging
 ---
+
+Consistent labeling and tagging is a critical practice in Infrastructure as Code (IaC), enabling better resource organization, cost tracking, compliance, and automation across cloud environments. At Ananta Cloud, we enforce a standardized tagging strategy across all prebuilt and custom IaC modules to ensure every deployed resource is easily identifiable and traceable.
+
+Our approach ensures that each resource includes a core set of labels — such as environment, project, owner, and cost center — along with provider-specific metadata. These tags help teams manage infrastructure more effectively, integrate with governance tools, and align with organizational policies for security and accountability.
+
+###nRecommended Naming Conventions for Tags and Labels:
+
+To maintain clarity and consistency, we recommend adopting clear naming conventions for tags and labels across your cloud resources:
+
+- **Environment:** Use standardized short names such as dev, staging, prod, or qa to easily distinguish deployment stages.
+- **Project or Application:** Use lowercase, hyphen-separated names like ananta-core, payment-service, or web-frontend.
+- **Owner or Team:** Use consistent team names or identifiers, for example team-devops, team-data, or team-security.
+- **Cost Center:** Use formal cost center codes provided by your finance department, e.g., CC-1234 or FIN-5678.
+- **Lifecycle or Managed By:** Indicate whether a resource is managed manually or automated (manual, terraform, ananta).
+- **Compliance Tags:** Include tags like pci_compliant=true or gdpr_scope=yes to identify regulatory boundaries.
+- **Region or Zone:** Add geographic identifiers like us-east-1, eu-west-2, or asia-south1 for location-based resource management.
+
+### Additional Best Practices:
+
+- **Use lowercase letters and avoid spaces:** This prevents issues with case sensitivity and improves script compatibility.
+- **Limit tag key and value length:** Most cloud providers have character limits (usually 128 characters for keys and 256 for values).
+- **Avoid special characters:** Stick to alphanumeric, dashes (-), and underscores (_) to maintain compatibility.
+- **Document your tag policy:** Ensure your team has a clear reference guide to tag usage and conventions.
+- **Automate tagging:** Embed tag application in your IaC modules to enforce consistency and reduce human error.
+
