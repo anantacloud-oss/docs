@@ -57,7 +57,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);  
-  gap: 30px;
+  gap: 20px;
 }
 
 .card {
@@ -69,8 +69,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 290px;
-  height: 290px;
+  width: 280px;
+  height: 270px;
   transition: transform 0.3s ease;
   text-align: left;
 }
@@ -131,12 +131,13 @@
   background-color: #0b5fff;
   color: white;
   border: none;
-  width: 95px;
-  padding: 6px 14px;
+  width: 80px;
+  padding: 4px 6px;
   border-radius: 6px;
   font-size: 0.9rem;
   cursor: pointer;
   font-weight: 500;
+  text-align: center; 
 }
 
 .status {
@@ -217,8 +218,10 @@ html[data-theme='dark'] .categoryHeading {
   }
 
   .card {
-    width: 100%;
-    height: auto;
+    width: 90%;         
+    height: 98%;       
+    padding: 15px;      
+    margin: auto;    
   }
 }
 
@@ -254,8 +257,10 @@ html[data-theme='dark'] .categoryHeading {
   }
 
   .card {
-    height: auto;
-    padding: 16px;
+    width: 90%;         
+    height: 98%;
+    padding: 15px;     
+    margin: auto;
   }
 
   .icon {

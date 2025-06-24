@@ -32,7 +32,7 @@
 
 .pagination-nav{
    display: flex;
-    justify-content: space-between;   
+   justify-content: space-between;
 }
 
 .pagination-nav__link
@@ -44,7 +44,7 @@
     line-height: var(--ifm-heading-line-height);
     padding: var(--ifm-global-spacing);
     transition: border-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
-}  
+} 
 
 .menu_SIkG {
     padding: 0.5rem 0.5rem 0.5rem 0.75rem; /* Top, Right, Bottom, Left */
@@ -72,7 +72,6 @@
 .toggleButton_gllP:hover {
     color: blue; /* Change background to blue on hover */
 }
-
 
 
 .support-card {
@@ -233,9 +232,10 @@ html[data-theme='dark'] .support-card p {
      width: 290px; 
    }
 
-  .pagination-nav__link {
+   .pagination-nav__link {
      height: 80px;
      width: 200px;
      padding: 10px; 
   } 
+
 }

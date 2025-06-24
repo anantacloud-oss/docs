@@ -127,7 +127,7 @@ const categorizedCards = [
 
 const categoryToRouteMap = {
   "Infrastructure as a Code": "/docs/devops/cicd/iac",
-  "Top Security Actions": "/docs/devops/cicd/security",
+  "Top 3 Security Actions": "/docs/devops/cicd/security",
   "Continuous Integration": "/docs/devops/cicd/continuous-integration",
   "Version Control": "/docs/devops/cicd/version-control",
 };
