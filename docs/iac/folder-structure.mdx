@@ -1,5 +1,34 @@
 ---
-id: folder-structure
+id: folder_structure
 title: Folder Structure
 sidebar_label: Folder Structure
 ---
+
+A well-defined folder structure is essential for maintaining scalable, secure, and maintainable Infrastructure as Code (IaC) projects. At Ananta Cloud, we follow industry best practices to organize Terraform and OpenTofu configurations in a modular and environment-specific manner. This structure helps teams collaborate efficiently, enforce consistent standards, and simplify the management of multi-cloud infrastructure at scale.
+
+Organizing code by environment, module, and workspace ensures that your infrastructure remains clean, version-controlled, and easy to extend — whether you're managing a single application or an entire cloud platform.
+
+```
+iac/
+├── modules/                   # Reusable infrastructure modules
+│   ├── network/
+│   ├── compute/
+│   └── storage/
+├── environments/             # Environment-specific configurations
+│   ├── dev/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── terraform.tfvars
+│   ├── staging/
+│   └── prod/
+├── global/                   # Global/shared resources (e.g., IAM, DNS)
+│   ├── iam/
+│   └── dns/
+├── scripts/                  # Helper scripts (e.g., init, validate, plan)
+├── backends/                 # Backend configuration for remote state
+│   ├── s3-backend.tf
+│   └── gcs-backend.tf
+└── README.md                 # Documentation and usage instructions
+```
+
+Explore our detailed folder structure guidelines and sample repositories to understand how Ananta Cloud promotes clean, reusable, and production-ready IaC implementations across cloud providers.
