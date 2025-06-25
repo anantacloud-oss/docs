@@ -35,7 +35,6 @@ const sidebars = {
          'iac/overview', 
          'iac/folder-structure',
          'iac/tagging',
-         'iac/iac-platforms',
          'iac/prebuilt-modules'
        ],
     },
