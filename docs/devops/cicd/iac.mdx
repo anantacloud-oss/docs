@@ -4,40 +4,20 @@ title: Manage Infrastructure as Code
 sidebar_label: IAC
 ---
 
+Infrastructure as Code (IaC) enables teams to automate and version their cloud infrastructure using configuration files. Tools like **Terraform**, **Pulumi**, and **Terragrunt** help you:
 
-import React, { useState } from "react";
-import styles from "./Styles.module.css";
-import { FiSearch } from 'react-icons/fi';
+- **Automate Deployments:** Consistently provision infrastructure across environments.
+- **Ensure Reproducibility:** Avoid drift and manual misconfigurations.
+- **Scale Efficiently:** Manage infrastructure at scale using code.
+- **Track Changes:** Use version control systems to audit and roll back changes.
 
-import Cardsiac from "./Cardsiac";
+At **Ananta Cloud**, we build IaC solutions tailored to your environment and compliance requirements. Whether you're on AWS, Azure, or Kubernetes, our templates and best practices help you deploy faster and safer.
 
-export default function CICDWorkflowHub() {
-  const [searchTerm, setSearchTerm] = useState("");
+Use the search below to explore ready-to-use templates, best practices, and configuration modules.
 
-  return (
-    <>
-      <div className={styles.workflowHeader}>
-        <p>
-         Automate and version your cloud infrastructure using tools like Terraform, Pulumi, and Terragrunt. Improve consistency, scalability, and reproducibility across environments.
-        </p>
+import IACSearchWithCards from './IACSearchWithCards';
 
-        <div className={styles.searchContainer}>
-             <FiSearch className={styles.searchIcon} />
-                <input
-                     type="text"
-                     placeholder="Search workflows"
-                     className={styles.searchBar}
-                     value={searchTerm}
-                     onChange={(e) => setSearchTerm(e.target.value)}
-                 />
-        </div>
+<IACSearchWithCards />
 
-
-      </div>
-
-      <Cardsiac searchTerm={searchTerm} />
-    </>
-  );
-}
 
 
