@@ -19,6 +19,15 @@ const sidebars = {
       type: 'category',
       label: 'GitHub Actions',
       items: [
+         {
+           type: 'category',
+           label: 'IAC',
+           items: [
+              { type: 'doc', id: 'iac/terraform', label: 'Terraform' },
+              { type: 'doc', id: 'iac/terragrunt', label: 'Terragrunt' },
+              { type: 'doc', id: 'iac/pulumi', label: 'Pulumi' },
+            ],
+        },
         {
           type: 'category',
           label: 'Security Tools',
@@ -32,15 +41,6 @@ const sidebars = {
             { type: 'doc', id: 'security/kube-bench', label: 'Kube-bench' },
             { type: 'doc', id: 'security/kube-hunter', label: 'Kube-hunter' },
             { type: 'doc', id: 'security/Checkov', label: 'Checkov' },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'IAC',
-          items: [
-            { type: 'doc', id: 'iac/terraform', label: 'Terraform' },
-            { type: 'doc', id: 'iac/terragrunt', label: 'Terragrunt' },
-            { type: 'doc', id: 'iac/pulumi', label: 'Pulumi' },
           ],
         },
         {
