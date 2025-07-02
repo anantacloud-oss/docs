@@ -10,7 +10,7 @@ const categorizedCards = [
       {
         title: "Cosign",
         subtitle: "Owner: Ananta Cloud",
-        icon: <img src="/img/cosign.webp" style= {{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate        (900%)"}} />,
+        icon: <img src="/img/cosign.webp" style= {{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate             (900%)"}} />,
         text: "Build trust into your supply chain with cryptographic signatures.",
         buttonText: "Configure",
         status: "Image Signing",
@@ -21,7 +21,7 @@ const categorizedCards = [
       {
         title: "Trivy",
         subtitle: "Owner: Ananta Cloud",
-        icon: <img src="/img/trivy.png"  style= {{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate        (900%)"}} />,
+        icon: <img src="/img/trivy.png"  style= {{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate                (900%)"}} />,
         text: "Comprehensive scanner for containers, IaC, and source code vulnerabilities",
         buttonText: "Configure",
         status: "Vulnerability Scanner",
@@ -32,7 +32,7 @@ const categorizedCards = [
       {
         title: "Clair",
         subtitle: "Owner: Ananta Cloud",
-        icon: <img src="/img/clair.png"  style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate        (900%)"}} />,
+        icon: <img src="/img/clair.png"  style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate                (900%)"}} />,
         text: "Performs static vulnerability analysis on container images",
         buttonText: "Configure",
         status: "Security Analysis",
@@ -43,7 +43,7 @@ const categorizedCards = [
       {
         title: "Grype",
         subtitle: "Owner: Ananta Cloud",
-        icon: <img src="/img/grype.png"  style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate        (900%)"}} />,
+        icon: <img src="/img/grype.png"  style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate                (900%)"}} />,
         text: "Vulnerability scanner for container images and filesystems, compatible with Syft.",
         buttonText: "Configure",
         status: "Vulnerability Scanner",
@@ -54,7 +54,7 @@ const categorizedCards = [
       {
         title: "Syft",
         subtitle: "Owner: Ananta Cloud",
-        icon: <img src="/img/syft.png" style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate        (900%)" }} />,
+        icon: <img src="/img/syft.png" style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate                (900%)" }} />,
         text: "Generates Software Bill of Materials (SBOM) for container images and code projects.",
         buttonText: "Configure",
         status: "SBOM Generator",
@@ -65,7 +65,7 @@ const categorizedCards = [
       {
        title: "Kube-bench",
        subtitle: "Owner: Ananta Cloud",
-       icon: <img src="/img/kube-bench.png"  style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg)        saturate(900%)"}} />,
+       icon: <img src="/img/kube-bench.png"  style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg)                   saturate(900%)"}} />,
        text: "Checks Kubernetes clusters against CIS security benchmarks for best practices.",
        buttonText: "Configure",
        status: "Kubernetes Security",
@@ -76,7 +76,7 @@ const categorizedCards = [
      {
        title: "Kube-hunter",
        subtitle: "Owner: Ananta Cloud",
-       icon: <img src="/img/kube-hunter.png"   style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg)        saturate(900%)"}} />,
+       icon: <img src="/img/kube-hunter.png"   style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg)               saturate(900%)"}} />,
        text: "Kubernetes penetration testing tool that identifies security risks in clusters.",
        buttonText: "Configure",
        status: "Kubernetes PenTest",
@@ -87,7 +87,7 @@ const categorizedCards = [
      {
        title: "Checkov",
        subtitle: "Owner: Ananta Cloud",
-       icon: <img src="/img/checkov.png"  style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate       (900%)" }} />,
+       icon: <img src="/img/checkov.png"  style={{ width: "120px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate             (900%)" }} />,
        text: "Static code analysis tool for securing infrastructure as code (Terraform, CloudFormation).",
        buttonText: "Configure",
        status: "IaC Security",
@@ -98,7 +98,7 @@ const categorizedCards = [
      {
        title: "Falco",
        subtitle: "Owner: Ananta Cloud",
-       icon: <img src="/img/falco.png" style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate       (900%)"  }} />,
+       icon: <img src="/img/falco.png" style={{ width: "120px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate              (900%)"  }} />,
        text: "Cloud-native runtime security tool for detecting unexpected application behavior.",
        buttonText: "Configure",
        status: "Runtime Security",
