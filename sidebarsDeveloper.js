@@ -50,7 +50,9 @@ const sidebars = {
             { type: 'doc', id: 'version-control/git', label: 'Git' },
           ],
         },
-        {
+      ],
+    },
+    {
           type: 'category',
           label: 'Cloud',
           items: [
@@ -60,8 +62,6 @@ const sidebars = {
             { type: 'doc', id: 'cloud/gcp', label: 'Google Cloud Provider' },
             { type: 'doc', id: 'cloud/oci', label: 'Oracle Cloud Infrastructure' },
           ],
-        },
-      ],
     },
     {
       type: 'category',
