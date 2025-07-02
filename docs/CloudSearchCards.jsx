@@ -13,7 +13,7 @@ export default function CloudSearchCards() {
         <FiSearch className={styles.searchIcon} />
         <input
           type="text"
-          placeholder="Search workflows"
+          placeholder="Search Modules"
           className={styles.searchBar}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
