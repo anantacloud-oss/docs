@@ -5,39 +5,32 @@ sidebar_label: Security Tools
 ---
 
 
-import React, { useState } from "react";
-import styles from "./Styles.module.css";
-import { FiSearch } from 'react-icons/fi';
+# 🔐 Cloud Security at Ananta Cloud
 
-import Cards from "./Cards";
+Cloud security is a shared responsibility — and at **Ananta Cloud**, we help you own your part confidently. Our security practices and tools are designed to:
 
-export default function CICDWorkflowHub() {
-  const [searchTerm, setSearchTerm] = useState("");
+- **🛡️ Prevent Threats:** Implement identity management, encryption, firewalls, and security groups.
+- **🔍 Detect Vulnerabilities:** Continuously scan your infrastructure for misconfigurations and risks.
+- **📜 Ensure Compliance:** Align with standards like **CIS Benchmarks**, **ISO 27001**, **HIPAA**, or **SOC 2**.
+- **⚡ Respond Quickly:** Integrate alerting, monitoring, and automated remediation into your CI/CD pipelines.
 
-  return (
-    <>
-      <div className={styles.workflowHeader}>
-        <p>
-          Explore essential tools to secure your CI/CD pipelines, container images, Kubernetes clusters, and infrastructure as code. Enhance your DevSecOps workflow with scanning,           monitoring, and runtime protection capabilities.
-        </p>
+We provide:
 
-        <div className={styles.searchContainer}>
-             <FiSearch className={styles.searchIcon} />
-                <input
-                     type="text"
-                     placeholder="Search workflows"
-                     className={styles.searchBar}
-                     value={searchTerm}
-                     onChange={(e) => setSearchTerm(e.target.value)}
-                 />
-        </div>
+- Security-first architecture reviews  
+- Policy-as-code using **OPA**, **Terraform Sentinel**, or **AWS Config**  
+- Hardened deployment templates for AWS, Azure, and Kubernetes  
+
+At **Ananta Cloud**, we design security into every layer of your cloud journey — from identity to runtime.
+
+---
+
+## 🔎 Explore Modules and Practices
+
+Use the search below to explore secure-by-default modules, cloud provider best practices, and compliance-ready configurations:
 
 
-      </div>
+import SecuritySearchCards from './SecuritySearchCards';
 
-      <Cards searchTerm={searchTerm} />
-    </>
-  );
-}
+<SecuritySearchCards />
 
 

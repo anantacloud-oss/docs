@@ -93,7 +93,7 @@ export default function Modalbutton() {
                 Cancel
               </button>
               <a
-                href="https://github.com/anantacloud/github-actions"
+                href="https://github.com/anantacloud/github-actions/security/cosign@v1"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ width: isMobile ? '100%' : 'auto' }}

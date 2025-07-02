@@ -80,35 +80,9 @@ const categorizedCards = [
       },
     ],
   },
+
   {
-    category: "Continuous Integration",
-    items: [
-      {
-        title: "Maven Build",
-        subtitle: "By Apache Maven",
-        icon: <img src="/img/maven.png"  style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"}}/>,
-        text: "Manage builds, dependencies, and documentation with Maven",
-        buttonText: "Configure",
-        status: "Maven",
-        statusColor: "#1565c0",
-        isCustom: true,
-        link: "/developer-docs/continuous-integration/maven",
-      },
-      {
-        title: "Gradle Build",
-        subtitle: "By Gradle",
-        icon: <img src="/img/gradle.png" style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)" }} />,
-        text: "Flexible build automation for Java and Android projects",
-        buttonText: "Configure",
-        status: "Gradle",
-        statusColor: "#388e3c",
-        isCustom: true,
-        link: "/developer-docs/continuous-integration/gradle",
-      },
-    ],
-  },
-  {
-    category: "Version Control",
+    category: "Source Control",
     items: [
       {
         title: "Source Control",
@@ -128,8 +102,7 @@ const categorizedCards = [
 const categoryToRouteMap = {
   "Infrastructure as a Code": "/docs/devops/cicd/iac",
   "Top 3 Security Actions": "/docs/devops/cicd/security",
-  "Continuous Integration": "/docs/devops/cicd/continuous-integration",
-  "Version Control": "/docs/devops/cicd/version-control",
+  "Source Control": "/docs/devops/cicd/source-control",
 };
 
 const WorkflowCards = ({ searchTerm = "" }) => {

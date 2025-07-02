@@ -1,0 +1,51 @@
+---
+id: helm-chart
+title: Helm Chart
+sidebar_label: Helm Chart
+---
+
+
+# 🚢 Helm Charts at Ananta Cloud
+
+**Helm** is the package manager for Kubernetes. It helps you define, install, and upgrade even the most complex Kubernetes applications using reusable charts.
+
+At **Ananta Cloud**, we simplify Kubernetes deployment using Helm Charts tailored to your environment and use case.
+
+---
+
+## 🎯 Why Use Helm?
+
+- **Package Applications:** Helm charts package all Kubernetes resources for your app (Deployments, Services, ConfigMaps, etc.).
+- **Customize Easily:** Use `values.yaml` to customize configuration without modifying templates.
+- **Repeatable Deployments:** Install the same app in dev, staging, and prod with consistency.
+- **Version Control:** Track chart versions to roll back or audit changes.
+
+---
+
+## 🛠️ Ananta-Ready Helm Features
+
+Our Helm-based workflows include:
+
+- ✅ Predefined charts for common use cases (e.g., NGINX, PostgreSQL, Redis, Prometheus)
+- 🔐 Secure-by-default templates with RBAC, pod security policies, and resource quotas
+- 🔄 Integrated with GitOps and CI/CD tools (ArgoCD, Flux, GitHub Actions)
+- 🌐 Multi-cloud compatible: Use the same chart across EKS, AKS, GKE, or private clusters
+
+---
+
+## 📦 Example Chart Structure
+
+```bash
+myapp/
+├── Chart.yaml
+├── values.yaml
+├── templates/
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   └── ingress.yaml
+
+```
+
+import HelmSearchCards from './HelmSearchCards';
+
+<HelmSearchCards />

@@ -1,35 +1,23 @@
 import React, { useState } from "react";
 import Link from "@docusaurus/Link";
-import styles from "./Styles.module.css";
+import styles from "./cicd/Styles.module.css";
 
 
 const categorizedCards = [
   {
-    category: "Continuous Integration",
+    category: "Helm Chart Tools",
     items: [
-      {
-        title: "Maven",
-        subtitle: "By Apache",
-        icon: <img src="/img/maven.png" style= {{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"}} />,
-        text: "Manage builds, dependencies, and documentation with Maven",
-        buttonText: "Configure",
-        status: "Build Automation",
-        statusColor: "#007acc",
-        isCustom: true,
-        link: "/developer-docs/continuous-integration/maven",    
-      },
-      {
-        title: "Gradle",
-        subtitle: "By Gradle Inc.",
-        icon: <img src="/img/gradle.png"  style= {{ width: "135px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"}} />,
-        text: "Flexible build automation for Java and Android projects",
-        buttonText: "Configure",
-        status: "Build Automation",
-        statusColor: "#e67e22",
-        isCustom: true,
-        link: "/developer-docs/continuous-integration/gradle",
-      },
-            
+     {
+       title: "Prometheus + Grafana",
+       subtitle: "Monitoring",
+       icon: <img src="/img/aws.png" style={{ width: "60px" }} />,
+       text: "Collect and visualize metrics from your Kubernetes workloads.",
+       buttonText: "Configure",
+       status: "Helm Chart",
+       statusColor: "#4caf50",
+       isCustom: true,
+       link: ""
+     }
     ],
   },
 ]; 
@@ -79,5 +67,4 @@ const Cards = ({ searchTerm = "" }) => {
 };
 
 export default Cards;
-
 

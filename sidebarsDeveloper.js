@@ -89,34 +89,53 @@ const sidebars = {
         },
       ],
     },
+   
 
-    // NEW: Continuous Integration
     {
       type: 'category',
-      label: 'Continuous Integration',
-      items: [
-        {
-          type: 'doc',
-          id: 'continuous-integration/maven',
-          label: 'Maven',
-        },
-        {
-          type: 'doc',
-          id: 'continuous-integration/gradle',
-          label: 'Gradle',
-        },
-      ],
-    },
-
-    // NEW: Version Control
-    {
-      type: 'category',
-      label: 'Version Control',
+      label: 'Source Control',
       items: [
         {
           type: 'doc',
           id: 'version-control/git',
           label: 'Git',
+        },
+      ],
+    },
+
+
+    {
+      type: 'category',
+      label: 'Cloud',
+      items: [
+        {
+          type: 'doc',
+          id: 'cloud/aws',
+          label: 'AWS',
+        },
+      
+         {
+          type: 'doc',
+          id: 'cloud/azure',
+          label: 'Azure',
+        },
+
+        {
+          type: 'doc',
+          id: 'cloud/digitalocean',
+          label: 'Digital Ocean',
+        },
+
+       {
+          type: 'doc',
+          id: 'cloud/gcp',
+          label: 'Google Cloud Provider',
+        },
+
+        {
+          type: 'doc',
+          id: 'cloud/oci',
+          label: 'Oracle Cloud Infrastructure',
         },
       ],
     },
