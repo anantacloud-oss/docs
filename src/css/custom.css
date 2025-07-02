@@ -1,33 +1,33 @@
 .navbar {
   background-color: white;
-  height: 75px; /* Set desired navbar height */
+  height: 75px; 
   display: flex;
-  align-items: center; /* Vertically center contents */
-  padding: 0 5rem; /* Horizontal padding */
+  align-items: center; 
+  padding: 0 5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); 
 }
 
 /* Custom styling for the navbar links */
 .navbar__item {
-  color: black; /* Black color for navbar links */
-  font-size: 1rem; /* Set font size for navbar items */
+  color: black; 
+  font-size: 1rem; 
 }
 
 /* Change color of navbar links on hover */
 .navbar__item:hover {
-  color: blue; /* Blue color when hovering over navbar items */
+  color: blue; 
 }
 
 /* Custom styling for the navbar logo */
 .navbar__logo img {
-  height: 65px; /* Set a fixed height for the logo */
-  width: auto;  /* Maintain aspect ratio */
-  margin-right: 1rem; /* Add some space to the right of the logo */
-  margin-top: -18px;     /* Move logo upward */
+  height: 65px; 
+  width: auto;  
+  margin-right: 1rem;
+  margin-top: -18px;     
 }
 
 .navbar__search {
-  color: black; /* Search bar icon color */
+  color: black; 
 }
 
 .pagination-nav{
@@ -47,10 +47,10 @@
 } 
 
 .menu_SIkG {
-    padding: 0.5rem 0.5rem 0.5rem 0.75rem; /* Top, Right, Bottom, Left */
+    padding: 0.5rem 0.5rem 0.5rem 0.75rem; 
     scrollbar-gutter: stable;
     width: 270px;
-    overflow-y: auto; /* enables vertical scrolling when needed */
+    overflow-y: auto; 
 }
 
 :root {
@@ -66,11 +66,11 @@
     height: 100%;
     border-radius: 50%;
     transition: background var(--ifm-transition-fast);
-    margin-left: 10px; /* Add left gap (adjust as needed) */
+    margin-left: 10px; 
 }
 
 .toggleButton_gllP:hover {
-    color: blue; /* Change background to blue on hover */
+    color: blue; 
 }
 
 
@@ -83,7 +83,7 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.7);
   transition: transform 0.2s ease;
   display: block;
-  text-align: center; /* Center all inner content */
+  text-align: center; 
 }
 
 
@@ -134,8 +134,8 @@
 /* Dark theme */
 
 html[data-theme='dark'] .navbar {
-  background-color: #001c2e; /* Dark background */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Bottom shadow */
+  background-color: #001c2e; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 /* Dark mode navbar items text color */
@@ -167,7 +167,7 @@ html[data-theme='dark'] .sidebar_njMd {
 
 /* Dark mode hover effect for toggle button */
 html[data-theme='dark'] .toggleButton_gllP:hover {
-  color: #3399ff; /* Optional: text color change */
+  color: #3399ff; 
   background-color: #001c2e;
 }
 

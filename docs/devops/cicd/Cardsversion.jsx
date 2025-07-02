@@ -10,7 +10,7 @@ const categorizedCards = [
       {
         title: "Git",
         subtitle: "By Linus Torvalds",
-        icon: <img src="/img/cosign.webp" style= {{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"}} />,
+        icon: <img src="/img/git.png" style= {{ width: "100px" , height: "50px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate        (900%)"}} />,
         text: "Version control with Git-based workflows",
         buttonText: "Configure",
         status: "Version Control",

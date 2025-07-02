@@ -21,7 +21,7 @@ const categorizedCards = [
      {
       title: "Grafana",
       subtitle: "Visualization",
-      icon: <img src="/img/grafana.png" style={{ width: "100px" , height: "50px" }} />,
+      icon: <img src="/img/grafana.png" style={{ width: "100px" , height: "40px" }} />,
       text: "Visualize metrics and logs with powerful dashboards and alerts.",
       buttonText: "Configure",
       status: "Helm Chart",
@@ -32,7 +32,7 @@ const categorizedCards = [
      {
       title: "CSI Driver",
       subtitle: "Storage",
-      icon: <img src="/img/CSI.png" style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate                  (900%)"}} />,
+      icon: <img src="/img/CSI.png" style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate                     (900%)"}} />,
       text: "Provision and manage persistent volumes with Container Storage Interface.",
       buttonText: "Configure",
       status: "Helm Chart",

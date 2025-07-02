@@ -10,7 +10,7 @@ const categorizedCards = [
      {
        title: "Amazon Web Services",
        subtitle: "By Amazon",
-       icon: <img src="/img/aws.png" style={{ width: "100px", height: "40px", filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate                       (900%)" }} />,
+       icon: <img src="/img/aws.png" style={{ width: "100px", height: "40px" }} />,
        text: "Scalable cloud services for compute, storage, networking, and more.",
        buttonText: "Get Modules",
        status: "Cloud Platform",
@@ -21,7 +21,7 @@ const categorizedCards = [
     {
       title: "Microsoft Azure",
       subtitle: "By Microsoft",
-      icon: <img src="/img/azure.png" style={{ width: "100px", height: "40px", filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate                    (900%)" }} />,
+      icon: <img src="/img/azure.png" style={{ width: "100px", height: "40px" }} />,
       text: "Build, run, and manage apps across multiple clouds with Azure.",
       buttonText: "Get Modules",
       status: "Cloud Platform",
@@ -32,7 +32,7 @@ const categorizedCards = [
     {
        title: "DigitalOcean",
        subtitle: "By DigitalOcean",
-       icon: <img src="/img/digitalocean.png" style={{ width: "100px", height: "40px", filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg)                        saturate(900%)" }} />,
+       icon: <img src="/img/digitalocean.png" style={{ width: "100px", height: "35px" }} />,
        text: "Simple cloud hosting for developers and teams.",
        buttonText: "Get Modules",
        status: "Cloud Platform",
@@ -43,7 +43,7 @@ const categorizedCards = [
     {
       title: "Google Cloud Platform",
       subtitle: "By Google",
-      icon: <img src="/img/gcp.png" style={{ width: "100px", height: "40px", filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"         }} />,
+      icon: <img src="/img/gcp.png" style={{ width: "100px", height: "50px", filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"          }} />,
       text: "Modern infrastructure and data services built on Google's backbone.",
       buttonText: "Get Modules",
       status: "Cloud Platform",
@@ -54,7 +54,7 @@ const categorizedCards = [
      {
        title: "Oracle Cloud Infrastructure",
        subtitle: "By Oracle",
-       icon: <img src="/img/oci.png" style={{ width: "100px", height: "40px", filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate(900%)"          }} />,
+       icon: <img src="/img/oracle-cloud.png" style={{ width: "100px", height: "40px", filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg)        saturate(900%)" }} />,
        text: "High-performance cloud infrastructure and apps with OCI.",
        buttonText: "Get Modules",
        status: "Cloud Platform",
