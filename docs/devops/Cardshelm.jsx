@@ -10,7 +10,7 @@ const categorizedCards = [
      {
       title: "Cold DNS",
       subtitle: "Networking",
-      icon: <img src="/img/dns.png" style={{ width: "100px" , height: "50px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate                      (900%)"}} />,
+      icon: <img src="/img/dns.png" style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.2) sepia(1) hue-rotate(200deg) saturate                    (1200%)"}} />,
       text: "Enable DNS resolution and manage domain traffic efficiently in Kubernetes.",
       buttonText: "Configure",
       status: "Helm Chart",
