@@ -10,7 +10,7 @@ Welcome to the Reference section of Ananta Cloud’s documentation! This is your
 
 Here, you’ll find comprehensive documentation on inputs, configurations, and outputs for our tools and services—everything you need to effectively integrate Ananta Cloud into your workflows.
 
-For broader guidance, tutorials, and best practices, visit our [Docs](#) section. It’s full of step-by-step guides to help you get started and deepen your understanding of the Ananta Cloud ecosystem.
+For broader guidance, tutorials, and best practices, visit our [Docs](/docs/getting-started) section. It’s full of step-by-step guides to help you get started and deepen your understanding of the Ananta Cloud ecosystem.
 
 Whether you're deploying a new service, troubleshooting an issue, or exploring advanced configuration options, the Reference section is here to support your technical needs.
 
