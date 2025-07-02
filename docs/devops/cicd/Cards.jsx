@@ -10,7 +10,7 @@ const categorizedCards = [
       {
         title: "Cosign",
         subtitle: "Owner: Ananta Cloud",
-        icon: <img src="/img/cosign.webp" style= {{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate             (900%)"}} />,
+        icon: <img src="/img/cosign.webp" style= {{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.2) sepia(1) hue-rotate(200deg) saturate             (1500%)"}} />,
         text: "Build trust into your supply chain with cryptographic signatures.",
         buttonText: "Configure",
         status: "Image Signing",
@@ -54,7 +54,7 @@ const categorizedCards = [
       {
         title: "Syft",
         subtitle: "Owner: Ananta Cloud",
-        icon: <img src="/img/syft.png" style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate                (900%)" }} />,
+        icon: <img src="/img/syft.png" style={{ width: "100px" , height: "40px" , filter: "grayscale(1) brightness(1.2) sepia(1) hue-rotate(200deg) saturate                     (1500%)" }} />,
         text: "Generates Software Bill of Materials (SBOM) for container images and code projects.",
         buttonText: "Configure",
         status: "SBOM Generator",
@@ -87,7 +87,7 @@ const categorizedCards = [
      {
        title: "Checkov",
        subtitle: "Owner: Ananta Cloud",
-       icon: <img src="/img/checkov.png"  style={{ width: "120px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate             (900%)" }} />,
+       icon: <img src="/img/checkov.png"  style={{ width: "120px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate             (900%)" }} />,
        text: "Static code analysis tool for securing infrastructure as code (Terraform, CloudFormation).",
        buttonText: "Configure",
        status: "IaC Security",
@@ -98,7 +98,7 @@ const categorizedCards = [
      {
        title: "Falco",
        subtitle: "Owner: Ananta Cloud",
-       icon: <img src="/img/falco.png" style={{ width: "120px" , height: "40px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate              (900%)"  }} />,
+       icon: <img src="/img/falco.png" style={{ width: "120px" , height: "60px" , filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate                    (900%)"  }} />,
        text: "Cloud-native runtime security tool for detecting unexpected application behavior.",
        buttonText: "Configure",
        status: "Runtime Security",
