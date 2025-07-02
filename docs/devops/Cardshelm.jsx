@@ -8,16 +8,39 @@ const categorizedCards = [
     category: "Helm Chart Tools",
     items: [
      {
-       title: "Prometheus + Grafana",
-       subtitle: "Monitoring",
-       icon: <img src="/img/aws.png" style={{ width: "60px" }} />,
-       text: "Collect and visualize metrics from your Kubernetes workloads.",
-       buttonText: "Configure",
-       status: "Helm Chart",
-       statusColor: "#4caf50",
-       isCustom: true,
-       link: ""
-     }
+      title: "Cold DNS",
+      subtitle: "Networking",
+      icon: <img src="/img/cold-dns.png" style={{ width: "60px" }} />,
+      text: "Enable DNS resolution and manage domain traffic efficiently in Kubernetes.",
+      buttonText: "Configure",
+      status: "Helm Chart",
+      statusColor: "#4caf50",
+      isCustom: true,
+      link: ""
+     },
+     {
+      title: "Grafana",
+      subtitle: "Visualization",
+      icon: <img src="/img/grafana.png" style={{ width: "60px" }} />,
+      text: "Visualize metrics and logs with powerful dashboards and alerts.",
+      buttonText: "Configure",
+      status: "Helm Chart",
+      statusColor: "#4caf50",
+      isCustom: true,
+      link: ""
+     },
+     {
+      title: "CSI Driver",
+      subtitle: "Storage",
+      icon: <img src="/img/csi-driver.png" style={{ width: "60px" }} />,
+      text: "Provision and manage persistent volumes with Container Storage Interface.",
+      buttonText: "Configure",
+      status: "Helm Chart",
+      statusColor: "#4caf50",
+      isCustom: true,
+      link: ""
+     },
+            
     ],
   },
 ]; 
