@@ -12,7 +12,7 @@ const categorizedCards = [
        subtitle: "By Amazon",
        icon: <img src="/img/aws.png" style={{ width: "100px", height: "40px", filter: "grayscale(1) brightness(1.1) sepia(1) hue-rotate(190deg) saturate                     (900%)" }} />,
        text: "Scalable cloud services for compute, storage, networking, and more.",
-       buttonText: "Find Modules",
+       buttonText: "Get Modules",
        status: "Cloud Platform",
        statusColor: "#ff9900", 
        isCustom: true,
