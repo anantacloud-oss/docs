@@ -8,7 +8,7 @@ const categorizedCards = [
     category: "Helm Chart Tools",
     items: [
      {
-      title: "Cold DNS",
+      title: "CoreDNS",
       subtitle: "Networking",
       icon: <img src="/img/dns.png" style={{ width: "100px" , height: "40px" }} />,
       text: "Enable DNS resolution and manage domain traffic efficiently in Kubernetes.",
@@ -16,7 +16,7 @@ const categorizedCards = [
       status: "Helm Chart",
       statusColor: "#4caf50",
       isCustom: true,
-      link: ""
+      link: "/developer-docs/helmchart/coredns"
      },
      {
       title: "Grafana",
@@ -27,7 +27,7 @@ const categorizedCards = [
       status: "Helm Chart",
       statusColor: "#4caf50",
       isCustom: true,
-      link: ""
+      link: "/developer-docs/helmchart/grafana"
      },
      {
       title: "CSI Driver",
@@ -38,7 +38,7 @@ const categorizedCards = [
       status: "Helm Chart",
       statusColor: "#4caf50",
       isCustom: true,
-      link: ""
+      link: "/developer-docs/helmchart/csidriver"
      },
             
     ],
