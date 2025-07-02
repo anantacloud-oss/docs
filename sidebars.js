@@ -62,11 +62,6 @@ const sidebars = {
       label: 'Support',
       id: 'Support',
     },
-    {
-      type: 'doc',
-      label: 'Appendices',
-      id: 'Appendices',
-    },
   ],
 };
 
