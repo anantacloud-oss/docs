@@ -10,7 +10,7 @@ const categorizedCards = [
         {
           title: "Jenkins",
           subtitle: "CI/CD",
-          icon: <img src="/img/jenkins.png" style={{ width: "100px", height: "40px" }} />,
+          icon: <img src="/img/jenkins.png" style={{ width: "100px", height: "50px" }} />,
           text: "Automate builds, tests, and deployments using Jenkins Docker container.",
           buttonText: "Configure",
           status: "Docker Image",
@@ -21,7 +21,7 @@ const categorizedCards = [
         {
           title: "Python",
           subtitle: "Runtime",
-          icon: <img src="/img/python.png" style={{ width: "100px", height: "40px" }} />,
+          icon: <img src="/img/python.png" style={{ width: "100px", height: "50px" }} />,
           text: "Run Python applications in isolated and reproducible environments.",
           buttonText: "Configure",
           status: "Docker Image",
@@ -32,7 +32,7 @@ const categorizedCards = [
         {
           title: "Postgres",
           subtitle: "Database",
-          icon: <img src="/img/postgres.png" style={{ width: "100px", height: "40px" }} />,
+          icon: <img src="/img/postgres.png" style={{ width: "100px", height: "50px" }} />,
           text: "Reliable and scalable relational database containerized with Docker.",
           buttonText: "Configure",
           status: "Docker Image",
