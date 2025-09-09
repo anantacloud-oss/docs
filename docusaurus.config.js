@@ -44,7 +44,17 @@ const config = {
         sidebarPath: require.resolve('./sidebarsDeveloper.js'),
       },
     ],
-  ],
+     
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'modules-docs',
+        path: 'modules-docs',
+        routeBasePath: 'modules-docs',
+        sidebarPath: require.resolve('./sidebarmodule.js'),
+      },
+   ],
+ ],
 
   themeConfig:
     ({
@@ -59,6 +69,7 @@ const config = {
         items: [
           { to: '/docs/getting-started', label: 'Documentations', position: 'left' },
           { to: '/developer-docs/introduction', label: 'References', position: 'left' },
+          { to: '/modules-docs/searchmodule', label: 'Infrastructure as a Code', position: 'left' },
           { to: 'https://github.com/orgs/anantacloud/discussions', label: 'Knowledge-Hub', position: 'right' },
           { to: '/docs/Support', label: 'Support', position: 'right' },
           {

@@ -239,3 +239,22 @@ html[data-theme='dark'] .support-card p {
   } 
 
 }
+
+
+
+/* Override tip block only for dark theme */
+html[data-theme='dark'] .theme-admonition.theme-admonition-tip {
+  background-color: #2e2e2e !important;  /* light grey for dark theme */
+  border-left-color: #999 !important;    /* subtle grey border */
+}
+
+html[data-theme='dark'] .theme-admonition.theme-admonition-tip .admonition-heading {
+  color: #ddd !important;  /* heading text lighter */
+}
+
+html[data-theme='dark'] .theme-admonition.theme-admonition-tip .admonition-content {
+  color: #ccc !important;  /* body text grey */
+}
+
+
+
