@@ -90,7 +90,7 @@ export default function Modulebutton() {
             <p>
               {showModal === 'subscription'
                 ? `This link points to the private terraform-aws-ecs-service-catalog repository, which is accessible only to subscribers. Non-subscribers will receive a 404 error.`
-                : `Here you can view the latest release notes, updates, and changes related to this module visible only to subscribers; everyone else will see a 404.`}
+                : `Here you can view the latest release notes, updates, and changes related to this module visible only to subscribers; everyone else will see a 404 error.`}
             </p>
             <div
               style={{
