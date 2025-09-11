@@ -66,7 +66,7 @@ export default function SearchModulePage() {
       category: "module",
     },
     {
-      title: "Network",
+      title: "AWS Networking",
       desc: "A module that provides networking resources such as VPC, subnets, route tables, and gateways to build secure and scalable infrastructure.",
       link: "/modules-docs/modules/Network",
       category: "module",
