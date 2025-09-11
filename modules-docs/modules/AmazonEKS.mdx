@@ -1,0 +1,208 @@
+---
+id: AmazonEKS
+title: Amazon Elastic Kubernetes Service (EKS) 
+sidebar_label: Amazon Elastic Kubernetes Service (EKS)
+---
+
+import EKSModulebutton from './EKSModulebutton';
+
+# Amazon Elastic Kubernetes Service (EKS)  
+
+<EKSModulebutton />
+
+## Overview  
+The **Amazon EKS Module** provides a reusable and scalable way to provision and manage **Amazon Elastic Kubernetes Service (EKS)** clusters using Terraform.  
+It abstracts the complexity of configuring Kubernetes control planes and worker nodes, enabling developers to deploy containerized applications securely and reliably on AWS.  
+
+This module supports both **resource creation** and **data sources** for managing EKS clusters, node groups, and associated IAM roles.  
+
+---
+
+## Features  
+
+- 🚀 **Reusable & Modular** – Predefined structure for EKS clusters and node groups.  
+- ☸️ **Managed Kubernetes** – Run Kubernetes without needing to manage the control plane.  
+- 🔒 **Secure by Default** – Integrates with IAM for RBAC, and VPC for networking isolation.  
+- 📈 **Scalable** – Add or remove managed node groups to handle workloads dynamically.  
+- 🧑‍🤝‍🧑 **Team-Friendly** – Supports multiple namespaces and fine-grained IAM roles.  
+- 📜 **Tagging & Logging** – Apply tags to EKS resources and enable CloudWatch logging.  
+- 🧩 **Extensible** – Works seamlessly with other modules (VPC, IAM, Auto Scaling, etc.).  
+
+---
+
+## Core Concepts  
+
+1. **Resources Module**  
+   - Creates and manages EKS components, including:  
+     - EKS Cluster  
+     - Managed Node Groups  
+     - IAM Roles & Policies  
+     - VPC Networking Integration  
+     - CloudWatch Logging  
+
+2. **Data Module**  
+   - Fetches information about existing EKS clusters.  
+   - Useful for referencing attributes like cluster ARN, endpoint, and certificate.  
+
+3. **Separation of Concerns**  
+   - `resources/` handles **EKS cluster creation and configuration**.  
+   - `data/` is focused on **reading and referencing existing EKS resources**.  
+   - This separation ensures clarity, reusability, and modular design.  
+
+---
+
+# Sample Usage
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+
+  <TabItem value="terraform" label="Terraform" default>
+
+```hcl
+# DEPLOY ANANTA CLOUD'S EKS MODULE
+
+module "eks" {
+  source = "github.com/anantacloud/terraform-aws-kubernetes-module/modules/resources"
+
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  cluster_name    = "my-eks-cluster"
+  cluster_version = "1.30"
+  subnet_ids      = ["subnet-123456", "subnet-654321"]
+  vpc_id          = "vpc-123456"
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  enable_cluster_logging = true
+  node_group_name        = "my-node-group"
+  node_instance_types    = ["t3.medium"]
+  desired_size           = 2
+  min_size               = 1
+  max_size               = 3
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+   </TabItem> 
+
+   <TabItem value="terragrunt" label="Terragrunt">
+
+```
+
+# terragrunt.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-kubernetes-module/modules/resources"
+}
+
+inputs = {
+  cluster_name    = "my-eks-cluster"
+  cluster_version = "1.30"
+  subnet_ids      = ["subnet-123456", "subnet-654321"]
+  vpc_id          = "vpc-123456"
+
+  enable_cluster_logging = true
+  node_group_name        = "my-node-group"
+  node_instance_types    = ["t3.medium"]
+  desired_size           = 2
+  min_size               = 1
+  max_size               = 3
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+
+   </TabItem> 
+
+   <TabItem value="Opentofu" label="Opentofu">
+
+```
+
+# Opentofu.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-kubernetes-module/modules/resources"
+}
+
+inputs = {
+  cluster_name    = "my-eks-cluster"
+  cluster_version = "1.30"
+  subnet_ids      = ["subnet-123456", "subnet-654321"]
+  vpc_id          = "vpc-123456"
+
+  enable_cluster_logging = true
+  node_group_name        = "my-node-group"
+  node_instance_types    = ["t3.medium"]
+  desired_size           = 2
+  min_size               = 1
+  max_size               = 3
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+
+    </TabItem> 
+
+</Tabs> 
+
+<Tabs> 
+
+   <TabItem value="inputs" label="Inputs" default>
+
+### Required
+
+| Name             | Description                               | Type   | Example             |
+| ---------------- | ----------------------------------------- | ------ | ------------------- |
+| cluster\_name    | Name of the EKS cluster                   | string | `"my-eks-cluster"`  |
+| cluster\_version | Kubernetes version for the cluster        | string | `"1.30"`            |
+| subnet\_ids      | List of subnet IDs for worker nodes       | list   | `["subnet-123456"]` |
+| vpc\_id          | VPC ID where the cluster will be deployed | string | `"vpc-123456"`      |
+
+### Optional
+
+| Name                     | Description                                     | Type   | Default         |
+| ------------------------ | ----------------------------------------------- | ------ | --------------- |
+| enable\_cluster\_logging | Enable or disable cluster control plane logging | bool   | `false`         |
+| node\_group\_name        | Name of the managed node group                  | string | `"default-ng"`  |
+| node\_instance\_types    | EC2 instance types for worker nodes             | list   | `["t3.medium"]` |
+| desired\_size            | Desired number of worker nodes                  | number | `2`             |
+| min\_size                | Minimum number of worker nodes                  | number | `1`             |
+| max\_size                | Maximum number of worker nodes                  | number | `3`             |
+| tags                     | Key-value tags to apply to EKS resources        | map    | `{}`            |
+
+
+    </TabItem> 
+
+    <TabItem value="outputs" label="Outputs">
+
+| Name              | Description                               |
+| ----------------- | ----------------------------------------- |
+| cluster\_id       | The ID of the EKS cluster                 |
+| cluster\_name     | The name of the EKS cluster               |
+| cluster\_arn      | The ARN of the EKS cluster                |
+| cluster\_endpoint | The endpoint of the Kubernetes API server |
+| cluster\_version  | The Kubernetes version of the cluster     |
+| node\_group\_id   | The ID of the EKS managed node group      |
+| node\_group\_name | The name of the EKS managed node group    |
+
+
+    </TabItem> 
+
+</Tabs>
+

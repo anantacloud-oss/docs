@@ -28,6 +28,8 @@ const sidebars = {
         { type: 'doc', id: 'modules/AWSSecretsmanager'},
         { type: 'doc', id: 'modules/AmazonEC2'},
         { type: 'doc', id: 'modules/AWSAutoscaling'},
+        { type: 'doc', id: 'modules/AmazonEKS'},
+        { type: 'doc', id: 'modules/Network'},
       ],
     },
   ],

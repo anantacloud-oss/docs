@@ -1,0 +1,212 @@
+---
+id: Network
+title: Network
+sidebar_label: Network
+---
+
+import NetworkModulebutton from './NetworkModulebutton';
+
+# AWS Network Module   
+
+<NetworkModulebutton />
+
+## Overview  
+The **AWS Network Module** provides a reusable and scalable way to provision and manage **complete networking infrastructure** using Terraform.  
+It enables you to configure VPCs, subnets, route tables, internet gateways, NAT gateways, VPNs, VPC endpoints, and security groups in a modular and maintainable way.  
+
+This module supports both **resource creation** and **data sources** for all networking components, ensuring secure and highly available network architecture.  
+
+---
+
+## Features  
+
+- 🚀 **Reusable & Modular** – Predefined structure for all networking resources.  
+- 🌐 **Flexible Networking** – Configure public, private, and isolated subnets across multiple Availability Zones.  
+- 🔒 **Secure by Default** – Integrates security groups, NACLs, and VPC endpoints for granular access control.  
+- 🔄 **Highly Available** – Supports multi-AZ design, NAT gateways, and VPN connectivity.  
+- 📜 **Tagging & Documentation** – Consistent tags and naming conventions across all network resources.  
+- 🧩 **Extensible** – Can be integrated with other modules like EKS, Auto Scaling, ELB, and RDS.  
+
+---
+
+## Core Concepts  
+
+1. **Resources Module**  
+   - Creates and manages the following networking components:  
+     - VPCs  
+     - Public, private, and isolated subnets  
+     - Route tables and routes  
+     - Internet Gateways  
+     - NAT Gateways  
+     - VPC Endpoints (Interface & Gateway)  
+     - VPN Gateways and Customer Gateways  
+     - Transit Gateways (optional)  
+     - Security Groups  
+     - Network ACLs  
+
+2. **Data Module**  
+   - Fetches information about existing network resources.  
+   - Useful for referencing attributes like VPC ID, subnet IDs, security groups, and route table IDs.  
+
+3. **Separation of Concerns**  
+   - `resources/` handles **creation of networking components**.  
+   - `data/` is focused on **reading and referencing existing network resources**.  
+   - Ensures clarity, reusability, and modular design.  
+
+---
+
+# Sample Usage
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+
+  <TabItem value="terraform" label="Terraform" default>
+
+```hcl
+# DEPLOY COMPLETE AWS NETWORK MODULE
+
+module "network" {
+  source = "github.com/anantacloud/terraform-aws-network-module/modules/resources"
+
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  vpc_name        = "my-vpc"
+  cidr_block      = "10.0.0.0/16"
+  public_subnets  = ["10.0.1.0/24", "10.0.2.0/24"]
+  private_subnets = ["10.0.3.0/24", "10.0.4.0/24"]
+  isolated_subnets = ["10.0.5.0/24", "10.0.6.0/24"]
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  enable_nat_gateway   = true
+  enable_vpn           = false
+  enable_transit_gateway = false
+  enable_vpc_endpoints = true
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+    </TabItem> 
+
+    <TabItem value="terragrunt" label="Terragrunt">
+
+```
+# terragrunt.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-network-module/modules/resources"
+}
+
+inputs = {
+  vpc_name        = "my-vpc"
+  cidr_block      = "10.0.0.0/16"
+  public_subnets  = ["10.0.1.0/24", "10.0.2.0/24"]
+  private_subnets = ["10.0.3.0/24", "10.0.4.0/24"]
+  isolated_subnets = ["10.0.5.0/24", "10.0.6.0/24"]
+
+  enable_nat_gateway     = true
+  enable_vpn             = false
+  enable_transit_gateway = false
+  enable_vpc_endpoints   = true
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+    </TabItem> 
+
+    <TabItem value="Opentofu" label="Opentofu">
+
+```
+# Opentofu.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-network-module/modules/resources"
+}
+
+inputs = {
+  vpc_name        = "my-vpc"
+  cidr_block      = "10.0.0.0/16"
+  public_subnets  = ["10.0.1.0/24", "10.0.2.0/24"]
+  private_subnets = ["10.0.3.0/24", "10.0.4.0/24"]
+  isolated_subnets = ["10.0.5.0/24", "10.0.6.0/24"]
+
+  enable_nat_gateway     = true
+  enable_vpn             = false
+  enable_transit_gateway = false
+  enable_vpc_endpoints   = true
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+
+    </TabItem> 
+
+</Tabs> 
+
+<Tabs> 
+
+    <TabItem value="inputs" label="Inputs" default>
+
+### Required
+
+| Name              | Description                   | Type   | Example           |
+| ----------------- | ----------------------------- | ------ | ----------------- |
+| vpc\_name         | Name of the VPC               | string | `"my-vpc"`        |
+| cidr\_block       | CIDR block for the VPC        | string | `"10.0.0.0/16"`   |
+| public\_subnets   | List of public subnet CIDRs   | list   | `["10.0.1.0/24"]` |
+| private\_subnets  | List of private subnet CIDRs  | list   | `["10.0.3.0/24"]` |
+| isolated\_subnets | List of isolated subnet CIDRs | list   | `["10.0.5.0/24"]` |
+
+
+### Optional
+
+| Name                     | Description                                         | Type | Default |
+| ------------------------ | --------------------------------------------------- | ---- | ------- |
+| enable\_nat\_gateway     | Create NAT gateways for private subnets             | bool | `false` |
+| enable\_vpn              | Create VPN connections                              | bool | `false` |
+| enable\_transit\_gateway | Create Transit Gateway                              | bool | `false` |
+| enable\_vpc\_endpoints   | Create VPC endpoints for services like S3, DynamoDB | bool | `false` |
+| tags                     | Key-value tags to apply to all network resources    | map  | `{}`    |
+
+
+    </TabItem> 
+
+    <TabItem value="outputs" label="Outputs">
+
+| Name                  | Description                                |
+| --------------------- | ------------------------------------------ |
+| vpc\_id               | The ID of the VPC                          |
+| public\_subnet\_ids   | List of public subnet IDs                  |
+| private\_subnet\_ids  | List of private subnet IDs                 |
+| isolated\_subnet\_ids | List of isolated subnet IDs                |
+| route\_table\_ids     | List of route table IDs                    |
+| internet\_gateway\_id | The ID of the Internet Gateway             |
+| nat\_gateway\_ids     | List of NAT Gateway IDs                    |
+| vpn\_gateway\_id      | The ID of the VPN Gateway (if enabled)     |
+| transit\_gateway\_id  | The ID of the Transit Gateway (if enabled) |
+| vpc\_endpoint\_ids    | List of VPC Endpoint IDs (if enabled)      |
+| security\_group\_ids  | List of Security Group IDs                 |
+| network\_acl\_ids     | List of Network ACL IDs                    |
+
+    </TabItem> 
+
+</Tabs>
+
+
+

@@ -59,6 +59,18 @@ export default function SearchModulePage() {
       link: "/modules-docs/modules/AWSAutoscaling",
       category: "module",
     },
+    {
+      title: "Amazon Elastic Kubernetes Service (EKS)",
+      desc: "A managed Kubernetes service that makes it easy to run Kubernetes on AWS without needing to install and operate your own control plane or nodes.",
+      link: "/modules-docs/modules/AmazonEKS",
+      category: "module",
+    },
+    {
+      title: "Network",
+      desc: "A module that provides networking resources such as VPC, subnets, route tables, and gateways to build secure and scalable infrastructure.",
+      link: "/modules-docs/modules/Network",
+      category: "module",
+    },
   ];
 
   // Filtering logic
