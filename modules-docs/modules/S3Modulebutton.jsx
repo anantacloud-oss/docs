@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Modulebutton() {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(null); // null | 'subscription' | 'release'
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -15,23 +15,43 @@ export default function Modulebutton() {
 
   return (
     <>
-      <button
-        onClick={() => setShowModal(true)}
-        style={{
-          backgroundColor: '#0033A0',
-          color: '#fff',
-          padding: '12px 24px',
-          border: 'none',
-          borderRadius: '8px',
-          cursor: 'pointer',
-          fontSize: '20px',
-          lineHeight: '1.2',
-          width: isMobile ? '100%' : 'auto', 
-          boxSizing: 'border-box',
-        }}
-      >
-        Subscription
-      </button>
+      <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+        <button
+          onClick={() => setShowModal('subscription')}
+          style={{
+            backgroundColor: '#0033A0',
+            color: '#fff',
+            padding: '12px 24px',
+            border: 'none',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            fontSize: '20px',
+            lineHeight: '1.2',
+            width: isMobile ? '100%' : 'auto',
+            boxSizing: 'border-box',
+          }}
+        >
+          Subscription
+        </button>
+
+        <button
+          onClick={() => setShowModal('release')}
+          style={{
+            backgroundColor: '#0033A0',
+            color: '#fff',
+            padding: '12px 24px',
+            border: 'none',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            fontSize: '20px',
+            lineHeight: '1.2',
+            width: isMobile ? '100%' : 'auto',
+            boxSizing: 'border-box',
+          }}
+        >
+          Release Notes
+        </button>
+      </div>
 
       {showModal && (
         <div
@@ -46,7 +66,7 @@ export default function Modulebutton() {
             justifyContent: 'center',
             alignItems: 'center',
             zIndex: 1000,
-            padding: isMobile ? '1rem' : '0', 
+            padding: isMobile ? '1rem' : '0',
           }}
         >
           <div
@@ -62,9 +82,15 @@ export default function Modulebutton() {
               overflowY: 'auto',
             }}
           >
-            <h3>For Subscribers Only</h3>
+            <h3>
+              {showModal === 'subscription'
+                ? 'For Subscribers Only'
+                : 'Release Notes'}
+            </h3>
             <p>
-              This link points to the private <code>terraform-aws-ecs-service-catalog</code> repository, which is accessible only to subscribers. Non-subscribers will receive a 404 error.
+              {showModal === 'subscription'
+                ? `This link points to the private terraform-aws-ecs-service-catalog repository, which is accessible only to subscribers. Non-subscribers will receive a 404 error.`
+                : `Here you can view the latest release notes, updates, and changes related to this module visible only to subscribers; everyone else will see a 404.`}
             </p>
             <div
               style={{
@@ -76,7 +102,7 @@ export default function Modulebutton() {
               }}
             >
               <button
-                onClick={() => setShowModal(false)}
+                onClick={() => setShowModal(null)}
                 style={{
                   backgroundColor: '#0033A0',
                   color: '#fff',
@@ -93,7 +119,11 @@ export default function Modulebutton() {
                 Cancel
               </button>
               <a
-                href="https://github.com/anantacloud/terraform-aws-kafka-module.git"
+                href={
+                  showModal === 'subscription'
+                    ? 'https://github.com/anantacloud/terraform-aws-s3-module.git'
+                    : 'https://github.com/anantacloud/terraform-aws-s3-module/releases'
+                }
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ width: isMobile ? '100%' : 'auto' }}

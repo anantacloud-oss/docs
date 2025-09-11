@@ -130,62 +130,6 @@
 }
 
 
-
-/* Dark theme */
-
-html[data-theme='dark'] .navbar {
-  background-color: #001c2e; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
-}
-
-/* Dark mode navbar items text color */
-html[data-theme='dark'] .navbar__item {
-  color: white;
-}
-
-/* Dark mode hover effect for navbar links */
-html[data-theme='dark'] .navbar__item:hover {
-  color: #3399ff; /* Blue on hover */
-}
-
-/* Dark mode search icon color */
-html[data-theme='dark'] .navbar__search {
-  color: white;
-}
-
-/* Dark theme override */
-[data-theme='dark'] .pagination-nav__link {
-    border: 1px solid white;
-}
-[data-theme='dark'] .pagination-nav__link:hover {
-   box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.4);
-}
-
-html[data-theme='dark'] .sidebar_njMd {
-  background-color: #001c2e;
-}
-
-/* Dark mode hover effect for toggle button */
-html[data-theme='dark'] .toggleButton_gllP:hover {
-  color: #3399ff; 
-  background-color: #001c2e;
-}
-
-html[data-theme='dark'] .support-card {
-  background-color: #001c2e !important;
-  border: 1px solid white !important;
-  transition: box-shadow 0.3s ease;
-}
-
-html[data-theme='dark'] .support-card:hover {
-  box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.4);
-}
-
-html[data-theme='dark'] .support-card h3,
-html[data-theme='dark'] .support-card p {
-  color: white !important;
-}
-
 @media (max-width: 768px) {
    .custom-schedule-button {
     display: block;
@@ -240,21 +184,6 @@ html[data-theme='dark'] .support-card p {
 
 }
 
-
-
-/* Override tip block only for dark theme */
-html[data-theme='dark'] .theme-admonition.theme-admonition-tip {
-  background-color: #2e2e2e !important;  /* light grey for dark theme */
-  border-left-color: #999 !important;    /* subtle grey border */
-}
-
-html[data-theme='dark'] .theme-admonition.theme-admonition-tip .admonition-heading {
-  color: #ddd !important;  /* heading text lighter */
-}
-
-html[data-theme='dark'] .theme-admonition.theme-admonition-tip .admonition-content {
-  color: #ccc !important;  /* body text grey */
-}
 
 
 

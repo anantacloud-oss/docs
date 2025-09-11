@@ -1,0 +1,234 @@
+---
+id: AmazonCloudfront
+title: Amazon Cloudfront
+sidebar_label: Amazon Cloudfront
+---
+
+import CloudfrontModulebutton from './CloudfrontModulebutton';
+
+# Amazon CloudFront
+
+<CloudfrontModulebutton />
+
+## Overview  
+The **AWS CloudFront Module** provides a reusable and scalable way to provision and manage Amazon CloudFront distributions using Terraform.  
+It abstracts the complexity of configuring CloudFront resources and enables developers to define content delivery infrastructure with minimal effort while following AWS best practices.  
+
+This module supports both **resource creation** and **data sources** for managing CloudFront distributions, origins, and behaviors in a consistent and modular way.  
+
+---
+
+## Features  
+
+- 🚀 **Reusable & Modular** – Predefined structure for resources and data modules.  
+- 🔐 **Security Best Practices** – Supports HTTPS-only traffic, origin access control, and WAF integration.  
+- ⚡ **Performance Optimization** – Leverage caching behaviors, edge locations, and origin groups.  
+- 📜 **Logging & Monitoring** – Enable access logs, real-time metrics, and CloudWatch integration.  
+- 🌍 **Global Content Delivery** – Distribute static and dynamic content to users with low latency.  
+- 🧩 **Extensible** – Easy to integrate with S3, ALB, API Gateway, or custom origins.  
+
+---
+
+## Core Concepts  
+
+1. **Resources Module**  
+   - Creates and manages CloudFront distributions and related configurations.  
+   - Includes support for:  
+     - Origins (S3, ALB, API Gateway, or custom)  
+     - Default cache behavior  
+     - Additional cache behaviors  
+     - Viewer protocol policies (HTTP/HTTPS)  
+     - SSL/TLS certificates  
+     - Logging and monitoring  
+
+2. **Data Module**  
+   - Fetches information about existing CloudFront distributions.  
+   - Useful for referencing distribution attributes, domain names, and integrating with other AWS resources.  
+
+3. **Behaviors Management**  
+   - Supports defining caching policies, response headers, and origin request policies.  
+   - Provides flexibility to optimize performance and enforce security.  
+
+4. **Separation of Concerns**  
+   - `resources/` handles CloudFront distribution creation and configuration.  
+   - `data/` is focused on reading and referencing existing CloudFront distributions.  
+   - This separation ensures clarity, reusability, and modular design.  
+
+---
+
+# Sample Usage
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="terraform" label="Terraform" default>
+
+```hcl
+# DEPLOY ANANTA CLOUD'S CLOUDFRONT MODULE
+
+module "cloudfront_distribution" {
+  source = "github.com/anantacloud/terraform-aws-cloudfront-module/modules/resources"
+
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  origin_id   = "s3-origin"
+  domain_name = "my-app-bucket.s3.amazonaws.com"
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  default_cache_behavior = {
+    viewer_protocol_policy = "redirect-to-https"
+    allowed_methods        = ["GET", "HEAD"]
+    cached_methods         = ["GET", "HEAD"]
+  }
+
+  viewer_certificate = {
+    acm_certificate_arn      = "arn:aws:acm:us-east-1:123456789012:certificate/abcd-1234"
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
+  }
+
+  logging_config = {
+    bucket = "my-log-bucket.s3.amazonaws.com"
+    prefix = "cloudfront-logs/"
+  }
+
+  tags = {
+    Environment = "dev"
+    Project     = "cdn-app"
+  }
+}
+
+```
+
+    </TabItem> 
+
+    <TabItem value="terragrunt" label="Terragrunt" default>
+
+```
+
+# terragrunt.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-cloudfront-module/modules/resources"
+}
+
+inputs = {
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  origin_id   = "s3-origin"
+  domain_name = "my-app-bucket.s3.amazonaws.com"
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  default_cache_behavior = {
+    viewer_protocol_policy = "redirect-to-https"
+    allowed_methods        = ["GET", "HEAD"]
+    cached_methods         = ["GET", "HEAD"]
+  }
+
+  viewer_certificate = {
+    acm_certificate_arn      = "arn:aws:acm:us-east-1:123456789012:certificate/abcd-1234"
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
+  }
+
+  logging_config = {
+    bucket = "my-log-bucket.s3.amazonaws.com"
+    prefix = "cloudfront-logs/"
+  }
+
+  tags = {
+    Environment = "dev"
+    Project     = "cdn-app"
+  }
+}
+
+
+```
+   </TabItem> 
+   
+   <TabItem value="Opentofu" label="Opentofu"> 
+
+```
+# Opentofu.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-autoscaling-module/modules/resources"
+}
+
+inputs = {
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  name_prefix        = "my-asg"
+  launch_config_name = "my-launch-config"
+  min_size           = 1
+  max_size           = 3
+  desired_capacity   = 2
+  vpc_zone_identifier = ["subnet-123456", "subnet-654321"]
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  health_check_type         = "EC2"
+  health_check_grace_period = 300
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+   </TabItem> 
+
+</Tabs>
+
+
+<Tabs>
+
+   <TabItem value="inputs" label="Inputs" default>
+
+### Required
+
+| Name         | Description                                    | Type   | Example                            |
+| ------------ | ---------------------------------------------- | ------ | ---------------------------------- |
+| origin\_id   | Identifier for the origin                      | string | `"s3-origin"`                      |
+| domain\_name | Domain name of the origin (S3, ALB, or custom) | string | `"my-app-bucket.s3.amazonaws.com"` |
+
+### Optional
+
+| Name                     | Description                                    | Type   | Default |
+| ------------------------ | ---------------------------------------------- | ------ | ------- |
+| default\_cache\_behavior | Defines the default cache behavior             | object | `null`  |
+| viewer\_certificate      | SSL/TLS certificate configuration              | object | `null`  |
+| logging\_config          | Configure CloudFront access logging            | object | `null`  |
+| tags                     | Add custom tags to the CloudFront distribution | map    | `{}`    |
+
+   </TabItem> 
+
+   <TabItem value="outputs" label="Outputs">
+
+| Name              | Description                                   |
+| ----------------- | --------------------------------------------- |
+| distribution\_id  | The ID of the CloudFront distribution         |
+| distribution\_arn | The ARN of the CloudFront distribution        |
+| domain\_name      | The CloudFront distribution domain name       |
+| hosted\_zone\_id  | The Route53 hosted zone ID to use for aliases |
+
+    </TabItem> 
+
+</Tabs>
+
+
+
+
+
+
+

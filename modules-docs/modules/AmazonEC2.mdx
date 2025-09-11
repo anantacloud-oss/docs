@@ -1,0 +1,222 @@
+---
+id: AmazonEC2
+title: Amazon EC2
+sidebar_label: Amazon EC2
+---
+
+import EC2Modulebutton from './EC2Modulebutton';
+
+# Amazon EC2
+
+<EC2Modulebutton />
+
+## Overview  
+The **AWS EC2 Module** provides a reusable and scalable way to provision and manage Amazon Elastic Compute Cloud (EC2) instances using Terraform.  
+It abstracts the complexity of configuring EC2 resources and enables developers to define compute infrastructure with minimal effort while following AWS best practices.  
+
+This module supports both **resource creation** and **data sources** for managing EC2 instances, networking, and security configurations in a consistent and modular way.  
+
+---
+
+## Features  
+
+- 🚀 **Reusable & Modular** – Predefined structure for resources and data modules.  
+- 🔐 **Security Best Practices** – Supports key pairs, security groups, and IAM roles.  
+- ⚡ **Instance Flexibility** – Choose from a variety of instance types and AMIs.  
+- 📡 **Networking Support** – Configure VPC, subnets, and Elastic IPs.  
+- 📜 **Monitoring & Logging** – Enable CloudWatch monitoring and detailed instance logs.  
+- 🧩 **Extensible** – Easy to integrate with other Terraform modules and AWS services.  
+
+---
+
+## Core Concepts  
+
+1. **Resources Module**  
+   - Creates and manages EC2 instances and related configurations.  
+   - Includes support for:  
+     - Instance type & AMI selection  
+     - Key pair association  
+     - Security groups & network interfaces  
+     - Elastic IP attachment  
+     - User data & bootstrap scripts  
+     - IAM roles and instance profiles  
+
+2. **Data Module**  
+   - Fetches details of existing EC2 resources.  
+   - Useful for referencing:  
+     - Existing AMIs  
+     - Existing instances  
+     - Security groups or key pairs  
+   - Helps integrate EC2 instances with other infrastructure components.  
+
+3. **Networking & Security**  
+   - Supports VPC and subnet configuration.  
+   - Attach security groups and NACLs for secure access.  
+   - Optional public IP allocation for internet-facing instances.  
+
+4. **Separation of Concerns**  
+   - `resources/` handles EC2 instance creation and configuration.  
+   - `data/` is focused on reading and referencing existing EC2 resources.  
+   - This separation ensures clarity, reusability, and modular design.  
+
+---
+
+# Sample Usage
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="terraform" label="Terraform" default>
+
+```hcl
+# DEPLOY ANANTA CLOUD'S EC2 MODULE
+
+module "ec2_instance" {
+  source = "github.com/anantacloud/terraform-aws-compute-module/modules/resources"
+
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  instance_type = "t2.micro"
+  ami_id        = "ami-0c55b159cbfafe1f0"
+  subnet_id     = "subnet-123456"
+  key_name      = "my-key"
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  associate_public_ip = true
+  security_groups     = ["sg-123456"]
+
+  user_data = <<-EOF
+              #!/bin/bash
+              echo "Hello, World" > /var/www/html/index.html
+              EOF
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+</TabItem> 
+
+<TabItem value="terragrunt" label="Terragrunt" default>
+
+```
+# terragrunt.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-compute-module/modules/resources"
+}
+
+inputs = {
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  instance_type = "t2.micro"
+  ami_id        = "ami-0c55b159cbfafe1f0"
+  subnet_id     = "subnet-123456"
+  key_name      = "my-key"
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  associate_public_ip = true
+  security_groups     = ["sg-123456"]
+
+  user_data = <<-EOF
+              #!/bin/bash
+              echo "Hello, World" > /var/www/html/index.html
+              EOF
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+   </TabItem> 
+
+   <TabItem value="Opentofu" label="Opentofu"> 
+
+```
+# Opentofu.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-compute-module/modules/resources"
+}
+
+inputs = {
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  name_prefix        = "my-asg"
+  launch_config_name = "my-launch-config"
+  min_size           = 1
+  max_size           = 3
+  desired_capacity   = 2
+  vpc_zone_identifier = ["subnet-123456", "subnet-654321"]
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  health_check_type         = "EC2"
+  health_check_grace_period = 300
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+   </TabItem> 
+
+</Tabs>
+
+<Tabs>
+
+   <TabItem value="inputs" label="Inputs" default>
+
+### Required
+
+| Name           | Description                                   | Type   | Example                   |
+| -------------- | --------------------------------------------- | ------ | ------------------------- |
+| instance\_type | EC2 instance type                             | string | `"t2.micro"`              |
+| ami\_id        | AMI ID to launch the instance                 | string | `"ami-0c55b159cbfafe1f0"` |
+| subnet\_id     | Subnet ID where the instance will be launched | string | `"subnet-123456"`         |
+| key\_name      | Name of the SSH key pair                      | string | `"my-key"`                |
+
+### Optional
+
+| Name                  | Description                                  | Type   | Default |
+| --------------------- | -------------------------------------------- | ------ | ------- |
+| associate\_public\_ip | Assign a public IP to the instance           | bool   | `false` |
+| security\_groups      | List of security group IDs to attach         | list   | `[]`    |
+| user\_data            | User data script for instance initialization | string | `null`  |
+| tags                  | Add custom tags to the instance              | map    | `{}`    |
+
+   </TabItem> 
+
+   <TabItem value="outputs" label="Outputs">
+
+| Name            | Description                            |
+| --------------- | -------------------------------------- |
+| instance\_id    | The ID of the EC2 instance             |
+| instance\_arn   | The ARN of the EC2 instance            |
+| private\_ip     | The private IP address of the instance |
+| public\_ip      | The public IP address of the instance  |
+| instance\_state | The current state of the EC2 instance  |
+
+    </TabItem> 
+
+</Tabs>
+
+
+
+
+

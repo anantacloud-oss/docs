@@ -1,0 +1,211 @@
+---
+id: AWSAutoscaling
+title: AWS Auto Scaling
+sidebar_label: AWS Auto Scaling
+---
+
+import AutoscalingModulebutton from './AutoscalingModulebutton';
+
+# Amazon EC2 Auto Scaling  
+
+<AutoscalingModulebutton />
+
+## Overview  
+The **AWS Auto Scaling Module** provides a reusable and scalable way to provision and manage **Amazon EC2 Auto Scaling** infrastructure using Terraform.  
+It abstracts the complexity of configuring Auto Scaling resources and enables developers to define infrastructure with minimal effort while following AWS best practices.  
+
+This module supports both **resource creation** and **data sources** for managing Auto Scaling Groups (ASG), Launch Configurations, and related policies.  
+
+---
+
+## Features  
+
+- 🚀 **Reusable & Modular** – Predefined structure for resources and data modules.  
+- 📈 **Dynamic Scaling** – Configure scaling policies based on CPU, memory, or custom CloudWatch metrics.  
+- 🔄 **Lifecycle Hooks** – Supports lifecycle events for custom workflows during instance launch/termination.  
+- 🧑‍🤝‍🧑 **Multiple Attachments** – Attach Auto Scaling groups to multiple target groups or load balancers.  
+- 📜 **Tagging & Notifications** – Supports group tags and SNS notifications for scaling activities.  
+- ⏱ **Scheduled Scaling** – Define scheduled actions for predictable workload changes.  
+- 🧩 **Extensible** – Easy to integrate with other Terraform modules (VPC, ELB, CloudWatch, etc.).  
+
+---
+
+## Core Concepts  
+
+1. **Resources Module**  
+   - Creates and manages Auto Scaling components, including:  
+     - Auto Scaling Groups (ASG)  
+     - Launch Configurations  
+     - Scaling Policies  
+     - Lifecycle Hooks  
+     - Scheduled Actions  
+     - Notifications  
+
+2. **Data Module**  
+   - Fetches information about existing Auto Scaling resources.  
+   - Useful for referencing attributes like group names, ARNs, and capacity.  
+
+3. **Separation of Concerns**  
+   - `resources/` handles **ASG creation and configuration**.  
+   - `data/` is focused on **reading and referencing existing ASG resources**.  
+   - This separation ensures clarity, reusability, and modular design.  
+
+---
+
+# Sample Usage
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="terraform" label="Terraform" default>
+
+```hcl
+# DEPLOY ANANTA CLOUD'S AUTO SCALING MODULE
+
+module "autoscaling" {
+  source = "github.com/anantacloud/terraform-aws-autoscaling-module/modules/resources"
+
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  name_prefix        = "my-asg"
+  launch_config_name = "my-launch-config"
+  min_size           = 1
+  max_size           = 3
+  desired_capacity   = 2
+  vpc_zone_identifier = ["subnet-123456", "subnet-654321"]
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  health_check_type         = "EC2"
+  health_check_grace_period = 300
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+
+  </TabItem> 
+  
+  <TabItem value="terragrunt" label="Terragrunt">
+
+```
+# terragrunt.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-autoscaling-module/modules/resources"
+}
+
+inputs = {
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  name_prefix        = "my-asg"
+  launch_config_name = "my-launch-config"
+  min_size           = 1
+  max_size           = 3
+  desired_capacity   = 2
+  vpc_zone_identifier = ["subnet-123456", "subnet-654321"]
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  health_check_type         = "EC2"
+  health_check_grace_period = 300
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+   </TabItem>
+
+   <TabItem value="Opentofu" label="Opentofu"> 
+
+```
+# Opentofu.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-autoscaling-module/modules/resources"
+}
+
+inputs = {
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  name_prefix        = "my-asg"
+  launch_config_name = "my-launch-config"
+  min_size           = 1
+  max_size           = 3
+  desired_capacity   = 2
+  vpc_zone_identifier = ["subnet-123456", "subnet-654321"]
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  health_check_type         = "EC2"
+  health_check_grace_period = 300
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+   </TabItem> 
+
+</Tabs> 
+
+<Tabs> 
+
+   <TabItem value="inputs" label="Inputs" default>
+
+### Required
+
+| Name                  | Description                                   | Type   | Example              |
+| --------------------- | --------------------------------------------- | ------ | -------------------- |
+| name\_prefix          | Prefix for the Auto Scaling Group name        | string | `"my-asg"`           |
+| launch\_config\_name  | Name of the Launch Configuration              | string | `"my-launch-config"` |
+| min\_size             | Minimum number of instances in the group      | number | `1`                  |
+| max\_size             | Maximum number of instances in the group      | number | `3`                  |
+| desired\_capacity     | Desired number of instances                   | number | `2`                  |
+| vpc\_zone\_identifier | List of subnet IDs for the Auto Scaling Group | list   | `["subnet-123456"]`  |
+
+
+### Optional
+
+| Name                         | Description                                        | Type   | Default |
+| ---------------------------- | -------------------------------------------------- | ------ | ------- |
+| health\_check\_type          | Health check type for the group (EC2 or ELB)       | string | `"EC2"` |
+| health\_check\_grace\_period | Time (in seconds) for grace period before checking | number | `300`   |
+| tags                         | Key-value tags to apply to Auto Scaling resources  | map    | `{}`    |
+
+
+  </TabItem> 
+  
+  <TabItem value="outputs" label="Outputs">
+
+| Name               | Description                                |
+| ------------------ | ------------------------------------------ |
+| asg\_id            | The ID of the Auto Scaling Group           |
+| asg\_name          | The name of the Auto Scaling Group         |
+| asg\_arn           | The ARN of the Auto Scaling Group          |
+| asg\_min\_size     | The minimum size of the Auto Scaling Group |
+| asg\_max\_size     | The maximum size of the Auto Scaling Group |
+| asg\_desired\_size | The desired size of the Auto Scaling Group |
+
+   </TabItem>
+
+</Tabs>
+
+
+
+

@@ -1,0 +1,258 @@
+---
+id: AmazonCloudwatch
+title: AmazonCloud Watch
+sidebar_label: Amazon CloudWatch
+---
+
+
+import CloudwatchModulebutton from './CloudwatchModulebutton';
+
+# Amazon CloudWatch
+
+<CloudwatchModulebutton />
+
+## Overview  
+The **AWS CloudWatch Module** provides a reusable and scalable way to provision and manage Amazon CloudWatch resources using Terraform.  
+It abstracts the complexity of configuring monitoring, logging, and alerting services, enabling developers and operators to define observability infrastructure with minimal effort while following AWS best practices.  
+
+This module supports both **resource creation** and **data sources** for managing CloudWatch metrics, alarms, dashboards, and log groups in a consistent and modular way.  
+
+---
+
+## Features  
+
+- 🚀 **Reusable & Modular** – Predefined structure for monitoring and logging resources.  
+- 📊 **Comprehensive Monitoring** – Collects and tracks metrics across AWS services.  
+- 🔔 **Alerting & Notifications** – Supports CloudWatch alarms integrated with SNS for automated notifications.  
+- 📝 **Centralized Logging** – Manage and query application and infrastructure logs with CloudWatch Logs.  
+- 📈 **Dashboards & Insights** – Build visual dashboards and generate insights from metrics and logs.  
+- 🧩 **Extensible** – Easy to integrate with other Terraform modules and AWS services.  
+
+---
+
+## Core Concepts  
+
+1. **Metrics & Alarms**  
+   - Create and manage custom and AWS-provided metrics.  
+   - Configure alarms to monitor thresholds and trigger automated actions.  
+   - Integrate alarms with SNS, Auto Scaling, or other services for automated responses.  
+
+2. **Logs Management**  
+   - Manage CloudWatch log groups and log streams.  
+   - Support for log retention policies.  
+   - Enable centralized logging for multiple AWS resources and applications.  
+
+3. **Dashboards**  
+   - Define CloudWatch dashboards to visualize key performance indicators (KPIs).  
+   - Support for multiple widgets (metrics graphs, alarms, and text).  
+   - Provide real-time insights into infrastructure and application performance.  
+
+4. **Data Module**  
+   - Fetch existing metrics, alarms, dashboards, or log groups.  
+   - Useful for referencing CloudWatch resources in other Terraform modules.  
+
+5. **Separation of Concerns**  
+   - `resources/` handles creation of CloudWatch metrics, alarms, dashboards, and log groups.  
+   - `data/` is focused on reading and referencing existing CloudWatch resources.  
+   - This separation ensures clarity, reusability, and modular design.  
+
+---
+
+# Sample Usage
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="terraform" label="Terraform" default>
+
+```hcl
+# DEPLOY ANANTA CLOUD'S CLOUDWATCH MODULE
+
+module "cloudwatch" {
+  source = "github.com/anantacloud/terraform-aws-cloudwatch-module/modules/resources"
+
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  log_group_name = "my-app-logs"
+  retention_days = 30
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  alarms = [
+    {
+      name                = "cpu-high"
+      metric_name         = "CPUUtilization"
+      namespace           = "AWS/EC2"
+      comparison_operator = "GreaterThanThreshold"
+      threshold           = 80
+      period              = 300
+      evaluation_periods  = 2
+      statistic           = "Average"
+      alarm_actions       = ["arn:aws:sns:us-east-1:123456789012:my-sns-topic"]
+    }
+  ]
+
+  dashboards = [
+    {
+      name   = "my-dashboard"
+      widgets = [
+        {
+          type = "metric"
+          properties = {
+            metrics = [["AWS/EC2", "CPUUtilization", "InstanceId", "i-1234567890abcdef0"]]
+            period  = 300
+            stat    = "Average"
+          }
+        }
+      ]
+    }
+  ]
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+
+   </TabItem> 
+
+   <TabItem value="terragrunt" label="Terragrunt" default>
+
+```
+
+# terragrunt.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-cloudwatch-module/modules/resources"
+}
+
+inputs = {
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  log_group_name = "my-app-logs"
+  retention_days = 30
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  alarms = [
+    {
+      name                = "cpu-high"
+      metric_name         = "CPUUtilization"
+      namespace           = "AWS/EC2"
+      comparison_operator = "GreaterThanThreshold"
+      threshold           = 80
+      period              = 300
+      evaluation_periods  = 2
+      statistic           = "Average"
+      alarm_actions       = ["arn:aws:sns:us-east-1:123456789012:my-sns-topic"]
+    }
+  ]
+
+  dashboards = [
+    {
+      name   = "my-dashboard"
+      widgets = [
+        {
+          type = "metric"
+          properties = {
+            metrics = [["AWS/EC2", "CPUUtilization", "InstanceId", "i-1234567890abcdef0"]]
+            period  = 300
+            stat    = "Average"
+          }
+        }
+      ]
+    }
+  ]
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+   </TabItem> 
+  
+   <TabItem value="Opentofu" label="Opentofu"> 
+
+```
+# Opentofu.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-cloudwatch-module/modules/resources"
+}
+
+inputs = {
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  name_prefix        = "my-asg"
+  launch_config_name = "my-launch-config"
+  min_size           = 1
+  max_size           = 3
+  desired_capacity   = 2
+  vpc_zone_identifier = ["subnet-123456", "subnet-654321"]
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  health_check_type         = "EC2"
+  health_check_grace_period = 300
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+   </TabItem> 
+
+</Tabs>
+
+
+<Tabs>
+
+   <TabItem value="inputs" label="Inputs" default>
+
+### Required
+
+| Name             | Description                         | Type   | Example         |
+| ---------------- | ----------------------------------- | ------ | --------------- |
+| log\_group\_name | Name of the CloudWatch log group    | string | `"my-app-logs"` |
+| retention\_days  | Number of days to retain log events | number | `30`            |
+
+### Optional
+
+| Name       | Description                                           | Type | Default |
+| ---------- | ----------------------------------------------------- | ---- | ------- |
+| alarms     | List of CloudWatch alarms to configure                | list | `[]`    |
+| dashboards | List of CloudWatch dashboards with widget definitions | list | `[]`    |
+| tags       | Add custom tags to CloudWatch resources               | map  | `{}`    |
+
+</TabItem> 
+
+<TabItem value="outputs" label="Outputs">
+
+| Name             | Description                                |
+| ---------------- | ------------------------------------------ |
+| log\_group\_name | The name of the CloudWatch log group       |
+| log\_group\_arn  | The ARN of the CloudWatch log group        |
+| alarm\_ids       | List of CloudWatch alarm IDs created       |
+| dashboard\_names | List of CloudWatch dashboard names created |
+
+    </TabItem> 
+
+</Tabs>
+
+
+
+
+

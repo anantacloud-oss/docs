@@ -1,0 +1,247 @@
+---
+id: Apachekafka
+title: Apache kafka 
+sidebar_label: Apache kafka
+---
+
+import KafkaModulebutton from './KafkaModulebutton';
+
+# Apache Kafka
+
+<KafkaModulebutton />
+
+## Overview  
+The **AWS Apache Kafka Module** provides a reusable and scalable way to provision and manage **Amazon Managed Streaming for Apache Kafka (MSK)** clusters using Terraform.  
+It abstracts the complexity of configuring Kafka clusters, brokers, and related networking resources, enabling developers to define infrastructure with minimal effort while following AWS best practices.  
+
+This module supports both **resource creation** and **data sources** for managing MSK clusters, configurations, and monitoring in a consistent and modular way.  
+
+---
+
+## Features  
+
+- 🚀 **Reusable & Modular** – Predefined structure for resources and data modules.  
+- 🔐 **Security Best Practices** – Supports encryption (at rest & in-transit), IAM authentication, and fine-grained access control.  
+- 📡 **Scalable Clusters** – Configure broker nodes, storage, and networking with auto-scaling capabilities.  
+- 📜 **Monitoring & Logging** – Integrated with CloudWatch metrics, enhanced monitoring, and broker logging.  
+- 🌐 **VPC Integration** – Deploy Kafka clusters in private subnets with customizable networking.  
+- 🧩 **Extensible** – Easily integrates with producers, consumers, and other AWS services like Lambda, Kinesis, and S3.  
+
+---
+
+## Core Concepts  
+
+1. **Resources Module**  
+   - Creates and manages MSK clusters and configurations.  
+   - Includes support for:  
+     - Broker nodes and instance types  
+     - Encryption (KMS, TLS)  
+     - Authentication (IAM, SASL, SCRAM)  
+     - Storage scaling  
+     - Monitoring & logging  
+
+2. **Data Module**  
+   - Fetches details of existing MSK clusters and configurations.  
+   - Useful for referencing cluster attributes, networking details, and integrating with other infrastructure components.  
+
+3. **Cluster Configuration Management**  
+   - Supports defining and updating Kafka configurations.  
+   - Provides flexibility to manage broker settings (topics, replication, partitions, etc.).  
+
+4. **Separation of Concerns**  
+   - `resources/` handles cluster creation and configuration.  
+   - `data/` is focused on reading and referencing existing MSK clusters.  
+   - This separation ensures clarity, reusability, and modular design.  
+
+---
+
+# Sample Usage
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+
+  <TabItem value="terraform" label="Terraform" default>
+
+```hcl
+# DEPLOY ANANTA CLOUD'S APACHE KAFKA MODULE
+
+module "msk_cluster" {
+  source = "github.com/anantacloud/terraform-aws-kafka-module/modules/resources"
+
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  cluster_name = "my-kafka-cluster"
+  kafka_version = "3.6.0"
+  number_of_broker_nodes = 3
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  broker_node_group_info = {
+    instance_type  = "kafka.m5.large"
+    ebs_volume_size = 100
+    client_subnets  = ["subnet-12345", "subnet-67890"]
+    security_groups = ["sg-12345678"]
+  }
+
+  encryption_info = {
+    encryption_in_transit = {
+      client_broker = "TLS"
+      in_cluster    = true
+    }
+    encryption_at_rest_kms_key_arn = "arn:aws:kms:us-east-1:123456789012:key/abcd-1234"
+  }
+
+  logging_info = {
+    broker_logs = {
+      cloudwatch_logs = {
+        enabled   = true
+        log_group = "/aws/msk/my-kafka-cluster"
+      }
+    }
+  }
+
+  tags = {
+    Environment = "dev"
+    Project     = "streaming-app"
+  }
+}
+
+```
+   </TabItem> 
+
+   <TabItem value="terragrunt" label="Terragrunt" default>
+
+```
+
+# terragrunt.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-apache-kafka-module/modules/resources"
+}
+
+inputs = {
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  cluster_name = "my-kafka-cluster"
+  kafka_version = "3.6.0"
+  number_of_broker_nodes = 3
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  broker_node_group_info = {
+    instance_type  = "kafka.m5.large"
+    ebs_volume_size = 100
+    client_subnets  = ["subnet-12345", "subnet-67890"]
+    security_groups = ["sg-12345678"]
+  }
+
+  encryption_info = {
+    encryption_in_transit = {
+      client_broker = "TLS"
+      in_cluster    = true
+    }
+    encryption_at_rest_kms_key_arn = "arn:aws:kms:us-east-1:123456789012:key/abcd-1234"
+  }
+
+  logging_info = {
+    broker_logs = {
+      cloudwatch_logs = {
+        enabled   = true
+        log_group = "/aws/msk/my-kafka-cluster"
+      }
+    }
+  }
+
+  tags = {
+    Environment = "dev"
+    Project     = "streaming-app"
+  }
+}
+
+```
+   </TabItem> 
+
+   <TabItem value="Opentofu" label="Opentofu"> 
+
+```
+# Opentofu.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-compute-module/modules/resources"
+}
+
+inputs = {
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  name_prefix        = "my-asg"
+  launch_config_name = "my-launch-config"
+  min_size           = 1
+  max_size           = 3
+  desired_capacity   = 2
+  vpc_zone_identifier = ["subnet-123456", "subnet-654321"]
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  health_check_type         = "EC2"
+  health_check_grace_period = 300
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+   </TabItem> 
+
+</Tabs> 
+
+<Tabs> 
+
+   <TabItem value="inputs" label="Inputs" default>
+
+### Required
+
+| Name                      | Description                           | Type   | Example              |
+| ------------------------- | ------------------------------------- | ------ | -------------------- |
+| cluster\_name             | Name of the Kafka cluster             | string | `"my-kafka-cluster"` |
+| kafka\_version            | Version of Apache Kafka               | string | `"3.6.0"`            |
+| number\_of\_broker\_nodes | Number of broker nodes in the cluster | number | `3`                  |
+
+### Optional
+
+| Name                      | Description                                              | Type   | Default |
+| ------------------------- | -------------------------------------------------------- | ------ | ------- |
+| broker\_node\_group\_info | Broker node configuration (instance type, subnets, etc.) | object | `null`  |
+| encryption\_info          | Encryption settings (in-transit, at-rest)                | object | `null`  |
+| logging\_info             | Logging configuration (CloudWatch, S3)                   | object | `null`  |
+| tags                      | Custom tags for the cluster                              | map    | `{}`    |
+
+   </TabItem> 
+
+   <TabItem value="outputs" label="Outputs">
+
+| Name               | Description                                       |
+| ------------------ | ------------------------------------------------- |
+| cluster\_arn       | The ARN of the MSK cluster                        |
+| cluster\_name      | The name of the MSK cluster                       |
+| bootstrap\_brokers | Comma-separated list of broker connection strings |
+| zookeeper\_connect | Zookeeper connection string                       |
+
+   </TabItem> 
+
+</Tabs>
+
+
+
+
+
+

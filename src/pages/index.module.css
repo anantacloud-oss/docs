@@ -92,47 +92,6 @@
   color: #999;
 }
 
-html[data-theme='dark'] .heroCustom {
-  background-color: #1b1b1d; 
-  color: white;
-}
-html[data-theme='dark'] .subtitle {
-  color: #cccccc;
-  background-color: #1b1b1d; 
-}
-html[data-theme='dark'] .card {
-  background-color: #001c2e !important;
-  border: 1px solid white !important;
-  transition: box-shadow 0.3s ease;
-}
-html[data-theme='dark'] .card:hover {
-  box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.4);
-}
-html[data-theme='dark'] .cardTitle,
-html[data-theme='dark'] .cardText {
-  color: white !important;
-}
-html[data-theme='dark'] .footer {
-  background-color: #001c2e; 
-  color: #f1f1f1;
-}
-html[data-theme='dark'] .footerColumn h4 {
-  color: #ffffff;
-}
-html[data-theme='dark'] .footerColumn p,
-html[data-theme='dark'] .footerColumn li {
-  color: #aaaaaa;
-}
-html[data-theme='dark'] .footerLinks li a {
-  color: #aaaaaa;
-}
-html[data-theme='dark'] .footerLinks li a:hover {
-  color: #ffffff;
-}
-html[data-theme='dark'] .footerBottom {
-  color: #777;
-  border-top: 1px solid #444;
-}
 
 @media (max-width: 768px) {
   .heroCustom {

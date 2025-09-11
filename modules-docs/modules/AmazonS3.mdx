@@ -1,0 +1,231 @@
+---
+id: AmazonS3
+title: Amazon S3
+sidebar_label: Amazon S3
+---
+
+
+import S3Modulebutton from './S3Modulebutton';
+
+# Amazon S3
+
+<S3Modulebutton />
+
+## Overview  
+The **AWS S3 Module** provides a reusable and scalable way to provision and manage Amazon Simple Storage Service (S3) buckets using Terraform.  
+It abstracts the complexity of configuring S3 resources and enables developers to define infrastructure with minimal effort while following best practices.  
+
+This module supports both **resource creation** and **data sources** for managing S3 buckets, policies, and objects in a consistent and modular way.  
+
+---
+
+## Features  
+
+- 🚀 **Reusable & Modular** – Predefined structure for resources and data modules.  
+- 🔐 **Security Best Practices** – Supports bucket policies, ACLs, and access control.  
+- 🗂 **Lifecycle Management** – Configure bucket lifecycle rules to manage data efficiently.  
+- 📜 **Logging & Versioning** – Enable bucket logging and versioning for compliance.  
+- 🌐 **CORS Support** – Manage cross-origin resource sharing rules.  
+- 🧩 **Extensible** – Easy to integrate with other Terraform modules and AWS services.  
+
+---
+
+## Core Concepts  
+
+1. **Resources Module**  
+   - Creates and manages S3 buckets and related configurations.  
+   - Includes support for:
+     - Bucket ACLs  
+     - Bucket policies  
+     - Versioning  
+     - Lifecycle rules  
+     - Logging  
+     - CORS configuration  
+
+2. **Data Module**  
+   - Allows fetching information about existing S3 resources.  
+   - Useful for referencing bucket attributes and integrating with other infrastructure components.  
+
+3. **Objects Management**  
+   - Supports defining and uploading objects to S3 buckets.  
+   - Provides flexibility for managing data storage within buckets.  
+
+4. **Separation of Concerns**  
+   - `resources/` handles bucket creation and configuration.  
+   - `data/` is focused on reading and referencing existing S3 resources.  
+   - This separation ensures clarity, reusability, and modular design.  
+
+---
+
+# Sample Usage
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+
+  <TabItem value="terraform" label="Terraform" default>
+
+```hcl
+# DEPLOY ANANTA CLOUD'S S3 MODULE
+
+module "s3_bucket" {
+  source = "github.com/anantacloud/terraform-aws-S3-module/modules/resources"
+
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  bucket = "my-app-bucket"
+  acl    = "private"
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  versioning = {
+    enabled = true
+  }
+
+  logging = {
+    target_bucket = "my-log-bucket"
+    target_prefix = "logs/"
+  }
+
+  cors_rules = [
+    {
+      allowed_methods = ["GET"]
+      allowed_origins = ["*"]
+    }
+  ]
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+
+   </TabItem> 
+ 
+   <TabItem value="terragrunt" label="Terragrunt" default>
+
+```hcl
+
+# terragrunt.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-S3-module/modules/resources"
+}
+
+inputs = {
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  bucket = "my-app-bucket"
+  acl        = "private"
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  versioning = {
+    enabled = true
+  }
+
+  logging = {
+    target_bucket = "my-log-bucket"
+    target_prefix  = "logs/"
+  }
+
+  cors_rules = [
+    {
+      allowed_methods = ["GET"]
+      allowed_origins    = ["*"]
+    }
+  ]
+
+  tags = {
+    Environment = "dev"
+    Project            = "my-app"
+  }
+}
+
+```
+   </TabItem> 
+
+   <TabItem value="Opentofu" label="Opentofu"> 
+
+```
+# Opentofu.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-S3-module/modules/resources"
+}
+
+inputs = {
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  name_prefix        = "my-asg"
+  launch_config_name = "my-launch-config"
+  min_size           = 1
+  max_size           = 3
+  desired_capacity   = 2
+  vpc_zone_identifier = ["subnet-123456", "subnet-654321"]
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  health_check_type         = "EC2"
+  health_check_grace_period = 300
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+   </TabItem> 
+
+</Tabs>
+
+
+<Tabs>
+
+   <TabItem value="inputs" label="Inputs" default>
+
+### Required
+
+| Name   | Description                        | Type   | Example          |
+|--------|------------------------------------|--------|------------------|
+| bucket | Name of the S3 bucket              | string | `"my-app-bucket"` |
+| acl    | Access control list for the bucket | string | `"private"`      |
+
+### Optional
+
+| Name       | Description                              | Type   | Default |
+|------------|------------------------------------------|--------|---------|
+| versioning | Enable bucket versioning                 | object | `false` |
+| logging    | Configure bucket logging                 | object | `null`  |
+| cors_rules | Define CORS configuration for the bucket | list   | `[]`    |
+| tags       | Add custom tags to the bucket            | map    | `{}`    |
+
+   </TabItem>
+
+   <TabItem value="outputs" label="Outputs">
+
+| Name                   | Description                                |
+|------------------------|--------------------------------------------|
+| bucket_id              | The ID of the S3 bucket                    |
+| bucket_arn             | The ARN of the S3 bucket                   |
+| bucket_domain          | The bucket domain name                     |
+| bucket_regional_domain | The regional domain name of the bucket      |
+
+   </TabItem>
+
+</Tabs>
+
+
+
+
+

@@ -81,17 +81,10 @@ const config = {
         ],
       },
 
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-
       colorMode: {
-        defaultMode: 'light',
-        disableSwitch: false,
-        respectPrefersColorScheme: true,
-      },
-    }),
+          disableSwitch: true, 
+     },
+  }),
 };
 
 export default config;

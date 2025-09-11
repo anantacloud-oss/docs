@@ -1,0 +1,201 @@
+---
+id: KMS
+title: AWS Key Management Service 
+sidebar_label: AWS Key Management Service 
+---
+
+import KMSModulebutton from './KMSModulebutton';
+
+# AWS Key Management Service (KMS)
+
+<KMSModulebutton />
+
+## Overview  
+The **AWS KMS Module** provides a reusable and scalable way to provision and manage AWS Key Management Service (KMS) keys using Terraform.  
+It abstracts the complexity of configuring encryption keys and related policies, enabling developers to define secure key management infrastructure with minimal effort while following AWS best practices.  
+
+This module supports both **resource creation** and **data sources** for managing KMS keys, aliases, and policies in a consistent and modular way.  
+
+---
+
+## Features  
+
+- 🚀 **Reusable & Modular** – Predefined structure for resources and data modules.  
+- 🔐 **Security Best Practices** – Supports key policies, IAM integration, and fine-grained access control.  
+- 🔑 **Encryption at Scale** – Manage encryption keys for S3, EBS, RDS, Lambda, and more.  
+- 📜 **Automatic Rotation** – Enable key rotation to enhance security posture.  
+- 🧩 **Extensible** – Easily integrates with other Terraform modules and AWS services.  
+- 🛡 **Compliance Ready** – Enforce encryption standards required for audits and regulations.  
+
+---
+
+## Core Concepts  
+
+1. **Resources Module**  
+   - Creates and manages KMS keys and related configurations.  
+   - Includes support for:  
+     - Customer-managed keys (CMKs)  
+     - Key policies and grants  
+     - Aliases for simplified referencing  
+     - Automatic key rotation  
+
+2. **Data Module**  
+   - Fetches information about existing KMS keys and aliases.  
+   - Useful for referencing key attributes and integrating with other infrastructure components.  
+
+3. **Policy Management**  
+   - Supports defining custom key policies for fine-grained IAM control.  
+   - Provides flexibility to delegate access securely across users, services, and accounts.  
+
+4. **Separation of Concerns**  
+   - `resources/` handles KMS key creation and configuration.  
+   - `data/` is focused on reading and referencing existing KMS keys.  
+   - This separation ensures clarity, reusability, and modular design.  
+
+---
+
+# Sample Usage
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+
+  <TabItem value="terraform" label="Terraform" default>
+
+```hcl
+# DEPLOY ANANTA CLOUD'S KMS MODULE
+
+module "kms_key" {
+  source = "github.com/anantacloud/terraform-aws-key-management-module/modules/resources"
+
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  description = "KMS key for my app"
+  enable_key_rotation = true
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  deletion_window_in_days = 30
+  key_usage               = "ENCRYPT_DECRYPT"
+  customer_master_key_spec = "SYMMETRIC_DEFAULT"
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+
+   </TabItem> 
+
+   <TabItem value="terragrunt" label="Terragrunt" default>
+
+```
+
+# terragrunt.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-key-management-module/modules/resources"
+}
+
+inputs = {
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  description        = "KMS key for my app"
+  enable_key_rotation = true
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  deletion_window_in_days  = 30
+  key_usage                              = "ENCRYPT_DECRYPT"
+  customer_master_key_spec = "SYMMETRIC_DEFAULT"
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+   </TabItem> 
+    
+   <TabItem value="Opentofu" label="Opentofu"> 
+
+```
+# Opentofu.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-key-management-module/modules/resources"
+}
+
+inputs = {
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  name_prefix        = "my-asg"
+  launch_config_name = "my-launch-config"
+  min_size           = 1
+  max_size           = 3
+  desired_capacity   = 2
+  vpc_zone_identifier = ["subnet-123456", "subnet-654321"]
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  health_check_type         = "EC2"
+  health_check_grace_period = 300
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+   </TabItem>
+
+</Tabs>
+
+
+<Tabs>
+
+   <TabItem value="inputs" label="Inputs" default>
+
+### Required
+
+| Name                  | Description                              | Type   | Example                |
+| --------------------- | ---------------------------------------- | ------ | ---------------------- |
+| description           | Description of the KMS key               | string | `"KMS key for my app"` |
+| enable\_key\_rotation | Enable automatic rotation of the KMS key | bool   | `true`                 |
+
+### Optional
+
+| Name                        | Description                                          | Type   | Default               |
+| --------------------------- | ---------------------------------------------------- | ------ | --------------------- |
+| deletion\_window\_in\_days  | Waiting period for scheduled KMS key deletion        | number | `30`                  |
+| key\_usage                  | The cryptographic operations (e.g. ENCRYPT\_DECRYPT) | string | `"ENCRYPT_DECRYPT"`   |
+| customer\_master\_key\_spec | Type of KMS key (e.g., SYMMETRIC\_DEFAULT)           | string | `"SYMMETRIC_DEFAULT"` |
+| tags                        | Add custom tags to the KMS key                       | map    | `{}`                  |
+
+   </TabItem> 
+
+   <TabItem value="outputs" label="Outputs">
+
+| Name        | Description                                     |
+| ----------- | ----------------------------------------------- |
+| key\_id     | The globally unique identifier for the KMS key  |
+| key\_arn    | The Amazon Resource Name (ARN) of the KMS key   |
+| key\_alias  | The alias assigned to the KMS key (if created)  |
+| key\_policy | The IAM policy document attached to the KMS key |
+
+   </TabItem>
+
+</Tabs>
+
+

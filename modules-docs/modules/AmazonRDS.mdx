@@ -1,0 +1,243 @@
+---
+id: AmazonRDS
+title: AmazonRDS
+sidebar_label: Amazon RDS
+---
+
+
+import RDSModulebutton from './RDSModulebutton';
+
+# Amazon RDS
+
+<RDSModulebutton />
+
+## Overview  
+The **AWS RDS Module** provides a reusable and scalable way to provision and manage Amazon Relational Database Service (RDS) instances using Terraform.
+It abstracts the complexity of configuring RDS resources and enables developers to define infrastructure with minimal effort while following AWS best practices.
+
+This module supports both **resource creation** and **data sources** for managing RDS instances, parameter groups, subnet groups, and snapshots in a consistent and modular way.
+
+---
+
+## Features  
+
+- 🚀 **Reusable & Modular** – Predefined structure for resources and data modules.
+- 🔐 **Security Best Practices** – Supports encryption, IAM roles, security groups, and parameter groups.
+- ⚡ **High Availability** – Configure Multi-AZ deployments and automatic failover.
+- 📊 **Monitoring & Logging** – Enable CloudWatch logs and enhanced monitoring for insights.
+- 🗂 **Parameter & Option Groups** – Manage custom DB configurations at scale.
+- 💾 **Backups & Snapshots** – Supports automated backups and snapshot management.
+- 🌐 **Network Isolation** – Supports VPC, subnets, and security groups for secure access.
+- 🧩 **Extensible** – Easy to integrate with other Terraform modules and AWS services.
+
+---
+
+## Core Concepts  
+
+1. **Resources Module**  
+   - Creates and manages RDS instances and related configurations.
+   - Includes support for:
+       - DB Instance creation (MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, etc.)
+       - Multi-AZ deployment
+       - DB Subnet Groups
+       - Security Group attachments
+       - Parameter & Option Groups
+       - Automated Backups & Maintenance Windows
+       - Monitoring & CloudWatch integration 
+
+2. **Data Module**  
+   - Fetches information about existing RDS resources.
+   - Useful for referencing attributes such as endpoint, port, and DB identifiers.
+   - Helps in integrating existing RDS instances with other infrastructure components.
+
+3. **Snapshots Management**  
+   - Supports creating and managing RDS snapshots.
+   - Allows restoring databases from existing snapshots.
+   - Provides flexibility for backup and disaster recovery.
+
+4. **Separation of Concerns**  
+   - **`resources/`** handles **RDS instance creation**, **subnet groups**, and **parameter configurations**.  
+   - **`data/`**  is focused on **reading and referencing existing RDS resources**.  
+   - This separation ensures **clarity, reusability, and modular design**.
+
+---
+
+# Sample Usage
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+
+  <TabItem value="terraform" label="Terraform" default>
+
+```hcl
+# DEPLOY ANANTA CLOUD'S S3 MODULE
+
+module "RDS" {
+  source = "github.com/anantacloud/terraform-aws-rds-module/modules/resources"
+
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  identifier         = "my-rds-instance"
+  engine             = "mysql"
+  engine_version     = "8.0"
+  instance_class     = "db.t3.micro"
+  allocated_storage  = 20
+  username           = "admin"
+  password           = "yourpassword"
+  db_subnet_group    = "my-db-subnet-group"
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  multi_az            = false
+  publicly_accessible = false
+  storage_encrypted   = true
+
+  backup_retention_period = 7
+  backup_window           = "03:00-06:00"
+
+  maintenance_window      = "sun:05:00-sun:06:00"
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+
+   </TabItem> 
+ 
+   <TabItem value="terragrunt" label="Terragrunt" default>
+
+```hcl
+
+# terragrunt.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-rds-module/modules/resources"
+}
+
+inputs = {
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  identifier        = "my-rds-instance"
+  engine            = "mysql"
+  engine_version    = "8.0"
+  instance_class    = "db.t3.micro"
+  allocated_storage = 20
+  username          = "admin"
+  password          = "yourpassword"
+  db_subnet_group   = "my-db-subnet-group"
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  multi_az            = false
+  publicly_accessible = false
+  storage_encrypted   = true
+
+  backup_retention_period = 7
+  backup_window           = "03:00-06:00"
+
+  maintenance_window      = "sun:05:00-sun:06:00"
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+   </TabItem> 
+   
+   <TabItem value="Opentofu" label="Opentofu"> 
+
+```
+# Opentofu.hcl
+
+terraform {
+  source = "github.com/anantacloud/terraform-aws-rds-module/modules/resources"
+}
+
+inputs = {
+  # ==========================
+  # REQUIRED VARIABLES
+  # ==========================
+  name_prefix        = "my-asg"
+  launch_config_name = "my-launch-config"
+  min_size           = 1
+  max_size           = 3
+  desired_capacity   = 2
+  vpc_zone_identifier = ["subnet-123456", "subnet-654321"]
+
+  # ==========================
+  # OPTIONAL VARIABLES
+  # ==========================
+  health_check_type         = "EC2"
+  health_check_grace_period = 300
+
+  tags = {
+    Environment = "dev"
+    Project     = "my-app"
+  }
+}
+
+```
+   </TabItem> 
+
+</Tabs>
+
+
+<Tabs>
+
+  <TabItem value="inputs" label="Inputs" default>
+
+### Required
+
+| Name            | Description                                | Type   | Example              |
+|-----------------|--------------------------------------------|--------|----------------------|
+| identifier      | Name of the RDS instance                   | string | `"my-rds-instance"`  |
+| engine          | Database engine (e.g., mysql, postgres)    | string | `"mysql"`            |
+| engine_version  | Version of the database engine             | string | `"8.0"`              |
+| instance_class  | The instance type of the RDS instance      | string | `"db.t3.micro"`      |
+| allocated_storage | Storage size (in GB)                     | number | `20`                 |
+| username        | Master DB username                         | string | `"admin"`            |
+| password        | Master DB password                         | string | `"mypassword123"`    |
+| db_subnet_group | Name of the DB subnet group                | string | `"my-db-subnet-group"` |
+
+### Optional
+
+| Name                  | Description                                       | Type   | Default |
+|-----------------------|---------------------------------------------------|--------|---------|
+| multi_az              | Deploy RDS in multiple availability zones         | bool   | `false` |
+| publicly_accessible   | Whether the DB instance is publicly accessible    | bool   | `false` |
+| storage_encrypted     | Whether to enable storage encryption              | bool   | `true`  |
+| backup_retention_period | Number of days to retain backups                | number | `7`     |
+| backup_window         | Daily time range for automated backups            | string | `"03:00-06:00"` |
+| maintenance_window    | Weekly time range for maintenance                 | string | `"sun:05:00-sun:06:00"` |
+| tags                  | Key-value mapping of resource tags                | map    | `{}`    |
+
+  </TabItem>
+
+  <TabItem value="outputs" label="Outputs">
+
+| Name           | Description                                |
+|----------------|--------------------------------------------|
+| db_instance_id | The RDS instance identifier                 |
+| db_instance_arn| The ARN of the RDS instance                 |
+| endpoint       | The connection endpoint for the database    |
+| port           | The port the database is listening on       |
+| username       | The master username                        |
+
+  </TabItem>
+
+</Tabs>
+
+
+
+
