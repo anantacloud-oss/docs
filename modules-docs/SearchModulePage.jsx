@@ -140,8 +140,10 @@ export default function SearchModulePage() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
+              height: "100%", // forces equal card height
             }}
           >
+           <div style={{ flexGrow: 1 }}>
             <h3
               style={{
                 marginBottom: "10px",
@@ -151,6 +153,7 @@ export default function SearchModulePage() {
                 WebkitLineClamp: 2,
                 WebkitBoxOrient: "vertical",
                 overflow: "hidden",
+                minHeight: "45px",
               }}
             >
               {card.title}
@@ -168,6 +171,7 @@ export default function SearchModulePage() {
             >
               {card.desc}
             </p>
+         </div>
             <a
               href={card.link}
               style={{
