@@ -7,7 +7,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '0. Introduction',
+      label: 'Introduction',
       items: [
         'introduction/welcome',
         'introduction/how-to-use',
@@ -17,7 +17,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '1. DevOps Foundations',
+      label: 'DevOps Foundations',
       items: [
         'devops/overview',
         'devops/gitops-and-cicd',
@@ -28,7 +28,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '2. IaC Best Practices',
+      label: 'IaC Best Practices',
       items: [
         'iac/overview',
         'iac/tagging-and-naming-conventions',
@@ -40,29 +40,29 @@ const sidebars = {
     },
     {
       type: 'doc',
-      label: '3. Cloud Computing',
+      label: 'Cloud Computing',
       id: 'supported-clouds', 
     },
     {
       type: 'category',
-      label: '4. Security & Compliance',
-      items: [
-        'security/overview',
-        'security/cis-benchmark',
-        'security/compliance-architecture',
-        'security/audit-logging',
-        'security/secret-and-key-management'
-      ],
-    },
-    {
-      type: 'category',
-      label: '5. Landing Zone Deployment',
+      label: 'Landing Zone Deployment',
       items: [
         'landing-zone/overview',
         'landing-zone/deployment-strategy',
         'landing-zone/deploying-to-aws',
         'landing-zone/deploying-to-gcp',
         'landing-zone/deploying-to-azure'
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Security & Compliance',
+      items: [
+        'security/overview',
+        'security/cis-benchmark',
+        'security/compliance-architecture',
+        'security/audit-logging',
+        'security/secret-and-key-management'
       ],
     },
   ],
