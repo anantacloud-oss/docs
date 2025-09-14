@@ -3,3 +3,22 @@ id: gitops-and-cicd
 title: GitOps & CICD
 sidebar_label: GitOps & CICD
 ---
+
+In modern cloud-native environments, delivering software quickly and reliably is a critical competitive advantage. **Ananta Cloud’s GitOps & CI/CD foundation** provides a streamlined approach to infrastructure and application delivery using Git-based workflows and automated pipelines.
+
+This component enables teams to adopt automation-first practices, enforce consistency across environments, and maintain full traceability for every change—whether it’s deploying a microservice or provisioning cloud infrastructure.
+
+### What is GitOps?
+
+**GitOps** is an operational model that uses Git as the **single source of truth** for managing both infrastructure and application deployments. It applies DevOps principles using Git pull requests, version control, and automated reconciliation to manage changes in declarative systems such as Kubernetes and Terraform.
+
+### Core Principles of GitOps
+
+| Principle                              | Description                                                               |
+| -------------------------------------- | ------------------------------------------------------------------------- |
+| **Declarative Configuration**          | All infrastructure and applications are defined in code (YAML, HCL, etc.) |
+| **Version Control as Source of Truth** | Git tracks every change, enabling auditability and rollback               |
+| **Automated Reconciliation**           | Tools like ArgoCD or Flux continuously sync the desired and actual state  |
+| **Approval Workflows**                 | Changes are reviewed and approved through pull requests (PRs)             |
+
+
