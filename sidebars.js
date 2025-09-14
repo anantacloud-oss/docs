@@ -55,7 +55,7 @@ const sidebars = {
       ],
     },
     {
-      type: 'doc',
+      type: 'category',
       label: '5. Landing Zone Deployment',
       items: [
         'landing-zone/overview',
@@ -64,11 +64,6 @@ const sidebars = {
         'landing-zone/deploying-to-gcp',
         'landing-zone/deploying-to-azure'
       ],
-    },
-    {
-      type: 'doc',
-      label: 'Support',
-      id: 'Support',
     },
   ],
 };
