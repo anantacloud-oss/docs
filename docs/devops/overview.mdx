@@ -10,7 +10,7 @@ Designed for modern teams operating in dynamic environments, DevOps Foundations 
 
 Rather than building everything from scratch, engineering teams can adopt a ready-to-use foundation built on proven patterns and evolving best practices—empowering them to focus on innovation, not infrastructure plumbing.
 
-#### What is DevOps Foundations?
+### What is DevOps Foundations?
 
 DevOps Foundations is a pre-integrated platform composed of tools, templates, and architectural guidance aimed at helping teams:
 
@@ -24,11 +24,35 @@ DevOps Foundations is a pre-integrated platform composed of tools, templates, an
 
 It offers a **plug-and-play starting point** that brings together automation, Infrastructure as Code (IaC), cloud-native patterns, and modular building blocks to operationalize DevOps from the ground up.
 
-#### Key Capabilities
-##### 1. Modular Infrastructure Framework
+### Key Capabilities
+#### 1. Modular Infrastructure Framework
 
 A reusable, version-controlled project structure optimized for IaC workflows. The framework enforces clean separation of concerns, promotes reuse, and supports both single-cloud and multi-cloud strategies.
 
 - Built on **OpenTofu, Terraform,** and **Terragrunt**
 - Follows best practices for state management, DRY principles, and modularity
 - Easily extendable for organization-specific requirements
+
+#### 2. Prebuilt Deployment Pipelines
+
+Automated CI/CD pipelines that handle the full lifecycle of infrastructure and applications—ensuring reliable, testable, and observable deployments at every stage.
+
+- Integrates with GitHub Actions, GitLab CI, and other popular CI tools
+- Includes templates for validation, testing, linting, plan approval, and deployment
+- Designed for both infrastructure (IaC) and application delivery workflows
+
+#### 3. Multi-Cloud Environment Provisioning
+
+Rapidly provision isolated environments (e.g., dev, staging, prod) across AWS, GCP, and Azure using pre-configured landing zones with built-in policies and security.
+
+- AWS Account Factory for scalable account provisioning and baseline enforcement
+- GCP Project Bootstrapper for secure project scaffolding and resource configuration
+- Environment-aware deployments with automatic context handling
+
+#### 4. Version-aware Module Lifecycle Management
+
+A purpose-built tool to manage the lifecycle of IaC modules across environments and teams.
+
+- Detects outdated modules and dependency mismatches
+- Creates automated upgrade pull requests with impact analysis
+- Integrates with CI pipelines for validation and regression testing
