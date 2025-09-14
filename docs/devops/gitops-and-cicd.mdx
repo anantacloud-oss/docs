@@ -21,4 +21,91 @@ This component enables teams to adopt automation-first practices, enforce consis
 | **Automated Reconciliation**           | Tools like ArgoCD or Flux continuously sync the desired and actual state  |
 | **Approval Workflows**                 | Changes are reviewed and approved through pull requests (PRs)             |
 
+### What is CI/CD?
 
+**CI/CD (Continuous Integration / Continuous Delivery)** refers to the automation of the software build, test, and deployment lifecycle. It ensures that changes are validated early and often, leading to faster, safer software releases.
+
+Ananta Cloud enables teams to establish mature CI/CD pipelines that:
+
+- Validate code and configurations with every commit.
+- Build and publish secure, versioned artifacts.
+- Deploy automatically to dev, staging, and production environments.
+- Integrate tightly with GitOps for controlled, auditable deployments.
+
+### Key Features of GitOps & CI/CD in Ananta Cloud
+#### 1. Declarative Infrastructure & App Deployments
+- Infrastructure and applications are managed through declarative code stored in Git repositories.
+- Support for Terraform, OpenTofu, and Kubernetes manifests.
+- Automatic sync and drift detection powered by tools like ArgoCD or Flux.
+
+#### 2. Pre-Built CI/CD Pipeline Templates
+Ananta Cloud provides reusable CI/CD pipeline blueprints for:
+
+- Infrastructure as Code (IaC) deployments.
+- Containerized application builds and releases.
+- Policy checks, security scans, and test automation.
+
+Supports platforms like:
+- **GitHub Actions**
+- **GitLab** CI/CD
+- **Bitbucket** Pipelines
+- **Jenkins** (for custom enterprise workflows)
+
+### 3. Multi-Stage Deployment Pipelines
+Each pipeline follows a structured and auditable flow:
+```
+[ Commit / PR ]
+       ↓
+[ Lint / Unit Tests ]
+       ↓
+[ Build & Artifact Creation ]
+       ↓
+[ Static & Security Analysis ]
+       ↓
+[ Deploy to Dev ]
+       ↓
+[ Integration / E2E Tests ]
+       ↓
+[ Approval / Auto-Gate ]
+       ↓
+[ Deploy to Staging / Prod ]
+```
+- **Approval gates** and **manual interventions** are configurable per environment.
+- Integrated **rollback mechanisms** enable fast recovery from failed deployments.
+
+#### 4. Environment-Aware GitOps Sync
+- Git repositories are structured per environment (dev/, staging/, prod/ folders or branches).
+- ArgoCD continuously monitors and applies changes to each environment based on Git commits.
+- Supports **multi-cluster** and **multi-region** Kubernetes deployments.
+
+#### 5. Policy Enforcement and Security Checks
+- Integrate with tools like **OPA/Gatekeeper, tfsec,** and **kube-score** for enforcing compliance.
+- Use signed **commits, merge checks,** and required reviewers to ensure secure Git workflows.
+- Secrets and sensitive variables are injected securely via **Vault, External Secrets,** or **CI secrets managers.**
+
+### Reference Architecture
+```
+Git Repository Structure:
+
+infrastructure/
+  ├── modules/
+  ├── environments/
+  │   ├── dev/
+  │   ├── staging/
+  │   └── prod/
+applications/
+  ├── service-a/
+  ├── service-b/
+  └── shared/
+```
+
+#### Sample Tools Stack
+| Category           | Tool                      |
+| ------------------ | ------------------------- |
+| CI/CD              | GitHub Actions, GitLab CI |
+| GitOps             | ArgoCD, Flux              |
+| IaC                | Terraform, OpenTofu       |
+| Secrets Management | Vault, External Secrets   |
+| Policy Enforcement | OPA, tfsec                |
+| Container Registry | ECR, GCR, Docker Hub      |
+| Testing            | Cypress, Postman, JUnit   |
