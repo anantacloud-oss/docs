@@ -6,7 +6,7 @@ const sidebars = {
       defaultStyle: true,
     },
     {
-      type: 'doc',
+      type: 'category',
       label: '0. Introduction',
       items: [
         'introduction/welcome',
