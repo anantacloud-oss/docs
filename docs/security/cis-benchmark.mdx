@@ -3,3 +3,105 @@ id: cis-benchmark
 title: CIS Benchmarking
 sidebar_label: CIS Benchmarking
 ---
+
+Security is no longer optional — it’s foundational. At **Ananta Cloud,** we help customers meet stringent security standards through **automated CIS Benchmarking** across their cloud stack, including:
+
+- Cloud Infrastructure (AWS, Azure, GCP)
+- Docker Containers
+- Kubernetes Clusters
+
+Our CIS Benchmarking service aligns with the Center for **Internet Security (CIS) standards** — an industry-recognized set of security best practices. Ananta Cloud automates the scanning, remediation, and reporting of CIS compliance, so you can focus on building secure applications without the operational burden.
+
+### Key Benefits
+
+- **Automated Scanning:** Run CIS checks on cloud, container, and Kubernetes configurations regularly or on demand.
+- **Real-Time Reporting:** Visual dashboards and exportable compliance reports.
+- **Built-In Remediation:** Auto-remediate common misconfigurations or generate pull requests for manual review.
+- **Audit-Ready Evidence:** Maintain detailed logs and evidence for compliance audits.
+
+### What is CIS Benchmarking?
+
+The **Center for Internet Security (CIS)** publishes secure configuration guidelines for popular technologies. These are known as **CIS Benchmarks** — prescriptive, prioritized checklists that help you:
+
+- Harden systems
+- Reduce attack surface
+- Comply with frameworks like SOC 2, ISO 27001, HIPAA, and PCI-DSS
+
+Ananta Cloud operationalizes these benchmarks across your environments with **automated compliance as code.**
+
+### Supported CIS Benchmarks
+
+| Category                | Standards Applied                                  |
+| ----------------------- | -------------------------------------------------- |
+| **Cloud Providers**     | CIS Benchmarks for AWS, Azure, GCP                 |
+| **Docker**              | CIS Docker Community Edition Benchmark v1.6+       |
+| **Kubernetes**          | CIS Kubernetes Benchmark v1.6+ (all major distros) |
+| **Linux OS (Optional)** | CIS for Ubuntu, CentOS, Amazon Linux               |
+
+### How it Works?
+
+Ananta Cloud’s CIS Benchmarking is fully integrated into your cloud environments:
+
+#### Step 1: Discovery
+- Agentless or lightweight agent-based scanning
+- Inventory of cloud resources, containers, and Kubernetes nodes
+
+#### Step 2: Benchmark Mapping
+- Automatically maps each asset type to relevant CIS benchmarks
+- Supports full-stack scanning: IAM, networking, compute, storage, orchestration
+
+#### Step 3: Scanning & Assessment
+- Scheduled or on-demand scans
+- Detects misconfigurations, deviations, and high-risk settings
+
+#### Step 4: Reporting & Alerting
+- Compliance scores per environment
+- Prioritized issue list with remediation steps
+- Exportable reports (PDF, CSV, JSON)
+
+#### Step 5: Remediation (Optional)
+- Auto-remediation for common findings
+- Pull request generation for IaC-based fixes (Terraform, Helm, etc.)
+- Slack/email/JIRA notifications
+- Custom Policy Extensions: Extend base CIS profiles to meet internal security requirements.
+
+### Cloud Security Benchmarking
+Supported providers: **AWS, Azure, Google Cloud**
+
+| Coverage Area                | Examples                                      |
+| ---------------------------- | --------------------------------------------- |
+| Identity & Access Management | Root account usage, MFA enforcement           |
+| Network Security             | Open ports, unencrypted traffic               |
+| Storage Configuration        | Public buckets, encryption at rest            |
+| Monitoring & Logging         | CloudTrail, Audit Logs, Flow Logs             |
+| Compute & Container Services | VM hardening, container runtime configuration |
+
+**Bonus:** Integrates with Ananta’s **Environment Management** to apply CIS policies per environment type (e.g., prod stricter than dev).
+
+### 🐳 Docker Benchmarking
+Secure your container workloads from the inside out with CIS Benchmarking for Docker:
+
+| Scanning Focus              | Sample Checks                             |
+| --------------------------- | ----------------------------------------- |
+| Docker Daemon Configuration | TLS, user namespace remapping, logging    |
+| Container Runtime           | Privileged containers, capabilities       |
+| Image Security              | Verified sources, signed images           |
+| Host Hardening              | Kernel parameters, Docker socket security |
+| User Permissions            | Rootless mode, UID/GID usage              |
+
+✅ Supports local, cloud-hosted, and CI-integrated Docker environments
+✅ Works with Ananta Container Registry or third-party registries
+
+### ☸️ Kubernetes Benchmarking
+Protect your orchestration layer with continuous CIS Benchmarking for Kubernetes:
+
+| Scanning Area      | Sample Checks                               |
+| ------------------ | ------------------------------------------- |
+| API Server         | Authentication, admission control           |
+| Controller Manager | Service account usage                       |
+| Scheduler          | Kubeconfig permissions                      |
+| Etcd               | Encryption, access control                  |
+| Worker Nodes       | Kubelet config, root user enforcement       |
+| RBAC Policies      | Role separation, least privilege            |
+| Network Policies   | Namespace isolation, ingress/egress control |
+
