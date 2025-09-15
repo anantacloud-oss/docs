@@ -3,3 +3,21 @@ id: deploying-to-azure
 title: Deploying to Azure
 sidebar_label: Deploying to Azure
 ---
+
+Our **Azure Landing Zone** implementation uses **Azure CAF (Cloud Adoption Framework)** and integrates Landing Zone Accelerators with modular IaC.
+
+### Key Components:
+
+- **Management group hierarchy:** Root > Platform > Landing Zones > Subscriptions
+- **Identity & Access:** RBAC, PIM (Privileged Identity Management), Conditional Access policies
+- **Networking:** Azure Virtual WAN or Hub-Spoke with NSGs and firewalls
+- **Policy enforcement:** Azure Policy, Blueprints, Initiative definitions
+- **Monitoring & Logging:** Azure Monitor, Log Analytics, Activity Logs
+- **Subscription vending:** Automated provisioning via pipelines and IaC
+
+### Optional Add-ons:
+
+- Hybrid cloud governance using Azure Arc
+- Integration with Microsoft Sentinel for SIEM
+- CI/CD setup via Azure DevOps or GitHub Actions
+- Secure DevOps pipelines with Azure Key Vault integration
