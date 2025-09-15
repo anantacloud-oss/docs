@@ -1,5 +1,23 @@
 ---
 id: deploying-to-aws
-title: Deploying to AWS
+title: Landing Zone on AWS
 sidebar_label: Deploying to AWS
 ---
+
+Ananta Cloud’s **AWS Landing Zone** leverages **AWS Control Tower,** enhanced with custom Terraform modules and integrations.
+
+### Key Components:
+
+- **Multi-account structure:** Using AWS Organizations & Control Tower
+- **Centralized identity:** IAM Identity Center (formerly AWS SSO) with integration into IdPs (Okta, Azure AD)
+- **Networking:** Hub-and-spoke VPC architecture with Transit Gateway
+- **Logging:** Centralized CloudTrail, AWS Config, GuardDuty, S3 log archiving
+- **Security guardrails:** SCPs, Config Rules, IAM permission boundaries
+- **Automation:** Account vending machine using custom Terraform modules
+
+### Optional Add-ons:
+
+- Landing Zone expansion for Dev/Test/Prod or specific business units
+- AWS Service Catalog integration
+- Custom budget alerts and CloudWatch dashboards
+- Cross-region disaster recovery setup
