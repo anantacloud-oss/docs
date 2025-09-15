@@ -1,5 +1,23 @@
 ---
 id: deploying-to-gcp
-title: Deploying to GCP
+title: Landing Zone on GCP
 sidebar_label: Deploying to GCP
 ---
+
+Our **GCP Landing Zone** setup utilizes **Google Cloud Foundation Toolkit** and follows the **Google Cloud Architecture Framework.**
+
+### Key Components:
+
+- **Organization structure:** Org > Folders > Projects (per team, app, or environment)
+- **IAM setup:** Roles, Groups, Service Accounts with workload identity federation
+- **Networking:** Shared VPCs, Firewall rules, Private Google Access
+- **Audit Logging:** Cloud Audit Logs, centralized storage, real-time alerts
+- **Policy enforcement:** Organization Policies, Policy Library as code
+- **Cost control:** Budget alerts, Quota policies, central billing export
+
+### Optional Add-ons:
+
+- CI/CD integration with Cloud Build, GitHub Actions, or GitLab
+- Advanced telemetry using Cloud Monitoring and Logging
+- Security posture management with Security Command Center
+- GKE (Kubernetes) or Anthos landing zone extensions
