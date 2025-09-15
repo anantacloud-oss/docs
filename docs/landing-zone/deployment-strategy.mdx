@@ -3,3 +3,66 @@ id: deployment-strategy
 title: Deployment Strategy
 sidebar_label: Deployment Strategy
 ---
+
+### Frameworks & Architecture Principles
+
+Ananta Cloud’s Landing Zone solutions are rooted in widely accepted cloud frameworks:
+
+| Cloud Provider | Framework                           | Reference                                                                     |
+| -------------- | ----------------------------------- | ----------------------------------------------------------------------------- |
+| **AWS**        | Well-Architected Framework          | Security, Operational Excellence, Cost Optimization, Performance, Reliability |
+| **Azure**      | Cloud Adoption Framework (CAF)      | Govern, Secure, Manage, Monitor                                               |
+| **GCP**        | Google Cloud Architecture Framework | Scalability, Security, Manageability                                          |
+
+### Our architecture incorporates key principles:
+
+- **Security by design:** Identity, access, encryption, and perimeter protections
+- **Operational readiness:** Logging, monitoring, alerting, diagnostics
+- **Modular architecture:** Reusable Terraform modules, automation-first approach
+- **Scalability:** Multi-account, multi-project, multi-region design
+- **Governance & compliance:** Policies, tagging, cost management, least privilege access
+
+### Phased Deployment Model
+
+We follow a 4-phase methodology to ensure each Landing Zone meets customer-specific needs and compliance requirements:
+
+#### Phase 1: Discovery & Planning
+
+- Cloud readiness workshops
+- Security, compliance, and governance assessment
+- Mapping to organizational structure and regulatory frameworks
+- Toolchain evaluation
+
+#### Phase 2: Design & Blueprinting
+
+- High-level and low-level design documents (HLD/LLD)
+- Cloud account/project structure
+- Network architecture and baseline security controls
+- CI/CD and DevOps requirements mapping
+
+#### Phase 3: Implementation & Automation
+
+- Infrastructure provisioning using Terraform (or provider-native IaC)
+- Identity and access setup
+- Logging, monitoring, and alerting configuration
+- Deployment pipelines and operational tool integration
+
+#### Phase 4: Handover & Continuous Improvement
+
+- Documentation and architecture diagrams
+- Knowledge transfer and walkthrough sessions
+- FinOps setup and budget governance
+- Ongoing support and managed services (optional)
+
+### Tooling and Automation
+
+We use a proven technology stack to deliver consistent and automated Landing Zones:
+
+| Category                     | Tools                                                         |
+| ---------------------------- | ------------------------------------------------------------- |
+| **Infrastructure as Code**   | Terraform, Bicep (Azure), Cloud Deployment Manager (GCP)      |
+| **CI/CD**                    | GitHub Actions, GitLab CI/CD, Azure DevOps                    |
+| **Configuration Management** | Ansible, AWS SSM, Azure Automation                            |
+| **Governance & Compliance**  | OPA/Conftest, HashiCorp Sentinel, native cloud policy engines |
+| **Security & Monitoring**    | AWS Security Hub, Azure Defender, GCP Security Command Center |
+| **Documentation & Diagrams** | Lucidchart, draw\.io, Markdown-based runbooks, Confluence     |
