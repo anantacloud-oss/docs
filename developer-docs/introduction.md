@@ -6,7 +6,7 @@ sidebar_label: Introduction
 
 ## Developer Reference
 
-Welcome to the Reference section of Ananta Cloud’s documentation! This is your go-to resource for detailed information on configuring and using Ananta Cloud products.
+Welcome to the **Reference** section of Ananta Cloud’s documentation! This is your go-to resource for detailed information on configuring and using Ananta Cloud products.
 
 Here, you’ll find comprehensive documentation on inputs, configurations, and outputs for our tools and services—everything you need to effectively integrate Ananta Cloud into your workflows.
 
