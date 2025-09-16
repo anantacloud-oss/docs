@@ -12,7 +12,7 @@ Here, you’ll find comprehensive documentation on inputs, configurations, and o
 
 For broader guidance, tutorials, and best practices, visit our [Docs](/docs/getting-started) section. It’s full of step-by-step guides to help you get started and deepen your understanding of the Ananta Cloud ecosystem.
 
-Whether you're deploying a new service, troubleshooting an issue, or exploring advanced configuration options, the Reference section is here to support your technical needs.
+Whether you're deploying a new service, troubleshooting an issue, or exploring advanced configuration options, the **Reference** section is here to support your technical needs.
 
 ### Navigation
 
