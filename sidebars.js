@@ -27,8 +27,22 @@ const sidebars = {
         'devops/overview',
         'devops/gitops-and-cicd',
         'devops/environment-management',
-        'devops/github-actions',
-        'devops/monitoring-and-observability'
+        {
+          type: 'category',
+          label: 'GitHub Actions',
+          link: {
+            type: 'doc',
+            id: 'devops/cicd/github-actions',
+          },
+          items: [
+            'devops/cicd/iac',
+            'devops/cicd/security',
+            'devops/cicd/source-control',
+          ],
+        },
+        'devops/helm-chart',
+        'devops/docker-images',
+        'devops/monitoring-and-observability',
       ],
     },
     {
