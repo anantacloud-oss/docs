@@ -87,6 +87,11 @@ const sidebars = {
         'security/iam'
       ],
     },
+    {
+      type: 'doc',
+      label: 'Support',
+      id: 'Support',
+    },
   ],
 };
 
