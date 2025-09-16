@@ -42,7 +42,7 @@ const sidebars = {
         },
         'devops/helm-chart',
         'devops/docker-images',
-        'devops/monitoring-and-observability',
+        'devops/monitoring-and-observability'
       ],
     },
     {
@@ -50,6 +50,7 @@ const sidebars = {
       label: 'IaC Best Practices',
       items: [
         'iac/overview',
+        'iac/folder-structure',
         'iac/tagging-and-naming-conventions',
         'iac/developer-self-service-patterns',
         'iac/choosing-iac-platform',
@@ -81,7 +82,9 @@ const sidebars = {
         'security/cis-benchmark',
         'security/compliance-architecture',
         'security/audit-logging',
-        'security/secret-and-key-management'
+        'security/secret-and-key-management',
+        'security/security-left',
+        'security/iam'
       ],
     },
   ],
