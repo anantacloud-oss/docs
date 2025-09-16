@@ -8,7 +8,7 @@ const sidebars = {
     {
       type: 'doc',
       label: 'Getting Started',
-      id: '',
+      id: 'getting-started',
     },
     {
       type: 'category',
