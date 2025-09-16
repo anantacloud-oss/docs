@@ -6,6 +6,11 @@ const sidebars = {
       defaultStyle: true,
     },
     {
+      type: 'doc',
+      label: 'Getting Started',
+      id: '',
+    },
+    {
       type: 'category',
       label: 'Introduction',
       items: [
