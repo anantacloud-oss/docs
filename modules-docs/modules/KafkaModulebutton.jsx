@@ -19,7 +19,7 @@ export default function Modulebutton() {
         <button
           onClick={() => setShowModal('subscription')}
           style={{
-            backgroundColor: '#0033A0',
+            backgroundColor: '#005BB5',
             color: '#fff',
             padding: '12px 24px',
             border: 'none',
@@ -37,7 +37,7 @@ export default function Modulebutton() {
         <button
           onClick={() => setShowModal('release')}
           style={{
-            backgroundColor: '#0033A0',
+            backgroundColor: '#005BB5',
             color: '#fff',
             padding: '12px 24px',
             border: 'none',
@@ -104,7 +104,7 @@ export default function Modulebutton() {
               <button
                 onClick={() => setShowModal(null)}
                 style={{
-                  backgroundColor: '#0033A0',
+                  backgroundColor: '#005BB5',
                   color: '#fff',
                   padding: '10px 20px',
                   border: 'none',
@@ -130,7 +130,7 @@ export default function Modulebutton() {
               >
                 <button
                   style={{
-                    backgroundColor: '#0033A0',
+                    backgroundColor: '#005BB5',
                     color: '#fff',
                     padding: '10px 20px',
                     border: 'none',
