@@ -178,7 +178,7 @@ export default function SearchModulePage() {
                 display: "inline-block",
                 padding: "8px 12px",
                 borderRadius: "6px",
-                background: "#005bb5",
+                background: "#005BB5",
                 color: "#fff",
                 textDecoration: "none",
                 textAlign: "center",
