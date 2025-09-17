@@ -18,7 +18,7 @@ export default function Modalbutton() {
       <button
         onClick={() => setShowModal(true)}
         style={{
-          backgroundColor: '#0033A0',
+          backgroundColor: '#005BB5',
           color: '#fff',
           padding: '12px 24px',
           border: 'none',
@@ -78,7 +78,7 @@ export default function Modalbutton() {
               <button
                 onClick={() => setShowModal(false)}
                 style={{
-                  backgroundColor: '#0033A0',
+                  backgroundColor: '#005BB5',
                   color: '#fff',
                   padding: '10px 20px',
                   border: 'none',
@@ -100,7 +100,7 @@ export default function Modalbutton() {
               >
                 <button
                   style={{
-                    backgroundColor: '#0033A0',
+                    backgroundColor: '#005BB5',
                     color: '#fff',
                     padding: '10px 20px',
                     border: 'none',
