@@ -53,7 +53,34 @@ const config = {
         sidebarPath: require.resolve('./sidebarmodule.js'),
       },
     ],
-  ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'blogs',
+        path: 'blogs',
+        routeBasePath: 'blogs',
+        sidebarPath: require.resolve('./sidebarblogs.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+       {
+         id: 'vulneralQ',
+         path: 'vulneralQ',
+         routeBasePath: 'vulneralQ',
+         sidebarPath: require.resolve('./sidebarvulneralQ.js'),
+       },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+       {
+         id: 'harbor',
+         path: 'harbor',
+         routeBasePath: 'harbor',
+         sidebarPath: require.resolve('./sidebarharbor.js'),
+       },
+    ],
+ ],
 
   themeConfig: {
     favicon: 'img/favicon.ico',
@@ -67,6 +94,8 @@ const config = {
         { to: '/docs/getting-started', label: 'Documentations', position: 'left' },
         { to: '/developer-docs/introduction', label: 'References', position: 'left' },
         { to: '/modules-docs/searchmodule', label: 'Infrastructure as a Code', position: 'left' },
+        { type: 'doc', docId: 'tools/tools', label: 'Toolkit' , position: 'left' },
+        { to: '/blogs/technicalblogs', label: 'Blogs', position: 'left' },
         { to: 'https://github.com/orgs/anantacloud/discussions', label: 'Knowledge-Hub', position: 'right' },
         { to: '/docs/Support', label: 'Support', position: 'right' },
         {
