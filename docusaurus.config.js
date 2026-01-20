@@ -66,8 +66,8 @@ const config = {
       '@docusaurus/plugin-content-docs',
        {
          id: 'vulneralQ',
-         path: 'vulneralQ',
-         routeBasePath: 'vulneralQ',
+         path: 'VulneralQ',
+         routeBasePath: 'VulneralQ',
          sidebarPath: require.resolve('./sidebarvulneralQ.js'),
        },
     ],
@@ -75,8 +75,8 @@ const config = {
       '@docusaurus/plugin-content-docs',
        {
          id: 'harbor',
-         path: 'harbor',
-         routeBasePath: 'harbor',
+         path: 'Harbor',
+         routeBasePath: 'Harbor',
          sidebarPath: require.resolve('./sidebarharbor.js'),
        },
     ],
