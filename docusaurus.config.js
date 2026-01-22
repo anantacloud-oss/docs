@@ -55,15 +55,6 @@ const config = {
     ],
     [
       '@docusaurus/plugin-content-docs',
-      {
-        id: 'blogs',
-        path: 'blogs',
-        routeBasePath: 'blogs',
-        sidebarPath: require.resolve('./sidebarblogs.js'),
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
        {
          id: 'vulneralQ',
          path: 'VulneralQ',
@@ -95,7 +86,7 @@ const config = {
         { to: '/developer-docs/introduction', label: 'References', position: 'left' },
         { to: '/modules-docs/searchmodule', label: 'Infrastructure as a Code', position: 'left' },
         { to: '/tools', label: 'Toolkit' , position: 'left' },
-        { to: '/blogs/technicalblogs', label: 'Blogs', position: 'left' },
+        { to: '/technicalblogs', label: 'Blogs', position: 'left' },
         { to: 'https://github.com/orgs/anantacloud/discussions', label: 'Knowledge-Hub', position: 'right' },
         { to: '/docs/Support', label: 'Support', position: 'right' },
         {

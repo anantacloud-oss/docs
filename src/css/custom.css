@@ -63,15 +63,13 @@
   text-align: center;
   white-space: normal;
   line-height: 1.2;
-}
+}    
+
 
 /* 🚫 HIDE "Next" / "Previous" LABELS */
 .pagination-nav__sublabel {
   display: none !important;
 }
-
-
-
 
 
 .menu_SIkG {
@@ -180,6 +178,29 @@
     font-size: 0.85rem;
     white-space: nowrap;
   }
+
+  .pagination-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two equal columns */
+    gap: 1rem;
+    align-items: stretch;           /* make items same height */
+  }
+
+  .pagination-nav__item {
+    display: flex;                  /* allow inner link to stretch */
+  }
+
+  .pagination-nav__link {
+    display: flex;
+    flex-direction: column;         /* stack multi-line content */
+    justify-content: center;        /* vertical center */
+    align-items: center;            /* horizontal center */
+    height: 100%;                   /* fill parent */
+    padding: 0.5rem 0.75rem;        /* adjust to reduce excess height */
+    text-align: center;
+    box-sizing: border-box;
+    white-space: normal;            /* allow wrapping */
+  }
 }
 
 /* ===============================
@@ -231,10 +252,32 @@
     width: 290px; 
   }
 
+  /* Pagination container adjustments */
+  .pagination-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two equal columns */
+    gap: 0.75rem;                   /* slightly smaller gap for mobile */
+    align-items: stretch;           /* make items same height */
+    justify-content: center;        /* center pagination on small screens */
+  }
+
+  /* Pagination item adjustments */
+  .pagination-nav__item {
+    display: flex;                  /* allow inner link to stretch */
+    width: 100%;                     /* full width of the grid cell */
+  }
+
+  /* You already have this for the link */
   .pagination-nav__link {
-    height: 80px;
-    width: 200px;
-    padding: 10px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0.5rem 0.75rem;
+    text-align: center;
+    box-sizing: border-box;
+    white-space: normal;
   }
 }
 
