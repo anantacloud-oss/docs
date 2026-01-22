@@ -1,4 +1,4 @@
-.workflowHeader {
+.workflowHeader { 
   max-width: 900px;
   margin: auto;
 }
@@ -53,7 +53,7 @@
 /* ---------------- Layout Container ---------------- */
 
 .container {
-  max-width: 1200px;          /* sidebar-safe width */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0.4rem 1rem;
 }
@@ -62,8 +62,9 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, minmax(260px, 340px));
   gap: 12px;
+  justify-content: start;   /* left align when <3 cards */
 }
 
 /* ---------------- Card ---------------- */
@@ -77,11 +78,11 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 320px;
-  height: 300px;
+  max-width: 360px;
+  height: 275px;
   transition: transform 0.3s ease;
   text-align: left;
-  margin: auto;
+  margin: 0; 
 }
 
 .card:hover {
@@ -123,21 +124,24 @@
   color: #888;
   text-align: center;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  height: 3.6em;
+  height: 4.8em;
+  line-height: 1.2em;
+  overflow: hidden;
   margin-bottom: 0.75rem;
 }
 
-/* ---------------- Footer ---------------- */
+/* ---------------- Footer (FIXED ALIGNMENT) ---------------- */
 
 .cardFooter {
   display: flex;
-  align-items: center;        /* same vertical level */
-  justify-content: flex-start;
-  gap: 16px;                  /* visible spacing */
-  margin-top: auto;           /* footer stays at bottom */
+  align-items: center;
+  justify-content: space-between; /* button left, status right */
+  margin-top: auto;               /* footer always at bottom */
 }
+
+/* ---------------- Button ---------------- */
 
 .configureButton {
   background-color: #0b5fff;
@@ -150,6 +154,7 @@
   cursor: pointer;
   font-weight: 500;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .configureButton:hover {
@@ -158,73 +163,36 @@
   color: white;
 }
 
+/* ---------------- Status (NORMALIZED HEIGHT) ---------------- */
+
 .status {
   font-size: 0.85rem;
   color: #555;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 0;                /* no gap between text and dot */
+  min-height: 2.4em;    /* FIXED HEIGHT → 2 lines */
+  line-height: 1.2em;
+  text-align: right;
 }
 
 .statusDot {
   width: 6px;
   height: 6px;
-  min-width: 6px;      /* 🔒 prevents flex stretching */
+  min-width: 6px;
   min-height: 6px;
   border-radius: 50%;
   display: inline-block;
-  flex-shrink: 0;      /* 🔒 stops resize inside flex */
+  flex-shrink: 0;
+  margin-left: 6px;
 }
+
+/* ---------------- Headings ---------------- */
 
 .categoryHeading {
   font-size: 1.5rem;
   margin: 1rem 0;
   color: #1a1a1a;
-}
-
-/* ---------------- Dark Theme ---------------- */
-
-html[data-theme='dark'] .card {
-  background-color: #001c2e !important;
-  border: 1px solid #ffffff !important;
-}
-
-html[data-theme='dark'] .card:hover {
-  box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.4);
-}
-
-html[data-theme='dark'] .title,
-html[data-theme='dark'] .subtitle,
-html[data-theme='dark'] .text {
-  color: #ffffff !important;
-}
-
-html[data-theme='dark'] .subtitle {
-  color: #cccccc !important;
-}
-
-html[data-theme='dark'] .status {
-  color: #bbbbbb;
-}
-
-html[data-theme='dark'] .configureButton {
-  background-color: #024ab6;
-}
-
-html[data-theme='dark'] .statusDot {
-  background-color: #ffffff;
-}
-
-html[data-theme='dark'] .categoryHeading {
-  color: white !important;
-}
-
-/* ---------------- Tablet ---------------- */
-
-@media (max-width: 1200px) {
-  .searchBar {
-    width: 100%;
-  }
 }
 
 /* ---------------- Mobile ---------------- */

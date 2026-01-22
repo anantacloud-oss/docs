@@ -30,24 +30,48 @@
   color: black; 
 }
 
+/* -----------------------------------------
+   PAGINATION FIX (Docusaurus)
+------------------------------------------ */
+
 .pagination-nav {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   gap: 1.5rem;
-  flex-wrap: nowrap;
+  justify-content: flex-end; /* single button → right */
+}
+
+/* when both prev + next exist */
+.pagination-nav:has(.pagination-nav__item--prev):has(.pagination-nav__item--next) {
+  justify-content: space-between;
 }
 
 .pagination-nav__item {
-  flex: 1;
+  flex: 0 0 auto;        /* ⬅️ IMPORTANT */
+  width: 260px;          /* fixed width */
 }
 
+/* Button layout */
 .pagination-nav__link {
   width: 100%;
-  max-width: 100%;
-  min-height: 80px;
-  padding: 1rem;
+  min-height: 56px;
+  padding: 0.75rem 1rem;
   box-sizing: border-box;
-} 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: normal;
+  line-height: 1.2;
+}
+
+/* 🚫 HIDE "Next" / "Previous" LABELS */
+.pagination-nav__sublabel {
+  display: none !important;
+}
+
+
+
 
 
 .menu_SIkG {
