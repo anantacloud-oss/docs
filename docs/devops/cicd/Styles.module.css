@@ -6,7 +6,9 @@
 .workflowHeader p {
   font-size: 1rem;
 }
- 
+
+/* ---------------- Search ---------------- */
+
 .searchContainer {
   position: relative;
   display: flex;
@@ -23,9 +25,9 @@
 }
 
 .searchBar {
-  padding: 6px 10px 6px 34px; 
-  width: 360px;             
-  height: 36px; 
+  padding: 6px 10px 6px 34px;
+  width: 360px;
+  height: 36px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
@@ -45,20 +47,26 @@
   text-align: center;
   margin-top: 2rem;
   font-size: 1.2rem;
-  color:  #0b5fff;
+  color: #0b5fff;
 }
 
+/* ---------------- Layout Container ---------------- */
+
 .container {
-  padding:0.4rem;
-  max-width: 1800px;
+  max-width: 1200px;          /* sidebar-safe width */
   margin: 0 auto;
+  padding: 0.4rem 1rem;
 }
+
+/* ---------------- Grid ---------------- */
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);  
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 12px;
 }
+
+/* ---------------- Card ---------------- */
 
 .card {
   background: #fff;
@@ -68,32 +76,33 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 290px;
-  height: 270px;
+  width: 100%;
+  max-width: 320px;
+  height: 300px;
   transition: transform 0.3s ease;
   text-align: left;
+  margin: auto;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(128, 128, 128, 0.4); 
+  box-shadow: 0 8px 20px rgba(128, 128, 128, 0.4);
 }
+
+/* ---------------- Card Content ---------------- */
 
 .icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px; 
+  height: 40px;
   margin-bottom: 0.75rem;
 }
-
 
 .icon img {
   object-fit: contain;
   display: block;
 }
-
 
 .title {
   font-size: 1.1rem;
@@ -112,20 +121,22 @@
 .text {
   font-size: 0.95rem;
   color: #888;
-  flex-grow: 1;
   text-align: center;
   display: -webkit-box;
-  -webkit-line-clamp: 3;  
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   height: 3.6em;
-  margin-bottom: 0.75rem; 
+  margin-bottom: 0.75rem;
 }
+
+/* ---------------- Footer ---------------- */
 
 .cardFooter {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 0.75rem;
+  align-items: center;        /* same vertical level */
+  justify-content: flex-start;
+  gap: 16px;                  /* visible spacing */
+  margin-top: auto;           /* footer stays at bottom */
 }
 
 .configureButton {
@@ -138,7 +149,13 @@
   font-size: 0.9rem;
   cursor: pointer;
   font-weight: 500;
-  text-align: center; 
+  text-align: center;
+}
+
+.configureButton:hover {
+  background-color: #094bcc;
+  transform: translateY(-2px);
+  color: white;
 }
 
 .status {
@@ -150,29 +167,26 @@
 }
 
 .statusDot {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
+  min-width: 6px;      /* 🔒 prevents flex stretching */
+  min-height: 6px;
   border-radius: 50%;
   display: inline-block;
+  flex-shrink: 0;      /* 🔒 stops resize inside flex */
 }
 
 .categoryHeading {
   font-size: 1.5rem;
-  margin: 1rem 0 1rem;
+  margin: 1rem 0;
   color: #1a1a1a;
 }
 
-.configureButton:hover {
-  background-color: #094bcc;
-  transform: translateY(-2px); 
-  color: white;
-  text-decoration: none;
-}
+/* ---------------- Dark Theme ---------------- */
 
 html[data-theme='dark'] .card {
   background-color: #001c2e !important;
   border: 1px solid #ffffff !important;
-  transition: box-shadow 0.3s ease;
 }
 
 html[data-theme='dark'] .card:hover {
@@ -195,7 +209,6 @@ html[data-theme='dark'] .status {
 
 html[data-theme='dark'] .configureButton {
   background-color: #024ab6;
-  color: white;
 }
 
 html[data-theme='dark'] .statusDot {
@@ -206,39 +219,25 @@ html[data-theme='dark'] .categoryHeading {
   color: white !important;
 }
 
-
+/* ---------------- Tablet ---------------- */
 
 @media (max-width: 1200px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .searchBar {
     width: 100%;
-    max-width: 100%;
-  }
-
-  .card {
-    width: 90%;         
-    height: 98%;       
-    padding: 15px;      
-    margin: auto;    
   }
 }
+
+/* ---------------- Mobile ---------------- */
 
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
   }
 
-  .container {
-    padding: 1rem;
-  }
-
   .workflowHeader,
   .searchBar {
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;
   }
 
   .searchContainer {
@@ -252,20 +251,9 @@ html[data-theme='dark'] .categoryHeading {
     top: 10px;
   }
 
-  .searchBar {
-    padding-left: 34px;
-    height: 36px;
-  }
-
   .card {
-    width: 90%;         
-    height: 98%;
-    padding: 15px;     
-    margin: auto;
-  }
-
-  .icon {
-    height: 50px;
+    max-width: 100%;
+    height: auto;
   }
 
   .categoryHeading {
@@ -278,4 +266,3 @@ html[data-theme='dark'] .categoryHeading {
     width: 100%;
   }
 }
-
