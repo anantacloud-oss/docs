@@ -1,5 +1,5 @@
 module.exports = {
-  harborSidebar: [
+  trustarySidebar: [
     {
       type: 'html',
       value: '<strong>Getting started</strong>',
@@ -7,7 +7,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Harbor',
+      label: 'trustary',
       collapsible: true,
       collapsed: false,
       items: [
