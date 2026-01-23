@@ -65,10 +65,10 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
        {
-         id: 'harbor',
-         path: 'Harbor',
-         routeBasePath: 'Harbor',
-         sidebarPath: require.resolve('./sidebarharbor.js'),
+         id: 'trustary',
+         path: 'Trustary',
+         routeBasePath: 'Trustary',
+         sidebarPath: require.resolve('./sidebartrustary.js'),
        },
     ],
  ],
