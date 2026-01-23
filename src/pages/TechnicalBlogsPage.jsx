@@ -31,7 +31,7 @@ export default function TechnicalBlogsPage() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
+          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
           gap: "20px",
           marginTop: "2rem",
         }}

@@ -7,7 +7,7 @@ export default function IACSearchWithCards() {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
-    <>
+    <div className={styles.iacPageWrapper}>
       <div className={styles.searchContainer}>
         <FiSearch className={styles.searchIcon} />
         <input
@@ -19,7 +19,7 @@ export default function IACSearchWithCards() {
         />
       </div>
       <Cardsiac searchTerm={searchTerm} />
-    </>
+    </div>
   );
 }
 

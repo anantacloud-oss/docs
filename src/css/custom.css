@@ -154,6 +154,44 @@
 }
 
 /* ===============================
+   FIX: 1025px – 1140px OVERLAP
+   =============================== */
+   @media (min-width: 1025px) and (max-width: 1340px) {
+
+    .navbar {
+      padding: 0 1rem;           /* reduce horizontal pressure */
+      height: 75px;
+    }
+  
+    /* Left + right navbar groups */
+    .navbar__items {
+      gap: 0.25rem;              /* tighter spacing */
+      flex-wrap: nowrap;
+    }
+  
+    /* Menu links (Docs, Blogs, Knowledge Hub etc.) */
+    .navbar__item {
+      font-size: 0.9rem;         /* slightly smaller */
+      padding: 0 0.35rem;
+      white-space: nowrap;
+    }
+  
+    /* Logo compression (KEY FIX) */
+    .navbar__logo img {
+      height: 56px;              /* was 65px */
+      margin-top: -12px;
+      margin-right: 0.5rem;
+    }
+  
+    /* Schedule / CTA button */
+    .custom-schedule-button {
+      padding: 6px 10px;
+      font-size: 0.82rem;
+      white-space: nowrap;
+    }
+  }
+  
+/* ===============================
    FIX FOR 1024px OVERLAP ISSUE
    =============================== */
 @media (max-width: 1024px) {
@@ -278,6 +316,37 @@
     text-align: center;
     box-sizing: border-box;
     white-space: normal;
+  }
+}
+
+/* ===============================
+   LAPTOP RANGE (1025px - 1440px)
+   Fix for IAC page sidebar overlap
+   =============================== */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* Ensure main content area respects sidebar */
+  article[itemprop="articleBody"] {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-right: 0.5rem;
+    overflow-x: hidden;
+  }
+
+  /* Fix markdown headings to prevent overlap */
+  article[itemprop="articleBody"] h2 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  /* Ensure any wrapper divs respect boundaries */
+  article[itemprop="articleBody"] > div {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 }
 
