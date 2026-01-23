@@ -14,7 +14,7 @@ export default function ToolsPage() {
         </p>
         <ul>
           <li>VulneralQ</li>
-          <li>Harbor</li>
+          <li>Trustary</li>
         </ul>
  
         <div className={styles.grid}>
@@ -23,7 +23,7 @@ export default function ToolsPage() {
             onClick={() => (window.location.href = '/VulneralQ/overview')}
             style={{ cursor: 'pointer' }}
           >
-            <img src="/img/vulneralq.svg" alt="VulneralQ" />
+            <img src="/img/vulneralq.jpg" alt="VulneralQ" />
             <h3>VulneralQ</h3>
             <p>
               Open-source cloud security and compliance platform for continuous risk detection and
@@ -33,11 +33,11 @@ export default function ToolsPage() {
  
           <div
             className={styles.card}
-            onClick={() => (window.location.href = '/Harbor/overview')}
+            onClick={() => (window.location.href = '/Trustary/overview')}
             style={{ cursor: 'pointer' }}
           >
-            <img src="/img/harbor.svg" alt="Harbor" />
-            <h3>Harbor</h3>
+            <img src="/img/trustary.png" alt="trustary" />
+            <h3>Trustary</h3>
             <p>
               Cloud-native container registry with built-in security, vulnerability scanning, and policy
               enforcement.
