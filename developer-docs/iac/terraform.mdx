@@ -1,5 +1,62 @@
 ---
 id: terraform
-title: terraform
+title: Terraform Github Action
 sidebar_label: Terraform
 ---
+
+import Modalbutton from './Modalbutton';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Terraform is an open-source **Infrastructure as Code (IaC)** tool developed by **HashiCorp** that enables teams to define, provision, and manage infrastructure across multiple cloud providers using a declarative configuration language.
+
+It is widely adopted for managing cloud resources in a predictable, repeatable, and scalable manner.
+
+### 🔹 Key Features of Terraform
+- **Declarative IaC:** Define desired infrastructure state using HCL.
+- **Multi-Cloud Support:** AWS, Azure, GCP, Kubernetes, and more.
+- **Reusable Modules:** Share and reuse infrastructure components.
+- **State Management:** Tracks infrastructure state for consistency.
+- **Provider Ecosystem:** Thousands of official and community providers.
+- **CI/CD Integration:** Works seamlessly with automation pipelines.
+
+As part of **Ananta Cloud’s** infrastructure platform, we provide a standardized **GitHub Action for Terraform** to ensure secure and consistent infrastructure deployments.
+
+### 🔹 What It Does?
+- Provisions cloud and Kubernetes infrastructure.
+- Applies infrastructure changes safely and predictably.
+- Enables reusable, modular infrastructure definitions.
+- Integrates with Ananta Cloud’s security and compliance controls.
+- Automates infrastructure lifecycle management.
+
+### 🔹 Benefits of Using Ananta Cloud’s Terraform Action
+- **Infrastructure Consistency**
+- **Modular & Reusable Design**
+- **Multi-Cloud Flexibility**
+- **Policy & Security Integration**
+- **Automation at Scale**
+
+### 🔹 Supported Inputs
+
+| Name            | Description                                 | Required |
+|-----------------|---------------------------------------------|----------|
+| `directory`     | Terraform working directory                 | ✔️ Yes   |
+| `command`       | Terraform command (plan, apply, destroy)    | ✔️ Yes   |
+| `backend-config`| Backend configuration for state             | ❌ No    |
+| `var-file`      | Terraform variable file                     | ❌ No    |
+
+### 🔹 Supported Outputs
+None
+
+### 🔹 Usage
+
+```yaml
+- name: Run Terraform apply
+  uses: anantacloud/github-actions/tree/main/iac/terraform
+  with:
+    directory: infra/
+    command: apply
+
+```
+
+<Modalbutton />

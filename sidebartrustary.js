@@ -7,11 +7,13 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'trustary',
+      label: 'Trustary',
       collapsible: true,
       collapsed: false,
       items: [
         'overview',
+        'how-it-works',
+        'key-capabilities',
       ],
     },
   ],

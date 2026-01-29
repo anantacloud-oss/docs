@@ -1,5 +1,63 @@
 ---
 id: Checkov
-title: Checkov
+title: Checkov Github Action
 sidebar_label: Checkov
 ---
+
+
+import Modalbutton from './Modalbutton';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Checkov is an open-source static analysis tool developed by **Bridgecrew (Palo Alto Networks)** that scans **Infrastructure as Code (IaC)**, container images, and CI/CD configurations to identify security and compliance misconfigurations early in the development lifecycle.
+
+It supports Terraform, Kubernetes, Helm, CloudFormation, Dockerfiles, and CI/CD pipelines, enabling teams to enforce security best practices before deployment.
+
+### 🔹 Key Features of Checkov
+- **IaC Security Scanning:** Detects misconfigurations in Terraform, Kubernetes, Helm, and CloudFormation.
+- **Policy-as-Code:** Built-in and custom policies mapped to CIS, NIST, SOC2, PCI-DSS.
+- **Shift-Left Security:** Catch issues early during PRs and CI builds.
+- **Custom Policies:** Write custom rules using Python or YAML.
+- **CI/CD Friendly:** Integrates with GitHub Actions, GitLab CI, Jenkins, and more.
+- **Actionable Reports:** Clear findings with severity and remediation guidance.
+
+As part of **Ananta Cloud’s** DevSecOps capabilities, we provide a standardized **GitHub Action for Checkov** to ensure consistent security and compliance checks across all repositories.
+
+### 🔹 What It Does?
+- Scans IaC and configuration files for misconfigurations.
+- Enforces organizational security policies.
+- Fails builds on high or critical violations.
+- Generates reports for auditing and compliance.
+- Integrates with Ananta Cloud’s security framework.
+
+### 🔹 Benefits of Using Ananta Cloud’s Checkov Action
+- **Prevent Misconfigurations Early**
+- **Compliance by Default**
+- **Consistent Security Across Teams**
+- **Fast Developer Feedback**
+- **Scalable Multi-Cloud Security**
+
+### 🔹 Supported Inputs
+
+| Name          | Description                                      | Required |
+|---------------|--------------------------------------------------|----------|
+| `directory`   | Path to IaC or config files to scan              | ✔️ Yes   |
+| `framework`   | Framework to scan (terraform, kubernetes, etc.)  | ❌ No    |
+| `soft-fail`   | Do not fail pipeline on violations               | ❌ No    |
+| `skip-checks` | Comma-separated list of checks to skip           | ❌ No    |
+
+### 🔹 Supported Outputs
+None
+
+### 🔹 Usage
+
+```yaml
+- name: Run Checkov scan
+  uses: anantacloud/github-actions/tree/main/security/checkov
+  with:
+    directory: .
+    soft-fail: false
+
+```
+
+<Modalbutton /> 

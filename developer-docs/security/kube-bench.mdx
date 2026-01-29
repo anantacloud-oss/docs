@@ -1,5 +1,59 @@
 ---
 id: kube-bench
-title: kube-bench
+title: Kube-bench Github Action
 sidebar_label: kube-bench
 ---
+
+import Modalbutton from './Modalbutton';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+kube-bench is an open-source security tool developed by **Aqua Security** that checks Kubernetes clusters against the **CIS Kubernetes Benchmark** to identify misconfigurations and security risks.
+
+It runs automated tests to validate whether Kubernetes components such as the API server, kubelet, controller manager, and etcd are securely configured according to best practices.
+
+### 🔹 Key Features of kube-bench
+- **CIS Benchmark Compliance:** Validates clusters against CIS Kubernetes Benchmarks.
+- **Automated Security Checks:** Scans control plane, node, and etcd configurations.
+- **Version-Aware:** Supports multiple Kubernetes versions.
+- **Detailed Reports:** Provides pass/fail results with remediation guidance.
+- **Flexible Deployment:** Can run as a job, container, or CLI.
+- **Cluster-Wide Visibility:** Helps assess overall Kubernetes security posture.
+
+As part of **Ananta Cloud’s** Kubernetes security framework, we provide a standardized **GitHub Action and deployment approach for kube-bench** to ensure cluster hardening checks are executed consistently.
+
+### 🔹 What It Does?
+- Audits Kubernetes cluster configurations.
+- Identifies security misconfigurations based on CIS standards.
+- Generates compliance and audit reports.
+- Supports security reviews and regulatory requirements.
+- Improves overall cluster security posture.
+
+### 🔹 Benefits of Using Ananta Cloud’s kube-bench Integration
+- **CIS Compliance by Default**
+- **Improved Cluster Hardening**
+- **Audit-Ready Security Reports**
+- **Consistent Checks Across Environments**
+- **Stronger Kubernetes Security Posture**
+
+### 🔹 Supported Inputs
+
+| Name            | Description                                   | Required |
+|-----------------|-----------------------------------------------|----------|
+| `benchmark`     | CIS benchmark version to run                  | ❌ No    |
+| `node-type`     | Control plane or worker node                  | ❌ No    |
+| `output-format` | Output format (json, table)                   | ❌ No    |
+| `k8s-version`   | Kubernetes version                            | ❌ No    |
+
+### 🔹 Supported Outputs
+None
+
+### 🔹 Usage
+
+```yaml
+- name: Run kube-bench CIS scan
+  uses: anantacloud/github-actions/tree/main/security/kube-bench
+
+```
+
+<Modalbutton />

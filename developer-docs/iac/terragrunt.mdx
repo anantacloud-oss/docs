@@ -1,5 +1,61 @@
 ---
 id: terragrunt
-title: terragrunt
+title: Terragrunt Github Action
 sidebar_label: Terragrunt
 ---
+
+import Modalbutton from './Modalbutton';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Terragrunt is an open-source **Terraform wrapper** developed by **Gruntwork** that provides additional tooling to manage Terraform configurations more efficiently at scale.
+
+It helps reduce duplication, enforce best practices, and manage complex multi-environment infrastructure setups.
+
+### 🔹 Key Features of Terragrunt
+- **DRY Infrastructure:** Eliminates repetitive Terraform code.
+- **Remote State Management:** Simplifies backend configuration.
+- **Dependency Management:** Handles inter-module dependencies.
+- **Environment Consistency:** Enforces consistent configuration across environments.
+- **Built on Terraform:** Fully compatible with Terraform modules.
+- **Automation Friendly:** Designed for CI/CD workflows.
+
+As part of **Ananta Cloud’s** infrastructure orchestration layer, we provide a standardized **GitHub Action for Terragrunt** to manage large-scale Terraform deployments.
+
+### 🔹 What It Does?
+- Orchestrates Terraform modules across environments.
+- Manages dependencies and remote state configuration.
+- Enforces infrastructure best practices.
+- Simplifies complex infrastructure layouts.
+- Integrates with Ananta Cloud’s automation framework.
+
+### 🔹 Benefits of Using Ananta Cloud’s Terragrunt Action
+- **Scalable Terraform Management**
+- **Reduced Configuration Duplication**
+- **Environment-Level Consistency**
+- **Improved Infrastructure Governance**
+- **Enterprise-Ready IaC Workflows**
+
+### 🔹 Supported Inputs
+
+| Name        | Description                                 | Required |
+|-------------|---------------------------------------------|----------|
+| `directory` | Terragrunt working directory                | ✔️ Yes   |
+| `command`   | Terragrunt command (plan, apply, destroy)   | ✔️ Yes   |
+| `env`       | Target environment (dev, stage, prod)       | ❌ No    |
+
+### 🔹 Supported Outputs
+None
+
+### 🔹 Usage
+
+```yaml
+- name: Run Terragrunt apply
+  uses: anantacloud/github-actions/tree/main/iac/terragrunt
+  with:
+    directory: live/dev
+    command: apply
+
+```
+
+<Modalbutton />

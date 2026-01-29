@@ -1,5 +1,61 @@
 ---
 id: kube-hunter
-title: kube-hunter
+title: Kube-hunter Github Action
 sidebar_label: kube-hunter
 ---
+
+import Modalbutton from './Modalbutton';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+kube-hunter is an open-source security tool developed by **Aqua Security** that performs **penetration testing** on Kubernetes clusters to identify exploitable security weaknesses.
+
+It simulates real-world attack techniques to uncover configuration flaws, exposed services, and insecure cluster components.
+
+### 🔹 Key Features of kube-hunter
+- **Active Security Testing:** Performs controlled penetration testing on clusters.
+- **Discovery & Hunting Modes:** Identifies attack surfaces and exploitable paths.
+- **Kubernetes-Aware Attacks:** Targets API server, kubelet, etcd, and dashboards.
+- **Risk Classification:** Categorizes findings by severity and exploitability.
+- **Non-Intrusive Options:** Supports passive scanning modes.
+- **Clear Findings:** Actionable security insights with remediation guidance.
+
+As part of **Ananta Cloud’s** Kubernetes security testing strategy, we provide a standardized **GitHub Action for kube-hunter** to proactively detect Kubernetes security risks.
+
+### 🔹 What It Does?
+- Scans clusters for exposed and vulnerable components.
+- Simulates attacker behavior in Kubernetes environments.
+- Identifies high-risk attack vectors.
+- Generates actionable security findings.
+- Enhances proactive cluster security testing.
+
+### 🔹 Benefits of Using Ananta Cloud’s kube-hunter Action
+- **Proactive Threat Discovery**
+- **Real-World Attack Simulation**
+- **Improved Cluster Defense**
+- **Early Risk Identification**
+- **Enhanced Kubernetes Security Testing**
+
+### 🔹 Supported Inputs
+
+| Name        | Description                                   | Required |
+|-------------|-----------------------------------------------|----------|
+| `mode`      | Scanning mode (active or passive)             | ❌ No    |
+| `remote`    | Target remote cluster                         | ❌ No    |
+| `namespace` | Kubernetes namespace to scan                  | ❌ No    |
+| `report`    | Output report format                          | ❌ No    |
+
+### 🔹 Supported Outputs
+None
+
+### 🔹 Usage
+
+```yaml
+- name: Run kube-hunter security scan
+  uses: anantacloud/github-actions/tree/main/security/kube-hunter
+  with:
+    mode: active
+
+```
+
+<Modalbutton />

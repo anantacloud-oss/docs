@@ -1,5 +1,62 @@
 ---
 id: pulumi
-title: pulumi
+title: Pulumi Github Action
 sidebar_label: Pulumi
 ---
+
+import Modalbutton from './Modalbutton';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Pulumi is an open-source **Infrastructure as Code (IaC)** platform that allows teams to define, deploy, and manage cloud infrastructure using **general-purpose programming languages** such as TypeScript, Python, Go, Java, and C#.
+
+Pulumi enables developers to apply familiar software engineering practices—like code reuse, testing, and versioning—to infrastructure provisioning.
+
+### 🔹 Key Features of Pulumi
+- **Real Programming Languages:** Define infrastructure using TypeScript, Python, Go, Java, or C#.
+- **Multi-Cloud Support:** Works with AWS, Azure, GCP, Kubernetes, and SaaS providers.
+- **State Management:** Secure and managed state backend options.
+- **Reusable Components:** Build and share infrastructure components.
+- **Policy as Code:** Enforce guardrails using Pulumi CrossGuard.
+- **CI/CD Friendly:** Designed for automation and GitOps workflows.
+
+As part of **Ananta Cloud’s** infrastructure automation framework, we provide a standardized **GitHub Action for Pulumi** to enable consistent and secure infrastructure deployments.
+
+### 🔹 What It Does?
+- Provisions and manages cloud infrastructure using code.
+- Supports multi-cloud and Kubernetes environments.
+- Enables reusable, testable infrastructure components.
+- Integrates with Ananta Cloud’s governance controls.
+- Automates infrastructure deployments via CI/CD.
+
+### 🔹 Benefits of Using Ananta Cloud’s Pulumi Action
+- **Developer-Friendly IaC**
+- **Reusable Infrastructure Patterns**
+- **Policy Enforcement by Default**
+- **Consistent Multi-Cloud Deployments**
+- **CI/CD Native Automation**
+
+### 🔹 Supported Inputs
+
+| Name          | Description                                | Required |
+|---------------|--------------------------------------------|----------|
+| `stack`       | Pulumi stack name                          | ✔️ Yes   |
+| `command`     | Pulumi command (preview, up, destroy)     | ✔️ Yes   |
+| `work-dir`    | Pulumi project directory                  | ❌ No    |
+| `config-file` | Pulumi configuration file                 | ❌ No    |
+
+### 🔹 Supported Outputs
+None
+
+### 🔹 Usage
+
+```yaml
+- name: Deploy infrastructure with Pulumi
+  uses: anantacloud/github-actions/tree/main/iac/pulumi
+  with:
+    stack: dev
+    command: up
+
+```
+
+<Modalbutton />
