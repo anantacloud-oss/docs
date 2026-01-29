@@ -34,35 +34,28 @@
    PAGINATION FIX (Docusaurus)
 ------------------------------------------ */
 
-.pagination-nav {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  justify-content: flex-end; /* single button → right */
+.pagination-nav__link--next {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
-
-/* when both prev + next exist */
-.pagination-nav:has(.pagination-nav__item--prev):has(.pagination-nav__item--next) {
-  justify-content: space-between;
-}
-
-.pagination-nav__item {
-  flex: 0 0 auto;        /* ⬅️ IMPORTANT */
-  width: 260px;          /* fixed width */
-}
-
-/* Button layout */
 .pagination-nav__link {
-  width: 100%;
-  min-height: 56px;
-  padding: 0.75rem 1rem;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  white-space: normal;
-  line-height: 1.2;
+    border-radius: 0;
+    padding: 1em 2em;
+    transition: all .2s ease-in-out;
+    box-shadow: 0 0 transparent;
+}
+.pagination-nav__link--next {
+    text-align: right;
+    grid-column: 2 / 3;
+}
+.pagination-nav__link {
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-pagination-nav-border-radius);
+    height: 100%;
+    line-height: var(--ifm-heading-line-height);
+    padding: var(--ifm-global-spacing);
+    transition: border-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+    display: block;
 }    
 
 
@@ -349,27 +342,6 @@
     overflow-x: hidden;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -16,6 +16,7 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+   
 
   presets: [
     [
@@ -86,7 +87,6 @@ const config = {
         { to: '/developer-docs/introduction', label: 'References', position: 'left' },
         { to: '/modules-docs/searchmodule', label: 'Infrastructure as a Code', position: 'left' },
         { to: '/tools', label: 'Toolkit' , position: 'left' },
-        { to: '/technicalblogs', label: 'Blogs', position: 'left' },
         { to: 'https://github.com/orgs/anantacloud/discussions', label: 'Knowledge-Hub', position: 'right' },
         { to: '/docs/Support', label: 'Support', position: 'right' },
         {
