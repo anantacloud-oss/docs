@@ -23,7 +23,7 @@ export default function ToolsPage() {
             onClick={() => (window.location.href = '/VulneralQ/overview')}
             style={{ cursor: 'pointer' }}
           >
-            <img src="/img/vulneralq.jpeg" alt="VulneralQ" />
+            <img src="/img/vulneralq.png" alt="VulneralQ" />
             <h3>VulneralQ</h3>
             <p>
               Open-source cloud security and compliance platform for continuous risk detection and
