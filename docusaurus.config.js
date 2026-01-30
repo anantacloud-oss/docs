@@ -4,7 +4,7 @@ const config = {
   title: 'Ananta Cloud Docs',
   tagline: "Discover how to manage and deploy infrastructure efficiently with infrastructure as code.",
   url: 'https://reimagined-adventure-lrry9rm.pages.github.io',
-  baseUrl: '/docs/',
+  baseUrl: '/',
 
   organizationName: 'anantacloud',
   projectName: 'docs',
@@ -83,12 +83,12 @@ const config = {
         src: 'img/logo.png',
       },
       items: [
-        { to: 'docs/getting-started', label: 'Documentations', position: 'left' },
-        { to: 'developer-docs/introduction', label: 'References', position: 'left' },
-        { to: 'modules-docs/searchmodule', label: 'Infrastructure as a Code', position: 'left' },
-        { to: 'tools', label: 'Toolkit' , position: 'left' },
+        { to: '/docs/getting-started', label: 'Documentations', position: 'left' },
+        { to: '/developer-docs/introduction', label: 'References', position: 'left' },
+        { to: '/modules-docs/searchmodule', label: 'Infrastructure as a Code', position: 'left' },
+        { to: '/tools', label: 'Toolkit' , position: 'left' },
         { to: 'https://github.com/orgs/anantacloud/discussions', label: 'Knowledge-Hub', position: 'right' },
-        { to: 'docs/Support', label: 'Support', position: 'right' },
+        { to: '/docs/Support', label: 'Support', position: 'right' },
         {
           type: 'html',
           position: 'right',
