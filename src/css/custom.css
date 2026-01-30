@@ -370,7 +370,6 @@
     max-width: 360px;
     z-index: 9999;
     overflow-y: auto;
-    box-sizing: border-box;
   }
 
   /* Stack sidebars correctly */
@@ -401,7 +400,6 @@
     max-width: 360px;
     z-index: 9999;
     overflow-y: auto;
-    box-sizing: border-box;
   }
 
   /* Schedule Meeting button FIX */
