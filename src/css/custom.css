@@ -405,7 +405,7 @@
   /* Schedule Meeting button FIX */
   .custom-schedule-button {
     display: block;
-    width: 50%;
+    width: 100%;
     max-width: 100%;
     margin: 0.75rem 0;
     padding: 10px 12px;
