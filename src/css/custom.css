@@ -351,6 +351,56 @@
 
 
 
+@media (max-width: 425px) {
+  .docSidebarContainer {
+    display: none !important;
+  }
+
+  .navbar-sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100vh !important;
+    width: 82% !important;
+    max-width: 360px !important;
+    z-index: 9999 !important;
+    overflow-y: auto !important;
+  }
+
+  .theme-doc-sidebar-container,
+  .theme-doc-sidebar-menu {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .main-wrapper {
+    overflow-x: hidden !important;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+  .custom-schedule-button {
+    display: block !important;
+    width: 50% !important;
+    max-width: 100% !important;
+    margin: 0.75rem 0 !important;
+    padding: 10px 12px !important;
+    font-size: 0.9rem !important;
+    text-align: center !important;
+    white-space: normal !important;
+    box-sizing: border-box !important;
+  }
+
+  .navbar-sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100vh !important;
+    width: 82% !important;
+    z-index: 9999 !important;
+    overflow-y: auto !important;
+  }
+}
 
   
   
