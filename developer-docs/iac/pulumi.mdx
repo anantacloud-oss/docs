@@ -4,7 +4,7 @@ title: Pulumi Github Action
 sidebar_label: Pulumi
 ---
 
-import Modalbutton from './Modalbutton';
+import Modalbutton from './PulumiModalbutton';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -52,7 +52,7 @@ None
 
 ```yaml
 - name: Deploy infrastructure with Pulumi
-  uses: anantacloud/github-actions/tree/main/iac/pulumi
+  uses: anantacloud/actions/tree/main/iac/pulumi
   with:
     stack: dev
     command: up
