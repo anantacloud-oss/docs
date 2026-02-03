@@ -4,7 +4,7 @@ title: Terraform Github Action
 sidebar_label: Terraform
 ---
 
-import Modalbutton from './Modalbutton';
+import Modalbutton from './TerraformModalbutton';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -52,7 +52,7 @@ None
 
 ```yaml
 - name: Run Terraform apply
-  uses: anantacloud/github-actions/tree/main/iac/terraform
+  uses: anantacloud/actions/tree/main/iac/terraform
   with:
     directory: infra/
     command: apply
