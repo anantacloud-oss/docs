@@ -3,15 +3,22 @@ id: how-it-works
 title: How It Works
 ---
 
-# How Trustary Works
+## How Trustary Works
 
-Trustary follows a streamlined workflow to manage container images:
+1. **Build & Push**  
+   Developers or CI pipelines build container images and push them to Trustary.
 
-- **📦 Push Images** – Users push container images to Trustary.  
-- **🔍 Vulnerability Scanning** – Trustary scans images using integrated security scanners.  
-- **🔐 Role-Based Access Control (RBAC)** – Ensures proper permissions and access control.   
-- **📜 Policy Enforcement** – Enforce retention, replication, and promotion workflows.  
-- **📊 Audit Logs & Reports** – Gain full visibility across teams and clusters.
+2. **Scan & Enforce Policies**  
+   Images are automatically scanned for vulnerabilities and validated against security policies.
+
+3. **Store & Manage**  
+   Images are organized into projects with role-based access control.
+
+4. **Replicate & Distribute**  
+   Policy-based replication syncs images across registries for multi-cloud, DR, and global deployments.
+
+5. **Deploy Securely**  
+   Only trusted and compliant images are pulled into Kubernetes clusters.
 
 
 <img 
