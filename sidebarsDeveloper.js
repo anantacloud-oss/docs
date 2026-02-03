@@ -52,6 +52,11 @@ const sidebars = {
         },
       ],
     },
+    {
+       type: 'doc',
+       label: 'Helm Chart',
+       id: 'helm-chart', 
+    },
   ],
 };
 
