@@ -64,7 +64,7 @@ export default function Modalbutton() {
           >
             <h3>For Subscribers Only</h3>
             <p>
-              This link points to the private <code>This is a Github Action Catalog</code> repository, which is accessible only to subscribers. Non-subscribers will receive a 404 error.
+              This link points to the private <code>Github Action</code> repository, which is accessible only to subscribers. Non-subscribers will receive a 404 error.
             </p>
             <div
               style={{
