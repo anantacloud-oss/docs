@@ -40,8 +40,6 @@ const sidebars = {
             'devops/cicd/source-control',
           ],
         },
-        'devops/helm-chart',
-        'devops/docker-images',
         'devops/monitoring-and-observability'
       ],
     },
@@ -57,11 +55,6 @@ const sidebars = {
         'iac/prebuilt-iac-modules',
         'iac/testing-and-validation'
       ],
-    },
-    {
-      type: 'doc',
-      label: 'Cloud Computing',
-      id: 'supported-clouds', 
     },
     {
       type: 'category',
