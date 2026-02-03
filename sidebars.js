@@ -17,7 +17,7 @@ const sidebars = {
         'introduction/welcome',
         'introduction/how-to-use',
         'introduction/target-audience',
-        'introduction/support-guidelines'
+        'introduction/support-guidelines',
       ]
     },
     {
@@ -42,7 +42,6 @@ const sidebars = {
         },
         'devops/helm-chart',
         'devops/docker-images',
-        'devops/monitoring-and-observability'
       ],
     },
     {
@@ -52,10 +51,7 @@ const sidebars = {
         'iac/overview',
         'iac/folder-structure',
         'iac/tagging-and-naming-conventions',
-        'iac/developer-self-service-patterns',
-        'iac/choosing-iac-platform',
         'iac/prebuilt-iac-modules',
-        'iac/testing-and-validation'
       ],
     },
     {
@@ -71,7 +67,7 @@ const sidebars = {
         'landing-zone/deployment-strategy',
         'landing-zone/deploying-to-aws',
         'landing-zone/deploying-to-gcp',
-        'landing-zone/deploying-to-azure'
+        'landing-zone/deploying-to-azure',
       ],
     },
     {
@@ -80,11 +76,7 @@ const sidebars = {
       items: [
         'security/overview',
         'security/cis-benchmark',
-        'security/compliance-architecture',
-        'security/audit-logging',
         'security/secret-and-key-management',
-        'security/security-left',
-        'security/iam'
       ],
     },
     {
