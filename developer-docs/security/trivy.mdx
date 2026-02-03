@@ -4,7 +4,7 @@ title: Trivy Github Action
 sidebar_label: Trivy
 ---
 
-import Modalbutton from './Modalbutton';
+import Modalbutton from './TrivyModalbutton';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -52,7 +52,7 @@ None
 
 ```yaml
 - name: Run Trivy security scan
-  uses: anantacloud/github-actions/tree/main/security/trivy
+  uses: anantacloud/actions/tree/main/security/trivy
   with:
     scan-type: image
     image: docker-image:tag
