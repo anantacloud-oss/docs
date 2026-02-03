@@ -4,7 +4,7 @@ title: Terragrunt Github Action
 sidebar_label: Terragrunt
 ---
 
-import Modalbutton from './Modalbutton';
+import Modalbutton from './TerragruntModalbutton';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -51,7 +51,7 @@ None
 
 ```yaml
 - name: Run Terragrunt apply
-  uses: anantacloud/github-actions/tree/main/iac/terragrunt
+  uses: https://github.com/anantacloud/actions/tree/main/iac/terragrunt
   with:
     directory: live/dev
     command: apply
