@@ -52,35 +52,6 @@ const sidebars = {
         },
       ],
     },
-    {
-          type: 'category',
-          label: 'Cloud',
-          items: [
-            { type: 'doc', id: 'cloud/aws', label: 'AWS' },
-            { type: 'doc', id: 'cloud/azure', label: 'Azure' },
-            { type: 'doc', id: 'cloud/digitalocean', label: 'Digital Ocean' },
-            { type: 'doc', id: 'cloud/gcp', label: 'Google Cloud Provider' },
-            { type: 'doc', id: 'cloud/oci', label: 'Oracle Cloud Infrastructure' },
-          ],
-    },
-    {
-      type: 'category',
-      label: 'Helm Chart',
-      items: [
-            { type: 'doc', id: 'helmchart/coredns', label: 'CoreDNS' },
-            { type: 'doc', id: 'helmchart/grafana', label: 'Grafana' },
-            { type: 'doc', id: 'helmchart/csidriver', label: 'CSI Driver' },
-          ],
-    },
-    {
-      type: 'category',
-      label: 'Docker Images',
-      items: [
-             { type: 'doc', id: 'Dockerimage/jenkins', label: 'Jenkins' },
-             { type: 'doc', id: 'Dockerimage/python', label: 'Python' },
-             { type: 'doc', id: 'Dockerimage/postgres', label: 'Postgres' },
-           ],
-    },
   ],
 };
 
