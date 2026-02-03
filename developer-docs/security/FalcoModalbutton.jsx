@@ -93,7 +93,7 @@ export default function Modalbutton() {
                 Cancel
               </button>
               <a
-                href="https://github.com/anantacloud/github-actions/tree/main/security/falco"
+                href="https://github.com/anantacloud/actions/tree/main/security/falco"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ width: isMobile ? '100%' : 'auto' }}
