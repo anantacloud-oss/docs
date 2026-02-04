@@ -28,18 +28,13 @@ jobs:
         run: npm install
       - name: Build project
         run: npm run build
-
-  upload:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./build
 
   deploy:
-    needs: upload
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
