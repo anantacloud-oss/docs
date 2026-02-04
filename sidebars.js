@@ -53,6 +53,11 @@ const sidebars = {
       ],
     },
     {
+      type: 'doc',
+      label: 'Cloud Computing',
+      id: 'supported-clouds', 
+    },
+    {
       type: 'category',
       label: 'Landing Zone Deployment',
       items: [
