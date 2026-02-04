@@ -26,7 +26,7 @@ export default function ToolsPage() {
             <img src="/img/vulneralq.png" alt="VulneralQ" className={styles.vulneralQLogo}/>
             <h3>VulneralQ</h3>
             <p>
-              Open-source cloud security and compliance platform for continuous risk detection and
+              Cloud security and compliance platform for continuous risk detection and
               remediation.
             </p>
           </div>
