@@ -23,7 +23,7 @@ export default function ToolsPage() {
             onClick={() => (window.location.href = '/VulneralQ/overview')}
             style={{ cursor: 'pointer' }}
           >
-            <img src="/img/vulneralq.png" alt="VulneralQ" className={styles.vulneralQLogo}/>
+            <img src="/img/vulneralq.png" alt="VulneralQ"/>
             <h3>VulneralQ</h3>
             <p>
               Cloud security and compliance platform for continuous risk detection and
@@ -36,7 +36,7 @@ export default function ToolsPage() {
             onClick={() => (window.location.href = '/Trustary/overview')}
             style={{ cursor: 'pointer' }}
           >
-            <img src="/img/trustary.png" alt="trustary" className={styles.trustaryLogo}/>
+            <img src="/img/trustary.png" alt="Trustary"/>
             <h3>Trustary</h3>
             <p>
               Cloud-native container registry with built-in security, vulnerability scanning, and policy
