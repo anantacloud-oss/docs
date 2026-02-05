@@ -121,8 +121,8 @@ export default function Modulebutton() {
               <a
                 href={
                   showModal === 'subscription'
-                    ? 'https://github.com/anantacloud/terraform-aws-secrets_manager-module.git'
-                    : 'https://github.com/anantacloud/terraform-aws-secrets_manager-module/releases'
+                    ? 'https://github.com/anantacloud/terraform-aws-secrets-manager-module.git'
+                    : 'https://github.com/anantacloud/terraform-aws-secrets-manager-module/releases'
                 }
                 target="_blank"
                 rel="noopener noreferrer"
