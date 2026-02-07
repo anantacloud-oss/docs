@@ -12,7 +12,7 @@ Trivy is an open-source **comprehensive security scanner** developed by **Aqua S
 
 It provides fast, accurate security scanning with minimal configuration, making it one of the most widely adopted tools in cloud-native security.
 
-### 🔹 Key Features of Trivy
+### Key Features of Trivy
 - **Vulnerability Scanning:** Detects CVEs in OS packages and application dependencies.
 - **IaC Misconfiguration Detection:** Scans Terraform, Kubernetes, Helm, and Dockerfiles.
 - **Secrets Scanning:** Identifies hard-coded secrets and credentials.
@@ -22,33 +22,33 @@ It provides fast, accurate security scanning with minimal configuration, making 
 
 As part of **Ananta Cloud’s** unified security scanning strategy, we provide a standardized **GitHub Action for Trivy** to enforce security checks across the entire software lifecycle.
 
-### 🔹 What It Does?
+### What It Does?
 - Scans container images and repositories for vulnerabilities.
 - Detects misconfigurations and exposed secrets.
 - Enforces severity-based security gates.
 - Produces detailed security reports.
 - Integrates with Ananta Cloud’s DevSecOps controls.
 
-### 🔹 Benefits of Using Ananta Cloud’s Trivy Action
+### Benefits of Using Ananta Cloud’s Trivy Action
 - **All-in-One Security Scanning**
 - **Fast Feedback for Developers**
 - **Shift-Left Security Enablement**
 - **Reduced Tool Sprawl**
 - **Enterprise-Grade Security Coverage**
 
-### 🔹 Supported Inputs
+### Supported Inputs
 
 | Name                 | Description                                   | Required |
 |----------------------|-----------------------------------------------|----------|
-| `scan-type`          | Type of scan (image, fs, repo, config)        | ✔️ Yes   |
-| `image`              | Container image name with tag                 | ❌ No    |
-| `severity-threshold` | Fail pipeline on specified severity           | ❌ No    |
-| `ignore-unfixed`     | Ignore unfixed vulnerabilities                | ❌ No    |
+| `scan-type`          | Type of scan (image, fs, repo, config)        |    Yes   |
+| `image`              | Container image name with tag                 |    No    |
+| `severity-threshold` | Fail pipeline on specified severity           |    No    |
+| `ignore-unfixed`     | Ignore unfixed vulnerabilities                |    No    |
 
-### 🔹 Supported Outputs
+### Supported Outputs
 None
 
-### 🔹 Usage
+### Usage
 
 ```yaml
 - name: Run Trivy security scan
