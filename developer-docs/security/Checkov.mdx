@@ -13,7 +13,7 @@ Checkov is an open-source static analysis tool developed by **Bridgecrew (Palo A
 
 It supports Terraform, Kubernetes, Helm, CloudFormation, Dockerfiles, and CI/CD pipelines, enabling teams to enforce security best practices before deployment.
 
-### 🔹 Key Features of Checkov
+### Key Features of Checkov
 - **IaC Security Scanning:** Detects misconfigurations in Terraform, Kubernetes, Helm, and CloudFormation.
 - **Policy-as-Code:** Built-in and custom policies mapped to CIS, NIST, SOC2, PCI-DSS.
 - **Shift-Left Security:** Catch issues early during PRs and CI builds.
@@ -23,33 +23,33 @@ It supports Terraform, Kubernetes, Helm, CloudFormation, Dockerfiles, and CI/CD 
 
 As part of **Ananta Cloud’s** DevSecOps capabilities, we provide a standardized **GitHub Action for Checkov** to ensure consistent security and compliance checks across all repositories.
 
-### 🔹 What It Does?
+### What It Does?
 - Scans IaC and configuration files for misconfigurations.
 - Enforces organizational security policies.
 - Fails builds on high or critical violations.
 - Generates reports for auditing and compliance.
 - Integrates with Ananta Cloud’s security framework.
 
-### 🔹 Benefits of Using Ananta Cloud’s Checkov Action
+### Benefits of Using Ananta Cloud’s Checkov Action
 - **Prevent Misconfigurations Early**
 - **Compliance by Default**
 - **Consistent Security Across Teams**
 - **Fast Developer Feedback**
 - **Scalable Multi-Cloud Security**
 
-### 🔹 Supported Inputs
+### Supported Inputs
 
 | Name          | Description                                      | Required |
 |---------------|--------------------------------------------------|----------|
-| `directory`   | Path to IaC or config files to scan              | ✔️ Yes   |
-| `framework`   | Framework to scan (terraform, kubernetes, etc.)  | ❌ No    |
-| `soft-fail`   | Do not fail pipeline on violations               | ❌ No    |
-| `skip-checks` | Comma-separated list of checks to skip           | ❌ No    |
+| `directory`   | Path to IaC or config files to scan              |   Yes    |
+| `framework`   | Framework to scan (terraform, kubernetes, etc.)  |   No     |
+| `soft-fail`   | Do not fail pipeline on violations               |   No     |
+| `skip-checks` | Comma-separated list of checks to skip           |   No     |
 
-### 🔹 Supported Outputs
+### Supported Outputs
 None
 
-### 🔹 Usage
+### Usage
 
 ```yaml
 - name: Run Checkov scan
