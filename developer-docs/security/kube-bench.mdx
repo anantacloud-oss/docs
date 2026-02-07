@@ -12,7 +12,7 @@ kube-bench is an open-source security tool developed by **Aqua Security** that c
 
 It runs automated tests to validate whether Kubernetes components such as the API server, kubelet, controller manager, and etcd are securely configured according to best practices.
 
-### 🔹 Key Features of kube-bench
+### Key Features of kube-bench
 - **CIS Benchmark Compliance:** Validates clusters against CIS Kubernetes Benchmarks.
 - **Automated Security Checks:** Scans control plane, node, and etcd configurations.
 - **Version-Aware:** Supports multiple Kubernetes versions.
@@ -22,33 +22,33 @@ It runs automated tests to validate whether Kubernetes components such as the AP
 
 As part of **Ananta Cloud’s** Kubernetes security framework, we provide a standardized **GitHub Action and deployment approach for kube-bench** to ensure cluster hardening checks are executed consistently.
 
-### 🔹 What It Does?
+### What It Does?
 - Audits Kubernetes cluster configurations.
 - Identifies security misconfigurations based on CIS standards.
 - Generates compliance and audit reports.
 - Supports security reviews and regulatory requirements.
 - Improves overall cluster security posture.
 
-### 🔹 Benefits of Using Ananta Cloud’s kube-bench Integration
+### Benefits of Using Ananta Cloud’s kube-bench Integration
 - **CIS Compliance by Default**
 - **Improved Cluster Hardening**
 - **Audit-Ready Security Reports**
 - **Consistent Checks Across Environments**
 - **Stronger Kubernetes Security Posture**
 
-### 🔹 Supported Inputs
+### Supported Inputs
 
 | Name            | Description                                   | Required |
 |-----------------|-----------------------------------------------|----------|
-| `benchmark`     | CIS benchmark version to run                  | ❌ No    |
-| `node-type`     | Control plane or worker node                  | ❌ No    |
-| `output-format` | Output format (json, table)                   | ❌ No    |
-| `k8s-version`   | Kubernetes version                            | ❌ No    |
+| `benchmark`     | CIS benchmark version to run                  |    No    |
+| `node-type`     | Control plane or worker node                  |    No    |
+| `output-format` | Output format (json, table)                   |    No    |
+| `k8s-version`   | Kubernetes version                            |    No    |
 
-### 🔹 Supported Outputs
+### Supported Outputs
 None
 
-### 🔹 Usage
+### Usage
 
 ```yaml
 - name: Run kube-bench CIS scan
