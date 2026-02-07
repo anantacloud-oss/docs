@@ -12,7 +12,7 @@ Clair is an open-source container vulnerability scanner that identifies known se
 
 It is widely used in cloud-native environments to ensure container images meet security standards before deployment.
 
-### 🔹 Key Features of Clair
+### Key Features of Clair
 - **Vulnerability Detection:** Identifies known CVEs in OS packages and dependencies.
 - **Layered Image Analysis:** Scans container image layers efficiently.
 - **Multi-OS Support:** Supports Alpine, Debian, Ubuntu, RHEL, and more.
@@ -22,33 +22,33 @@ It is widely used in cloud-native environments to ensure container images meet s
 
 As part of **Ananta Cloud’s** container security stack, we provide a standardized **GitHub Action for Clair** to automate vulnerability scanning during CI/CD workflows.
 
-### 🔹 What It Does?
+### What It Does?
 - Scans container images for vulnerabilities.
 - Produces severity-based vulnerability reports.
 - Blocks deployments with critical CVEs.
 - Integrates with Ananta Cloud’s security controls.
 - Ensures only secure images move to production.
 
-### 🔹 Benefits of Using Ananta Cloud’s Clair Action
+### Benefits of Using Ananta Cloud’s Clair Action
 - **Early CVE Detection**
 - **Policy-Based Security Gates**
 - **Reduced Container Attack Surface**
 - **Fully Automated Scanning**
 - **Enterprise-Ready Container Security**
 
-### 🔹 Supported Inputs
+### Supported Inputs
 
 | Name                  | Description                                   | Required |
 |-----------------------|-----------------------------------------------|----------|
-| `image`               | Full container image name with tag             | ✔️ Yes   |
-| `severity-threshold`  | Fail pipeline on specified severity            | ❌ No    |
-| `report-format`       | Output format (json, table)                    | ❌ No    |
-| `registry-token`      | Registry authentication token                 | ✔️ Yes   |
+| `image`               | Full container image name with tag            |   Yes    |
+| `severity-threshold`  | Fail pipeline on specified severity           |   No     |
+| `report-format`       | Output format (json, table)                   |   No     |
+| `registry-token`      | Registry authentication token                 |   Yes    |
 
-### 🔹 Supported Outputs
+### Supported Outputs
 None
 
-### 🔹 Usage
+### Usage
 
 ```yaml
 - name: Scan container image with Clair
