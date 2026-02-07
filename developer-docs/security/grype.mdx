@@ -12,7 +12,7 @@ Grype is an open-source vulnerability scanner developed by **Anchore** that iden
 
 It supports deep analysis of OS packages and application dependencies, making it ideal for scanning container images as part of CI/CD pipelines.
 
-### 🔹 Key Features of Grype
+### Key Features of Grype
 - **Comprehensive CVE Scanning:** Detects vulnerabilities in OS and application dependencies.
 - **Container & Filesystem Support:** Scan images, directories, and archives.
 - **SBOM Aware:** Works seamlessly with SBOMs (CycloneDX, SPDX).
@@ -22,33 +22,33 @@ It supports deep analysis of OS packages and application dependencies, making it
 
 As part of **Ananta Cloud’s** image security framework, we provide a standardized **GitHub Action for Grype** to automate vulnerability scanning during CI/CD workflows.
 
-### 🔹 What It Does?
+### What It Does?
 - Scans container images for known CVEs.
 - Generates detailed vulnerability reports.
 - Enforces severity-based pipeline gates.
 - Integrates with Ananta Cloud’s container security stack.
 - Prevents vulnerable images from reaching production.
 
-### 🔹 Benefits of Using Ananta Cloud’s Grype Action
+### Benefits of Using Ananta Cloud’s Grype Action
 - **Early Vulnerability Detection**
 - **Policy-Based Build Failures**
 - **Improved Image Security**
 - **CI/CD Friendly Automation**
 - **Enterprise-Ready Scanning**
 
-### 🔹 Supported Inputs
+### Supported Inputs
 
 | Name                 | Description                                   | Required |
 |----------------------|-----------------------------------------------|----------|
-| `image`              | Container image name with tag                 | ✔️ Yes   |
-| `severity-threshold` | Fail pipeline on specified severity           | ❌ No    |
-| `output-format`      | Output format (json, table)                   | ❌ No    |
-| `fail-on`            | Minimum severity to fail build                | ❌ No    |
+| `image`              | Container image name with tag                 |    Yes   |
+| `severity-threshold` | Fail pipeline on specified severity           |    No    |
+| `output-format`      | Output format (json, table)                   |    No    |
+| `fail-on`            | Minimum severity to fail build                |    No    |
 
-### 🔹 Supported Outputs
+### Supported Outputs
 None
 
-### 🔹 Usage
+### Usage
 
 ```yaml
 - name: Scan image with Grype
