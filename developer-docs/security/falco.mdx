@@ -12,7 +12,7 @@ Falco is an open-source **runtime security** tool originally developed by **Sysd
 
 Falco helps teams identify unexpected application behavior, security threats, and policy violations in containerized and cloud-native environments.
 
-### 🔹 Key Features of Falco
+### Key Features of Falco
 - **Runtime Threat Detection:** Detects abnormal behavior during application execution.
 - **Kubernetes Native:** Monitors pods, containers, nodes, and Kubernetes audit events.
 - **Rule-Based Engine:** Uses YAML-based rules to define allowed and disallowed behavior.
@@ -22,33 +22,33 @@ Falco helps teams identify unexpected application behavior, security threats, an
 
 As part of **Ananta Cloud’s** runtime security strategy, we provide a standardized **GitHub Action and deployment pattern for Falco** to help teams enforce runtime security policies consistently.
 
-### 🔹 What It Does?
+### What It Does?
 - Monitors container and host activity in real time.
 - Detects suspicious processes, file access, and network activity.
 - Generates security alerts based on predefined rules.
 - Integrates with Ananta Cloud’s observability and security stack.
 - Enhances runtime visibility across workloads.
 
-### 🔹 Benefits of Using Ananta Cloud’s Falco Integration
+### Benefits of Using Ananta Cloud’s Falco Integration
 - **Real-Time Security Visibility**
 - **Early Threat Detection**
 - **Reduced Incident Response Time**
 - **Kubernetes Runtime Protection**
 - **Consistent Security Policies Across Clusters**
 
-### 🔹 Supported Inputs
+### Supported Inputs
 
 | Name            | Description                                      | Required |
 |-----------------|--------------------------------------------------|----------|
-| `rules-file`    | Custom Falco rules file path                     | ❌ No    |
-| `output-format` | Alert output format                              | ❌ No    |
-| `severity`      | Minimum alert severity                           | ❌ No    |
-| `namespace`     | Kubernetes namespace to monitor                  | ❌ No    |
+| `rules-file`    | Custom Falco rules file path                     |    No    |
+| `output-format` | Alert output format                              |    No    |
+| `severity`      | Minimum alert severity                           |    No    |
+| `namespace`     | Kubernetes namespace to monitor                  |    No    |
 
-### 🔹 Supported Outputs
+### Supported Outputs
 None
 
-### 🔹 Usage
+### Usage
 
 ```yaml
 - name: Enable Falco runtime security
