@@ -9,7 +9,7 @@ Git is an open-source **distributed version control system** that allows develop
 
 It is the foundation of modern CI/CD workflows, enabling versioned deployments, branching strategies, and automated pipelines.
 
-### 🔹 Key Features of Git
+### Key Features of Git
 - **Distributed Version Control:** Every developer has a complete copy of the repository.
 - **Branching & Merging:** Create isolated branches, merge changes efficiently.
 - **History & Auditability:** Track every change, author, and timestamp.
@@ -19,35 +19,35 @@ It is the foundation of modern CI/CD workflows, enabling versioned deployments, 
 
 As part of **Ananta Cloud’s** DevOps practices, we provide standardized **Git workflows and GitHub Actions** to ensure consistent branching, automated CI/CD, and secure code management.
 
-### 🔹 What It Does?
+### What It Does?
 - Tracks and versions all code changes.
 - Supports collaborative development across teams.
 - Enables automated CI/CD pipelines.
 - Maintains audit trails and compliance records.
 - Integrates with Ananta Cloud’s DevOps and security practices.
 
-### 🔹 Benefits of Using Git in Ananta Cloud
+### Benefits of Using Git in Ananta Cloud
 - **Collaboration by Default**
 - **Traceable Code Changes**
 - **Seamless CI/CD Integration**
 - **Versioned Deployments**
 - **Secure & Auditable Workflows**
 
-### 🔹 Supported Inputs (for GitHub Actions)
+### Supported Inputs (for GitHub Actions)
 | Name             | Description                                               | Required |
 |------------------|-----------------------------------------------------------|----------|
-| `repository`     | Git repository URL or name                                 | ✔️ Yes   |
-| `branch`         | Branch to track or operate on                              | ❌ No    |
-| `commit-message` | Commit message for automated commits                       | ❌ No    |
-| `ssh-key`        | SSH key or token for authentication                        | ❌ No    |
+| `repository`     | Git repository URL or name                                |   Yes    |
+| `branch`         | Branch to track or operate on                             |    No    |
+| `commit-message` | Commit message for automated commits                      |    No    |
+| `ssh-key`        | SSH key or token for authentication                       |    No    |
 
-### 🔹 Supported Outputs
+### Supported Outputs
 - Repository clone path
 - Commit hash
 - Branch name
 - Merge/push status
 
-### 🔹 Usage
+### Usage
 
 ```yaml
 - name: Checkout repository
