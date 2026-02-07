@@ -20,12 +20,12 @@ This module supports both **resource creation** and **data sources** for managin
 
 ## Features  
 
-- 🚀 **Reusable & Modular** – Predefined structure for resources and data modules.  
-- 🔐 **Security Best Practices** – Supports encryption (at rest & in-transit), IAM authentication, and fine-grained access control.  
-- 📡 **Scalable Clusters** – Configure broker nodes, storage, and networking with auto-scaling capabilities.  
-- 📜 **Monitoring & Logging** – Integrated with CloudWatch metrics, enhanced monitoring, and broker logging.  
-- 🌐 **VPC Integration** – Deploy Kafka clusters in private subnets with customizable networking.  
-- 🧩 **Extensible** – Easily integrates with producers, consumers, and other AWS services like Lambda, Kinesis, and S3.  
+- **Reusable & Modular** – Predefined structure for resources and data modules.  
+- **Security Best Practices** – Supports encryption (at rest & in-transit), IAM authentication, and fine-grained access control.  
+- **Scalable Clusters** – Configure broker nodes, storage, and networking with auto-scaling capabilities.  
+- **Monitoring & Logging** – Integrated with CloudWatch metrics, enhanced monitoring, and broker logging.  
+- **VPC Integration** – Deploy Kafka clusters in private subnets with customizable networking.  
+- **Extensible** – Easily integrates with producers, consumers, and other AWS services like Lambda, Kinesis, and S3.  
 
 ---
 
@@ -120,7 +120,7 @@ module "msk_cluster" {
 # terragrunt.hcl
 
 terraform {
-  source = "github.com/anantacloud/terraform-aws-apache-kafka-module/modules/resources"
+  source = "github.com/anantacloud/terraform-aws-kafka-module/modules/resources"
 }
 
 inputs = {
@@ -173,7 +173,7 @@ inputs = {
 # Opentofu.hcl
 
 terraform {
-  source = "github.com/anantacloud/terraform-aws-compute-module/modules/resources"
+  source = "github.com/anantacloud/terraform-aws-kafka-module/modules/resources"
 }
 
 inputs = {
