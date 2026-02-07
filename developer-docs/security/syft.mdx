@@ -12,7 +12,7 @@ Syft is an open-source **Software Bill of Materials (SBOM)** generation tool dev
 
 Syft helps teams understand exactly what is inside their software artifacts, forming a critical foundation for vulnerability management and supply chain security.
 
-### 🔹 Key Features of Syft
+### Key Features of Syft
 - **SBOM Generation:** Creates SBOMs in formats like SPDX and CycloneDX.
 - **Container & Filesystem Support:** Generate SBOMs from images, directories, and archives.
 - **Language & OS Coverage:** Supports multiple ecosystems (Alpine, Debian, Ubuntu, Java, Python, Node.js, Go, etc.).
@@ -22,32 +22,32 @@ Syft helps teams understand exactly what is inside their software artifacts, for
 
 As part of **Ananta Cloud’s** supply chain security framework, we provide a standardized **GitHub Action for Syft** to automate SBOM generation during CI/CD workflows.
 
-### 🔹 What It Does?
+### What It Does?
 - Generates SBOMs for container images and artifacts.
 - Produces machine-readable SBOM formats.
 - Integrates with vulnerability scanning and signing tools.
 - Improves visibility into software dependencies.
 - Strengthens supply chain transparency.
 
-### 🔹 Benefits of Using Ananta Cloud’s Syft Action
+### Benefits of Using Ananta Cloud’s Syft Action
 - **Full Dependency Visibility**
 - **SBOMs by Default**
 - **Improved Supply Chain Transparency**
 - **CI/CD Native Automation**
 - **Compliance & Audit Readiness**
 
-### 🔹 Supported Inputs
+### Supported Inputs
 
 | Name            | Description                                   | Required |
 |-----------------|-----------------------------------------------|----------|
-| `image`         | Container image name with tag                 | ✔️ Yes   |
-| `output-format` | SBOM output format (spdx, cyclonedx, json)    | ❌ No    |
-| `output-file`   | Path to save generated SBOM                   | ❌ No    |
+| `image`         | Container image name with tag                 |    Yes   |
+| `output-format` | SBOM output format (spdx, cyclonedx, json)    |    No    |
+| `output-file`   | Path to save generated SBOM                   |    No    |
 
-### 🔹 Supported Outputs
+### Supported Outputs
 None
 
-### 🔹 Usage
+### Usage
 
 ```yaml
 - name: Generate SBOM using Syft
