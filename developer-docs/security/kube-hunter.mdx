@@ -12,7 +12,7 @@ kube-hunter is an open-source security tool developed by **Aqua Security** that 
 
 It simulates real-world attack techniques to uncover configuration flaws, exposed services, and insecure cluster components.
 
-### 🔹 Key Features of kube-hunter
+### Key Features of kube-hunter
 - **Active Security Testing:** Performs controlled penetration testing on clusters.
 - **Discovery & Hunting Modes:** Identifies attack surfaces and exploitable paths.
 - **Kubernetes-Aware Attacks:** Targets API server, kubelet, etcd, and dashboards.
@@ -22,33 +22,33 @@ It simulates real-world attack techniques to uncover configuration flaws, expose
 
 As part of **Ananta Cloud’s** Kubernetes security testing strategy, we provide a standardized **GitHub Action for kube-hunter** to proactively detect Kubernetes security risks.
 
-### 🔹 What It Does?
+### What It Does?
 - Scans clusters for exposed and vulnerable components.
 - Simulates attacker behavior in Kubernetes environments.
 - Identifies high-risk attack vectors.
 - Generates actionable security findings.
 - Enhances proactive cluster security testing.
 
-### 🔹 Benefits of Using Ananta Cloud’s kube-hunter Action
+### Benefits of Using Ananta Cloud’s kube-hunter Action
 - **Proactive Threat Discovery**
 - **Real-World Attack Simulation**
 - **Improved Cluster Defense**
 - **Early Risk Identification**
 - **Enhanced Kubernetes Security Testing**
 
-### 🔹 Supported Inputs
+### Supported Inputs
 
 | Name        | Description                                   | Required |
 |-------------|-----------------------------------------------|----------|
-| `mode`      | Scanning mode (active or passive)             | ❌ No    |
-| `remote`    | Target remote cluster                         | ❌ No    |
-| `namespace` | Kubernetes namespace to scan                  | ❌ No    |
-| `report`    | Output report format                          | ❌ No    |
+| `mode`      | Scanning mode (active or passive)             |    No    |
+| `remote`    | Target remote cluster                         |    No    |
+| `namespace` | Kubernetes namespace to scan                  |    No    |
+| `report`    | Output report format                          |    No    |
 
-### 🔹 Supported Outputs
+### Supported Outputs
 None
 
-### 🔹 Usage
+### Usage
 
 ```yaml
 - name: Run kube-hunter security scan
