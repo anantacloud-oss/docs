@@ -77,6 +77,16 @@ const config = {
   themeConfig: {
     favicon: '/favicon.ico',
 
+    headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        href: '/favicon.ico',
+      },
+    },
+  ],
+
     navbar: {
       logo: {
         alt: 'Ananta Cloud Logo',
