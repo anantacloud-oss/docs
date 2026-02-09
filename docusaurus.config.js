@@ -75,7 +75,7 @@ const config = {
  ],
 
   themeConfig: {
-    favicon: 'img/favicon.ico',
+    favicon: '/img/favicon.ico',
 
     navbar: {
       logo: {
