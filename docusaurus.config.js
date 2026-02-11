@@ -3,7 +3,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'Ananta Cloud Docs',
   tagline: "Discover how to manage and deploy infrastructure efficiently with infrastructure as code.",
-  url: 'https://reimagined-adventure-lrry9rm.pages.github.io',
+  url: 'https://docs.anantacloud.com/',
   baseUrl: '/',
 
   organizationName: 'anantacloud',
