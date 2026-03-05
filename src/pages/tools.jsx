@@ -15,6 +15,7 @@ export default function ToolsPage() {
         <ul>
           <li>VulneralQ</li>
           <li>Trustary</li>
+          <li>IdentiQ</li>
         </ul>
  
         <div className={styles.grid}>
@@ -43,6 +44,20 @@ export default function ToolsPage() {
               enforcement.
             </p>
           </div>
+
+
+         <div
+            className={styles.card}
+            onClick={() => (window.location.href = '/IdentiQ/overview')}
+            style={{ cursor: 'pointer' }}
+          >
+            <img src="/img/identiq.png" alt="VulneralQ" className={styles.identiqLogo}/>
+            <h3>IdentiQ</h3>
+            <p>
+              IdentiQ is an identity and access management platform that provides centralized authentication, authorization, and user management to securely protect applications and services.
+            </p>
+          </div>
+         
         </div>
       </main>
     </Layout>
