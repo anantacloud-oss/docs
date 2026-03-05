@@ -72,6 +72,15 @@ const config = {
          sidebarPath: require.resolve('./sidebartrustary.js'),
        },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+       {
+         id: 'identiq',
+         path: 'IdentiQ',
+         routeBasePath: 'IdentiQ',
+         sidebarPath: require.resolve('./sidebaridentiq.js'),
+       },
+    ],
  ],
 
   themeConfig: {
