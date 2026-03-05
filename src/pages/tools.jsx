@@ -53,9 +53,7 @@ export default function ToolsPage() {
           >
             <img src="/img/identiq.png" alt="IdentiQ" className={styles.identiqLogo}/>
             <h3>IdentiQ</h3>
-            <p>
-              IdentiQ is an identity and access management platform that provides centralized authentication and user access control for applications.
-            </p>
+            <p>IdentiQ is an IAM platform for centralized authentication and access control.</p>
           </div>
          
         </div>
