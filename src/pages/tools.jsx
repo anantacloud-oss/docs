@@ -66,7 +66,7 @@ export default function ToolsPage() {
             <img src="/img/axio.png" alt="Axio" className={styles.axioLogo}/>
             <h3>Axio</h3>
             <p>
-             Axio is a platform that simplifies Terraform infrastructure management by enabling teams to import modules, configure variables, and deploy infrastructure through an intuitive self-service web interface.
+             Axio is an open-source platform that simplifies Terraform infrastructure management through a self-service web interface.
             </p>          
           </div>
          
