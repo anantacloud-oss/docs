@@ -46,8 +46,8 @@
 }
 
 /* IdentiQ logo */
-.identiqLogo {
-  width: 120px;  
-  height: 50px;
+.identiqLogo { 
+  height: 30px;
+  margin-top: 2rem;
 }
 
