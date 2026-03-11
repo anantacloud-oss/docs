@@ -55,6 +55,20 @@ export default function ToolsPage() {
             <h3>IdentiQ</h3>
             <p>IdentiQ is an IAM platform for centralized authentication and access control.</p>
           </div>
+
+
+          <div
+            className={styles.card}
+            onClick={() => (window.location.href = '/Axio/overview')}
+            style={{ cursor: 'pointer' }}
+          >
+            <img src="/img/axio.png" alt="Axio" className={styles.axioLogo}/>
+            <h3>Axio</h3>
+            <p>
+              Axio is an identity and authentication platform that provides centralized user authentication, identity management, 
+              and secure access control for applications and services.
+            </p>          
+          </div>
          
         </div>
       </main>
