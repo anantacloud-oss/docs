@@ -16,6 +16,7 @@ export default function ToolsPage() {
           <li>VulneralQ</li>
           <li>Trustary</li>
           <li>IdentiQ</li>
+          <li>Axio</li>
         </ul>
  
         <div className={styles.grid}>
