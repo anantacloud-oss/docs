@@ -81,6 +81,15 @@ const config = {
          sidebarPath: require.resolve('./sidebaridentiq.js'),
        },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+       {
+         id: 'axio',
+         path: 'Axio',
+         routeBasePath: 'Axio',
+         sidebarPath: require.resolve('./sidebaraxio.js'),
+       },
+    ],
  ],
 
   themeConfig: {
