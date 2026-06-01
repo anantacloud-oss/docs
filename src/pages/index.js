@@ -90,7 +90,7 @@ return (
         <div className={styles.footerColumn}>
           <h4>Quick Links</h4>
           <ul className={styles.footerLinks}>
-            <li><a href="/docs/devops/overview">Documentation</a></li>
+            <li><a href="/docs/getting-started">Documentation</a></li>
             <li><a href="https://www.anantacloud.com/contact-us">Contact Us</a></li>
             <li><a href="/docs/support">Support</a></li>
           </ul>
