@@ -80,7 +80,7 @@ const sidebars = {
     {
       type: 'doc',
       label: 'Support',
-      id: 'Support',
+      id: 'support',
     },
   ],
 };
