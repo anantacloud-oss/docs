@@ -116,7 +116,7 @@ const config = {
         { to: '/modules-docs/searchmodule', label: 'Infrastructure as a Code', position: 'left' },
         { to: '/tools', label: 'Toolkit' , position: 'left' },
         { to: 'https://github.com/orgs/anantacloud/discussions', label: 'Knowledge-Hub', position: 'right' },
-        { to: '/docs/Support', label: 'Support', position: 'right' },
+        { to: '/docs/support', label: 'Support', position: 'right' },
         {
           type: 'html',
           position: 'right',
