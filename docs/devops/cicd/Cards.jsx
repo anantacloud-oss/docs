@@ -5,7 +5,7 @@ import styles from "./Styles.module.css";
 
 const categorizedCards = [
   {
-    category: "Top 3 Security Actions",
+    category: "Security Actions",
     items: [
       {
         title: "Cosign",
