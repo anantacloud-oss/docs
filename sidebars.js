@@ -24,7 +24,7 @@ const sidebars = {
       type: 'category',
       label: 'DevOps Foundations',
       items: [
-        'devops/overview',
+        'devops/devops-overview',
         'devops/gitops-and-cicd',
         'devops/environment-management',
         {
@@ -46,7 +46,7 @@ const sidebars = {
       type: 'category',
       label: 'IaC Best Practices',
       items: [
-        'iac/overview',
+        'iac/iac-overview',
         'iac/folder-structure',
         'iac/tagging-and-naming-conventions',
         'iac/prebuilt-iac-modules',
@@ -61,7 +61,7 @@ const sidebars = {
       type: 'category',
       label: 'Landing Zone Deployment',
       items: [
-        'landing-zone/overview',
+        'landing-zone/landing-zone-overview',
         'landing-zone/deployment-strategy',
         'landing-zone/deploying-to-aws',
         'landing-zone/deploying-to-gcp',
@@ -72,7 +72,7 @@ const sidebars = {
       type: 'category',
       label: 'Security & Compliance',
       items: [
-        'security/overview',
+        'security/security-overview',
         'security/cis-benchmark',
         'security/secret-and-key-management',
       ],
