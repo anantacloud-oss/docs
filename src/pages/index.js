@@ -24,7 +24,7 @@ return (
     <div className="row">
       <div className="col col--4">
         <Link
-          to="/docs/devops/overview"
+          to="/docs/devops/devops-overview"
           className={styles.card}
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
@@ -52,7 +52,7 @@ return (
 
       <div className="col col--4">
         <Link
-          to="/docs/security/overview"
+          to="/docs/security/security-overview"
           className={styles.card}
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
