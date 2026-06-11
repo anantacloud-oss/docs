@@ -1,0 +1,153 @@
+---
+title: Stacks
+id: stack
+---
+
+# Stacks
+
+Stacks are the core deployment units within Axio. They connect reusable modules from the Registry with projects, environments, and cloud providers, enabling teams to provision and manage infrastructure in a consistent and automated manner.
+
+
+## Overview
+
+A Stack represents a deployable infrastructure configuration. It combines infrastructure code, provider settings, variables, and deployment workflows into a single manageable unit.
+
+Stacks allow teams to standardize infrastructure deployments while maintaining flexibility across different projects and environments.
+
+With Stacks, organizations can:
+
+- Deploy infrastructure consistently
+- Manage multiple environments
+- Track deployment status
+- Reuse approved modules
+- Simplify infrastructure operations
+
+---
+
+## Stack Architecture
+
+<img
+  src="/img/stack-architecture.png"
+  alt="Stack Architecture"
+  style={{
+    display: 'block',
+    margin: '2rem auto',
+    maxWidth: '100%'
+  }}
+/>
+
+A Stack acts as the bridge between reusable infrastructure modules and cloud resources.
+
+Each Stack typically consists of:
+
+- Project Association
+- Registry Module
+- Cloud Provider Configuration
+- Environment Settings
+- Deployment State
+
+Together, these components create a complete infrastructure deployment workflow.
+
+---
+
+## Creating a Stack
+
+To create a new Stack:
+
+1. Navigate to **Stacks** from the sidebar.
+2. Click **Create Stack**.
+3. Select a Project.
+4. Choose a Module from the Registry.
+5. Configure provider settings.
+6. Define environment variables.
+7. Save the Stack.
+
+Once created, the Stack becomes ready for deployment operations.
+
+---
+
+## Stack Information
+
+Each Stack card provides key deployment details, including:
+
+- Stack Name
+- Associated Module
+- Cloud Provider
+- Project
+- Environment
+- Deployment Status
+
+This gives users a quick overview of infrastructure resources and their current state.
+
+---
+
+## Deployment Lifecycle
+
+Stacks move through a deployment lifecycle that helps teams track infrastructure changes and operational status.
+
+Common states include:
+
+### Running
+
+Infrastructure is successfully deployed and operational.
+
+### Pending
+
+Deployment is waiting for execution or approval.
+
+### Failed
+
+Deployment encountered an error and requires attention.
+
+### Archived
+
+The Stack is no longer actively managed but remains available for reference.
+
+---
+
+## Search and Management
+
+The search functionality allows users to quickly locate stacks using:
+
+- Stack name
+- Module name
+- Provider
+- Deployment state
+
+This becomes especially useful in large-scale environments with multiple deployments.
+
+---
+
+## Benefits of Using Stacks
+
+### Infrastructure Standardization
+
+Deploy infrastructure using approved and reusable modules.
+
+### Environment Consistency
+
+Maintain consistent deployments across Development, Staging, and Production.
+
+### Operational Visibility
+
+Monitor deployment status and infrastructure state from a centralized location.
+
+### Faster Provisioning
+
+Reduce setup time through reusable infrastructure components.
+
+### Simplified Management
+
+Manage infrastructure deployments from a single platform.
+
+---
+
+## Why Stacks Matter
+
+Stacks are the operational foundation of infrastructure deployments within Axio.
+
+They provide a structured way to deploy, manage, and monitor cloud resources while ensuring consistency, governance, and scalability across teams and environments.
+
+By combining Projects, Registry Modules, and Cloud Providers, Stacks enable organizations to efficiently manage their infrastructure lifecycle.
+
+
