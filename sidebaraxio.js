@@ -23,10 +23,6 @@ module.exports = {
           label: 'Credentials',
           collapsible: true,
           collapsed: true,
-          items: [
-            'credentials/access-keys-authentication',
-            'credentials/iam-role-arn-authentication',
-          ],
         },
       ],
     },
