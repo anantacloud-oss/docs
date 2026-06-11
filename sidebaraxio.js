@@ -17,7 +17,7 @@ module.exports = {
         'login',
         'projects',
         'registry',
-        'stacks',
+        'stack',
       ],
     },
   ],
