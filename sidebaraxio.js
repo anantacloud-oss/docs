@@ -2,7 +2,7 @@ module.exports = {
   axioSidebar: [
     {
       type: 'html',
-      value: '<strong>Getting started</strong>',
+      value: '<strong>Getting Started</strong>',
       defaultStyle: true,
     },
     {
@@ -17,13 +17,7 @@ module.exports = {
         'login',
         'projects',
         'registry',
-        'stack',
-        {
-          type: 'category',
-          label: 'Credentials',
-          collapsible: true,
-          collapsed: true,
-        },
+        'stacks',
       ],
     },
   ],
