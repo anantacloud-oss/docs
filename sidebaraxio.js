@@ -13,7 +13,7 @@ module.exports = {
       items: [
         'overview',
         'why-axio',
-        'challenges-axio-solves',
+        'challenges',
         'key-capabilities',
         'platform-architecture',
         'governance-security',
