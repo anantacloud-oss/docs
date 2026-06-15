@@ -9,45 +9,24 @@ Axio connects infrastructure code, governance controls, and deployment workflows
 
 ## Core Components
 
-### Registry
+- **Registry** — Stores and manages reusable Terraform modules that can be shared across teams. This promotes standardization, reduces duplication, and enables consistent infrastructure deployments.
 
-Stores reusable Terraform modules.
+- **Projects** — Provide logical boundaries for organizing infrastructure resources, environments, and teams. Projects help simplify ownership, access management, and operational visibility.
 
-### Projects
+- **Stacks** — Represent deployable infrastructure configurations built from approved modules. Stacks combine variables, credentials, and deployment settings into a single manageable unit.
 
-Provide logical boundaries for infrastructure ownership and management.
+- **Credentials** — Securely manage cloud provider access and authentication details. Credentials enable controlled infrastructure provisioning without exposing sensitive information to users.
 
-### Stacks
+- **Policies** — Define governance, security, and compliance requirements for infrastructure deployments. Policies help organizations enforce operational standards across environments.
 
-Represent deployable infrastructure configurations.
+- **Roles and Teams** — Control user permissions and access levels through role-based access management. Teams and roles help ensure that users only have access to the resources and actions relevant to their responsibilities.
 
-### Credentials
+- **VCS Integration** — Connect source code repositories from platforms such as GitHub and GitLab. This enables module synchronization, version control, and integration with existing development workflows.
 
-Securely manage cloud provider access.
+- **Cost Management** — Integrate infrastructure cost estimation into deployment workflows. This helps teams understand the financial impact of infrastructure changes before they are applied.
 
-### Policies
+- **Approval Workflows** — Introduce controlled review and approval processes for infrastructure changes. Approval workflows help reduce risk and improve governance for critical deployments.
 
-Define organizational governance rules.
+- **Identity Integration** — Integrate with enterprise identity providers using OIDC and Azure AD. This enables centralized authentication and simplifies user access management across the platform.
 
-### Roles and Teams
-
-Control access and permissions across the platform.
-
-### VCS Integration
-
-Connect repositories from GitHub and GitLab.
-
-### Cost Management
-
-Integrate cost estimation into deployment workflows.
-
-## Infrastructure Lifecycle
-
-Infrastructure moves through a consistent lifecycle:
-
-1. Module Creation
-2. Stack Creation
-3. Review and Approval
-4. Deployment
-5. Monitoring
-6. Continuous Management
+- **Infrastructure Lifecycle** — Infrastructure progresses through a well-defined lifecycle that includes module creation, stack provisioning, review and approval, deployment, monitoring, and continuous management. This ensures infrastructure changes are delivered in a controlled, repeatable, and governed manner.
