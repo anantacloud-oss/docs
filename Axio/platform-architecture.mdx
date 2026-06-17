@@ -3,30 +3,41 @@ id: platform-architecture
 title: Platform Architecture
 ---
 
-# Platform Architecture
+<img
+  src="/img/architecture.png"
+  alt="Axio Platform Architecture"
+  style={{
+    display: 'block',
+    margin: '2rem auto',
+    maxWidth: '900px',
+    width: '100%',
+    height: 'auto'
+  }}
+/>
 
-Axio connects infrastructure code, governance controls, and deployment workflows into a unified operating model.
+
+Axio combines infrastructure automation, governance controls, identity management, and deployment workflows into a unified platform. Its architecture is designed to help organizations standardize Infrastructure as Code operations while maintaining security, visibility, and scalability.
 
 ## Core Components
 
-- **Registry** — Stores and manages reusable Terraform modules that can be shared across teams. This promotes standardization, reduces duplication, and enables consistent infrastructure deployments.
+- **Registry** — Stores and manages reusable infrastructure services and Terraform modules. This enables teams to standardize deployments, reduce duplication, and accelerate infrastructure provisioning across projects.
 
-- **Projects** — Provide logical boundaries for organizing infrastructure resources, environments, and teams. Projects help simplify ownership, access management, and operational visibility.
+- **Projects** — Organize infrastructure resources, environments, and teams within logical boundaries. Projects help simplify ownership, access management, and operational visibility.
 
-- **Stacks** — Represent deployable infrastructure configurations built from approved modules. Stacks combine variables, credentials, and deployment settings into a single manageable unit.
+- **Stacks** — Represent deployable infrastructure configurations built from approved modules and variables. Stacks provide a consistent way to manage infrastructure across different environments.
 
-- **Credentials** — Securely manage cloud provider access and authentication details. Credentials enable controlled infrastructure provisioning without exposing sensitive information to users.
+- **Credentials** — Securely manage cloud provider authentication and access for deployments. Centralized credential management helps protect sensitive information while simplifying operations.
 
-- **Policies** — Define governance, security, and compliance requirements for infrastructure deployments. Policies help organizations enforce operational standards across environments.
+- **Policies** — Enforce governance, security, and compliance requirements across infrastructure operations. Policies help ensure deployments align with organizational standards and best practices.
 
-- **Roles and Teams** — Control user permissions and access levels through role-based access management. Teams and roles help ensure that users only have access to the resources and actions relevant to their responsibilities.
+- **Roles and Teams** — Manage permissions and access through role-based access control. This ensures users have the appropriate level of access based on their responsibilities.
 
-- **VCS Integration** — Connect source code repositories from platforms such as GitHub and GitLab. This enables module synchronization, version control, and integration with existing development workflows.
+- **VCS Integration** — Connect GitHub repositories for module management and version control. This enables infrastructure code to remain aligned with existing development workflows.
 
-- **Cost Management** — Integrate infrastructure cost estimation into deployment workflows. This helps teams understand the financial impact of infrastructure changes before they are applied.
+- **Cost Management** — Provide infrastructure cost estimation and financial visibility before deployment. Early cost awareness helps teams make informed infrastructure decisions and avoid unexpected spending.
 
-- **Approval Workflows** — Introduce controlled review and approval processes for infrastructure changes. Approval workflows help reduce risk and improve governance for critical deployments.
+- **Approval Workflows** — Introduce review and approval processes for controlled infrastructure changes. This adds governance checkpoints and reduces the risk of unintended deployments.
 
-- **Identity Integration** — Integrate with enterprise identity providers using OIDC and Azure AD. This enables centralized authentication and simplifies user access management across the platform.
+- **Identity Integration** — Support centralized authentication through OIDC and Azure AD. Integration with enterprise identity providers simplifies user management and strengthens security.
 
-- **Infrastructure Lifecycle** — Infrastructure progresses through a well-defined lifecycle that includes module creation, stack provisioning, review and approval, deployment, monitoring, and continuous management. This ensures infrastructure changes are delivered in a controlled, repeatable, and governed manner.
+- **Infrastructure Lifecycle** — Manage infrastructure through provisioning, approvals, deployment, monitoring, and ongoing operations. A structured lifecycle helps ensure consistency, governance, and operational control.
